@@ -38,8 +38,9 @@ philosophy: >
   and solving real-world problems through code.
 ```
 
+
 <div align="center">
-<img alt="Coding" width="400" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif"/>
+<img alt="Girl Coding" width="400" src="https://raw.githubusercontent.com/TheDudeThatCode/TheDudeThatCode/master/Assets/Developer.gif"/>
 </div>
 
 ---
