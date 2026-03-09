@@ -40,7 +40,7 @@ philosophy: >
 
 
 <div align="center">
-<img alt="Girl Coding" width="400" src="https://raw.githubusercontent.com/TheDudeThatCode/TheDudeThatCode/master/Assets/Developer.gif"/>
+<img alt="Girl Coding" width="400" src="https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif"/>
 </div>
 
 ---
