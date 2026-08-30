@@ -51,190 +51,136 @@ $ sys.telemetry --active-context
 ---
 
 <!-- ================================================================= -->
-<!-- SECTION 4: 4 INDUSTRIAL INTERNSHIPS (EXPERIENCE MATRIX)          -->
+<!-- SECTION 4: 4 INDUSTRIAL INTERNSHIPS (CLEAN RESPONSIVE CARDS)     -->
 <!-- ================================================================= -->
 
 ### 💼 `EXPERIENCE // 4_INDUSTRIAL_INTERNSHIPS`
 
-<table>
-  <!-- Internship 1: IIIT Dharwad Research Park -->
-  <tr>
-    <td colspan="2" bgcolor="#0A101F">
-      <table width="100%" border="0">
-        <tr>
-          <td width="35%" valign="top">
-            <h3>🏢 Full Stack Developer Intern</h3>
-            <p><b><font color="#22D3EE">IIIT Dharwad Research Park</font></b></p>
-            <p>📍 <i>Dharwad, India (Hybrid)</i> &nbsp;|&nbsp; 🗓️ <i>July 2026 – Present</i></p>
-          </td>
-          <td width="65%" valign="top">
-            <p align="right">
-              <img src="https://img.shields.io/badge/React.js-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
-              <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
-              <img src="https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white" />
-              <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" />
-              <img src="https://img.shields.io/badge/Razorpay-0C2340?style=flat-square&logo=razorpay&logoColor=2B83EA" />
-              <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white" />
-              <img src="https://img.shields.io/badge/RESTful_APIs-0891B2?style=flat-square&logo=fastapi&logoColor=white" />
-            </p>
-            <ul>
-              <li>Developed complete frontend and backend for a production-ready sleep-pod booking platform with responsive UI, user/booking modules, admin operations, and scalable RESTful APIs.</li>
-              <li>Integrated Razorpay for secure payments and AWS services for deployment/data handling, ensuring reliable backend services and seamless end-to-end application integration.</li>
-            </ul>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
+<details open>
+<summary><b>🏢 01 / Full Stack Developer Intern — IIIT Dharwad Research Park</b> &nbsp; <code>July 2026 – Present</code></button></summary>
+<br/>
 
-  <!-- Internship 2: Yumaris Agency -->
-  <tr>
-    <td colspan="2" bgcolor="#0A101F">
-      <table width="100%" border="0">
-        <tr>
-          <td width="35%" valign="top">
-            <h3>🤖 Backend Developer Intern</h3>
-            <p><b><font color="#22D3EE">Yumaris Agency</font></b></p>
-            <p>📍 <i>Chennai, India (Remote)</i> &nbsp;|&nbsp; 🗓️ <i>Mar 2026 – Sep 2026</i></p>
-          </td>
-          <td width="65%" valign="top">
-            <p align="right">
-              <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
-              <img src="https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white" />
-              <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" />
-              <img src="https://img.shields.io/badge/AI_Integration-8A2BE2?style=flat-square&logo=openai&logoColor=white" />
-              <img src="https://img.shields.io/badge/JWT_/_RBAC-10B981?style=flat-square&logo=auth0&logoColor=white" />
-              <img src="https://img.shields.io/badge/REST_APIs-0891B2?style=flat-square&logo=fastapi&logoColor=white" />
-            </p>
-            <ul>
-              <li>Developed an AI-powered HRMS backend using Node.js, Express.js, and MongoDB, with 25+ REST APIs, JWT/RBAC, and core HR workflows.</li>
-              <li>Engineered AI features for anomaly detection, performance analysis, candidate scoring, recommendations, alerts, and analytics, with API optimization and testing.</li>
-            </ul>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
+> 📍 **Location:** Dharwad, India *(Hybrid)* &nbsp;|&nbsp; 🏷️ **Domain:** Sleep-Pod Booking Platform & Cloud Infrastructure
+>
+> <img src="https://img.shields.io/badge/React.js-20232A?style=flat-square&logo=react&logoColor=61DAFB" /> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" /> <img src="https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white" /> <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" /> <img src="https://img.shields.io/badge/Razorpay-0C2340?style=flat-square&logo=razorpay&logoColor=2B83EA" /> <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white" /> <img src="https://img.shields.io/badge/RESTful_APIs-0891B2?style=flat-square&logo=fastapi&logoColor=white" />
+>
+> - ⚡ **Full-Stack Architecture:** Developed complete frontend and backend for a production-ready sleep-pod booking platform with responsive UI, user/booking modules, admin operations, and scalable RESTful APIs.
+> - ⚡ **Cloud & Payments:** Integrated Razorpay for secure payments and AWS services for deployment/data handling, ensuring reliable backend services and seamless end-to-end application integration.
 
-  <!-- Internship 3: ARMB -->
-  <tr>
-    <td colspan="2" bgcolor="#0A101F">
-      <table width="100%" border="0">
-        <tr>
-          <td width="35%" valign="top">
-            <h3>📱 React Native Developer Intern</h3>
-            <p><b><font color="#22D3EE">ARMB</font></b></p>
-            <p>📍 <i>West Bengal, India (Remote)</i> &nbsp;|&nbsp; 🗓️ <i>Mar 2026 – Sep 2026</i></p>
-          </td>
-          <td width="65%" valign="top">
-            <p align="right">
-              <img src="https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
-              <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
-              <img src="https://img.shields.io/badge/Redux_Toolkit-764ABC?style=flat-square&logo=redux&logoColor=white" />
-              <img src="https://img.shields.io/badge/REST_APIs-0891B2?style=flat-square&logo=fastapi&logoColor=white" />
-              <img src="https://img.shields.io/badge/Mobile_UI/UX-06B6D4?style=flat-square&logo=figma&logoColor=white" />
-              <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
-            </p>
-            <ul>
-              <li>Developed core frontend modules for a cross-platform React Native service booking application connecting customers with local service providers (electricians, plumbers, technicians, etc.).</li>
-              <li>Engineered the dedicated Service Provider interface, implementing profile management, booking requests handling, real-time availability toggling, and job tracking workflows.</li>
-              <li>Built responsive, accessible mobile UI screens with fluid animations, intuitive navigation flows, and robust backend API integrations.</li>
-            </ul>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
+</details>
 
-  <!-- Internship 4: LettrBlack -->
-  <tr>
-    <td colspan="2" bgcolor="#0A101F">
-      <table width="100%" border="0">
-        <tr>
-          <td width="35%" valign="top">
-            <h3>🌐 Full Stack Web Developer Intern</h3>
-            <p><b><font color="#22D3EE">LettrBlack</font></b></p>
-            <p>📍 <i>Bengaluru, India (Remote)</i> &nbsp;|&nbsp; 🗓️ <i>Sep 2025 – Feb 2026</i></p>
-          </td>
-          <td width="65%" valign="top">
-            <p align="right">
-              <img src="https://img.shields.io/badge/React.js-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
-              <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
-              <img src="https://img.shields.io/badge/REST_APIs-0891B2?style=flat-square&logo=fastapi&logoColor=white" />
-              <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
-              <img src="https://img.shields.io/badge/Agile-555555?style=flat-square&logo=jira&logoColor=white" />
-            </p>
-            <ul>
-              <li>Developed community features and interactive quizzes, increasing engagement by 25% and user interaction by 20% through responsive web experiences.</li>
-              <li>Built a real-time News module with dynamic REST API integration and optimized performance, improving content delivery speed by 30% and reducing load time by 25%.</li>
-              <li>Collaborated with backend & UI teams for seamless deployment, state management, and performance optimization.</li>
-            </ul>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
+<br/>
+
+<details open>
+<summary><b>🤖 02 / Backend Developer Intern — Yumaris Agency</b> &nbsp; <code>Mar 2026 – Sep 2026</code></summary>
+<br/>
+
+> 📍 **Location:** Chennai, India *(Remote)* &nbsp;|&nbsp; 🏷️ **Domain:** AI-Powered Enterprise HRMS Backend
+>
+> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" /> <img src="https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white" /> <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" /> <img src="https://img.shields.io/badge/AI_Integration-8A2BE2?style=flat-square&logo=openai&logoColor=white" /> <img src="https://img.shields.io/badge/JWT_/_RBAC-10B981?style=flat-square&logo=auth0&logoColor=white" /> <img src="https://img.shields.io/badge/REST_APIs-0891B2?style=flat-square&logo=fastapi&logoColor=white" />
+>
+> - ⚡ **Core HR Workflows:** Developed an AI-powered HRMS backend using Node.js, Express.js, and MongoDB, with 25+ REST APIs, JWT/RBAC, and core HR workflows.
+> - ⚡ **AI Anomaly & Scoring:** Engineered AI features for anomaly detection, performance analysis, candidate scoring, recommendations, alerts, and analytics, with API optimization and testing.
+
+</details>
+
+<br/>
+
+<details open>
+<summary><b>📱 03 / React Native Developer Intern — ARMB</b> &nbsp; <code>Mar 2026 – Sep 2026</code></summary>
+<br/>
+
+> 📍 **Location:** West Bengal, India *(Remote)* &nbsp;|&nbsp; 🏷️ **Domain:** On-Demand Local Service Booking Mobile App
+>
+> <img src="https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" /> <img src="https://img.shields.io/badge/Redux_Toolkit-764ABC?style=flat-square&logo=redux&logoColor=white" /> <img src="https://img.shields.io/badge/REST_APIs-0891B2?style=flat-square&logo=fastapi&logoColor=white" /> <img src="https://img.shields.io/badge/Mobile_UI/UX-06B6D4?style=flat-square&logo=figma&logoColor=white" /> <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
+>
+> - ⚡ **Cross-Platform Modules:** Developed core frontend modules for a cross-platform React Native service booking application connecting customers with local service providers (electricians, plumbers, technicians, etc.).
+> - ⚡ **Provider Interface:** Engineered the dedicated Service Provider interface, implementing profile management, booking requests handling, real-time availability toggling, and job tracking workflows.
+> - ⚡ **Mobile UI/UX:** Built responsive, accessible mobile UI screens with fluid animations, intuitive navigation flows, and robust backend API integrations.
+
+</details>
+
+<br/>
+
+<details open>
+<summary><b>🌐 04 / Full Stack Web Developer Intern — LettrBlack</b> &nbsp; <code>Sep 2025 – Feb 2026</code></summary>
+<br/>
+
+> 📍 **Location:** Bengaluru, India *(Remote)* &nbsp;|&nbsp; 🏷️ **Domain:** Community Platform & Real-Time Content Hub
+>
+> <img src="https://img.shields.io/badge/React.js-20232A?style=flat-square&logo=react&logoColor=61DAFB" /> <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" /> <img src="https://img.shields.io/badge/REST_APIs-0891B2?style=flat-square&logo=fastapi&logoColor=white" /> <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" /> <img src="https://img.shields.io/badge/Agile-555555?style=flat-square&logo=jira&logoColor=white" />
+>
+> - ⚡ **Community & Quizzes:** Developed community features and interactive quizzes, increasing engagement by 25% and user interaction by 20% through responsive web experiences.
+> - ⚡ **Real-Time News Engine:** Built a real-time News module with dynamic REST API integration and optimized performance, improving content delivery speed by 30% and reducing load time by 25%.
+> - ⚡ **Cross-Functional Sync:** Collaborated with backend & UI teams for seamless deployment, state management, and performance optimization.
+
+</details>
 
 ---
 
 <!-- ================================================================= -->
-<!-- SECTION 5: CAPABILITY MATRIX // TECH STACK                      -->
+<!-- SECTION 5: CAPABILITY MATRIX // 5-BOX MODERN TECH STACK          -->
 <!-- ================================================================= -->
 
 ### 🛠️ `TECH_STACK // CAPABILITY_MATRIX`
 
 <table>
   <tr>
-    <td width="22%" align="right"><b>Core Languages</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
-      <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-      <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-      <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
-      <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
+    <td width="33%" valign="top">
+      <h4>💻 Languages</h4>
+      <p>
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" /><br/>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" /><br/>
+        <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" /><br/>
+        <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
+      </p>
+    </td>
+    <td width="33%" valign="top">
+      <h4>🎨 Frontend & Mobile</h4>
+      <p>
+        <img src="https://img.shields.io/badge/React.js-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" /><br/>
+        <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" /><br/>
+        <img src="https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React Native" /><br/>
+        <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind" /><br/>
+        <img src="https://img.shields.io/badge/Shadcn_UI-000000?style=flat-square&logo=shadcnui&logoColor=white" alt="Shadcn" /><br/>
+        <img src="https://img.shields.io/badge/Redux_Toolkit-764ABC?style=flat-square&logo=redux&logoColor=white" alt="Redux" /><br/>
+        <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white" alt="Framer Motion" />
+      </p>
+    </td>
+    <td width="34%" valign="top">
+      <h4>⚙️ Backend & Systems</h4>
+      <p>
+        <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" /><br/>
+        <img src="https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white" alt="Express" /><br/>
+        <img src="https://img.shields.io/badge/RESTful_APIs-0891B2?style=flat-square&logo=fastapi&logoColor=white" alt="REST" /><br/>
+        <img src="https://img.shields.io/badge/JWT_Auth-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" alt="JWT" /><br/>
+        <img src="https://img.shields.io/badge/RBAC-10B981?style=flat-square&logo=auth0&logoColor=white" alt="RBAC" /><br/>
+        <img src="https://img.shields.io/badge/AI_Integration-8A2BE2?style=flat-square&logo=openai&logoColor=white" alt="AI Integration" />
+      </p>
     </td>
   </tr>
   <tr>
-    <td width="22%" align="right"><b>Frontend & Mobile</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/React.js-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
-      <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" />
-      <img src="https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React Native" />
-      <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
-      <img src="https://img.shields.io/badge/Shadcn_UI-000000?style=flat-square&logo=shadcnui&logoColor=white" alt="Shadcn UI" />
-      <img src="https://img.shields.io/badge/Redux_Toolkit-764ABC?style=flat-square&logo=redux&logoColor=white" alt="Redux Toolkit" />
-      <img src="https://img.shields.io/badge/PWA-5A0FC8?style=flat-square&logo=pwa&logoColor=white" alt="PWA" />
+    <td width="50%" valign="top" colspan="2">
+      <h4>🗄️ Databases & Cloud</h4>
+      <p>
+        <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB" />
+        <img src="https://img.shields.io/badge/Mongoose-880000?style=flat-square&logo=mongoose&logoColor=white" alt="Mongoose" />
+        <img src="https://img.shields.io/badge/AWS_Cloud-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white" alt="AWS" />
+        <img src="https://img.shields.io/badge/Cloudinary-3448C5?style=flat-square&logo=cloudinary&logoColor=white" alt="Cloudinary" />
+      </p>
     </td>
-  </tr>
-  <tr>
-    <td width="22%" align="right"><b>Backend & AI Microservices</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
-      <img src="https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white" alt="Express" />
-      <img src="https://img.shields.io/badge/RESTful_APIs-0891B2?style=flat-square&logo=fastapi&logoColor=white" alt="REST" />
-      <img src="https://img.shields.io/badge/JWT_Auth-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" alt="JWT" />
-      <img src="https://img.shields.io/badge/RBAC-10B981?style=flat-square&logo=auth0&logoColor=white" alt="RBAC" />
-    </td>
-  </tr>
-  <tr>
-    <td width="22%" align="right"><b>Databases & Cloud</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB" />
-      <img src="https://img.shields.io/badge/Mongoose-880000?style=flat-square&logo=mongoose&logoColor=white" alt="Mongoose" />
-      <img src="https://img.shields.io/badge/AWS_Cloud-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white" alt="AWS" />
-      <img src="https://img.shields.io/badge/Cloudinary-3448C5?style=flat-square&logo=cloudinary&logoColor=white" alt="Cloudinary" />
-    </td>
-  </tr>
-  <tr>
-    <td width="22%" align="right"><b>Platforms & Toolchain</b></td>
-    <td>
-      <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
-      <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
-      <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white" alt="Postman" />
-      <img src="https://img.shields.io/badge/Razorpay-0C2340?style=flat-square&logo=razorpay&logoColor=2B83EA" alt="Razorpay" />
-      <img src="https://img.shields.io/badge/Stripe-008CDD?style=flat-square&logo=stripe&logoColor=white" alt="Stripe" />
-      <img src="https://img.shields.io/badge/CI/CD-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="CI/CD" />
+    <td width="50%" valign="top">
+      <h4>🛠️ Tools, Payments & DevOps</h4>
+      <p>
+        <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
+        <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
+        <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white" alt="Postman" /><br/>
+        <img src="https://img.shields.io/badge/Razorpay-0C2340?style=flat-square&logo=razorpay&logoColor=2B83EA" alt="Razorpay" />
+        <img src="https://img.shields.io/badge/Stripe-008CDD?style=flat-square&logo=stripe&logoColor=white" alt="Stripe" />
+        <img src="https://img.shields.io/badge/PWA-5A0FC8?style=flat-square&logo=pwa&logoColor=white" alt="PWA" /><br/>
+        <img src="https://img.shields.io/badge/CI/CD-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="CI/CD" />
+        <img src="https://img.shields.io/badge/Agile-555555?style=flat-square&logo=jira&logoColor=white" alt="Agile" />
+      </p>
     </td>
   </tr>
 </table>
@@ -379,14 +325,14 @@ industrial_milestone:
 ---
 
 <!-- ================================================================= -->
-<!-- SECTION 9: GITHUB TELEMETRY & STATS                             -->
+<!-- SECTION 9: GITHUB TELEMETRY & METRICS                           -->
 <!-- ================================================================= -->
 
 ### 📊 `SYSTEM_METRICS // GITHUB_TELEMETRY`
 
 <div align="center">
 
-<img width="100%" src="https://nirzak-streak-stats.vercel.app/?user=meghanakotambari&theme=radical&hide_border=true&background=0A101F&stroke=22D3EE&ring=10B981&fire=22D3EE&currStreakLabel=10B981&sideLabels=94A3B8&dates=64748B" alt="Meghana's GitHub Streak" />
+<img width="100%" src="https://github-readme-streak-stats.herokuapp.com/?user=meghanakotambari&theme=radical&background=0A101F&stroke=22D3EE&ring=10B981&fire=22D3EE&currStreakLabel=10B981&sideLabels=94A3B8&dates=64748B&hide_border=true" alt="Meghana's GitHub Streak" />
 
 <br/><br/>
 

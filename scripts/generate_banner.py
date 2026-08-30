@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """
-High-Precision SVG Hero Generator for Meghana Kotambari's GitHub Profile
-Theme: Futuristic Developer OS / Terminal (term://meghana.os/profile.sh --live)
-Matches Reference Image 1 Layout & Color Palette with Dithered Avatar & Particle SMIL
+Refined SVG Hero Generator for Meghana Kotambari's GitHub Profile
+Theme: term://meghana.os/profile.sh --live
+1. Fixes character encoding glitch (uses &#183; instead of raw bytes)
+2. Uses assets/avatar.jpg with enhanced contrast and centered face
+3. Strict XML well-formedness with <?xml version="1.0" encoding="UTF-8"?>
 """
 
 import json
@@ -13,21 +15,18 @@ import html
 import numpy as np
 from PIL import Image, ImageEnhance, ImageOps, ImageDraw
 
-def escape_xml(text):
-    return html.escape(str(text), quote=True)
+def clean_text(text):
+    """Escapes XML and replaces Unicode middle-dot with safe XML entity &#183;"""
+    escaped = html.escape(str(text), quote=True)
+    return escaped.replace("·", "&#183;").replace("—", "&#8212;").replace("➔", "&#8594;")
 
 
 def generate_logo_points(logo_type, num_points=900, width=280, height=300, offset_x=30, offset_y=60):
-    """
-    Generate clean, geometrically exact particle points for technical logos
-    normalized to the (offset_x, offset_y, width, height) viewport.
-    """
     points = []
     cx = offset_x + width / 2.0
     cy = offset_y + height / 2.0
     
     if logo_type == "react":
-        # React Logo: 1 nucleus circle + 3 rotated ellipses
         n_nucleus = int(num_points * 0.20)
         for i in range(n_nucleus):
             r = math.sqrt(random.random()) * 20
@@ -48,7 +47,6 @@ def generate_logo_points(logo_type, num_points=900, width=280, height=300, offse
                 points.append((cx + rx, cy + ry))
                 
     elif logo_type == "nodejs":
-        # Node.js Logo: Hexagon outline + inner structure
         radius = 95
         n_hex = int(num_points * 0.55)
         for i in range(n_hex):
@@ -73,7 +71,6 @@ def generate_logo_points(logo_type, num_points=900, width=280, height=300, offse
                 points.append((cx - 40 + random.random() * 80, cy - 50 + random.random() * 100))
 
     elif logo_type == "typescript":
-        # TypeScript Logo: Rounded square badge + 'TS' letters
         badge_points = int(num_points * 0.45)
         s = 85
         for i in range(badge_points):
@@ -133,17 +130,13 @@ def match_points_nearest(source_pts, target_pts):
 
 
 def generate_dithered_portrait_matrix(width=280, height=310, offset_x=30, offset_y=60):
-    """
-    Generate an engineered 1-bit Floyd-Steinberg dithered head-and-shoulders
-    monochrome portrait point matrix (~15,000 dots) directly from Meghana's 4th image.
-    """
-    photo_path = "assets/portrait.jpg" if os.path.exists("assets/portrait.jpg") else "data/portrait.jpg"
+    photo_path = "assets/avatar.jpg" if os.path.exists("assets/avatar.jpg") else "assets/portrait.jpg"
     
     if os.path.exists(photo_path):
         img = Image.open(photo_path).convert("L")
         img = ImageOps.autocontrast(img, cutoff=2)
         enhancer = ImageEnhance.Contrast(img)
-        img = enhancer.enhance(1.4)
+        img = enhancer.enhance(1.45)
         
         w, h = img.size
         target_ratio = width / height
@@ -221,7 +214,7 @@ def generate_svg(theme="dark", profile_data=None):
         text_primary = "#F8FAFC"        # Pure White
         text_secondary = "#94A3B8"      # Silver Muted
         border_color = "#1E293B"
-        portrait_hue = "#38BDF8"        # Sky Blue for Meghana face
+        portrait_hue = "#38BDF8"        # Sky Blue
         traveller_hue = "#22D3EE"       # Cyan morph particles
         live_glow = "#10B981"
         header_bar = "#0F172A"
@@ -242,10 +235,8 @@ def generate_svg(theme="dark", profile_data=None):
         header_bar = "#E2E8F0"
         pill_bg = "#FFFFFF"
 
-    # Compute Portrait Matrix (Layer 1)
     portrait_groups, total_dense_dots = generate_dithered_portrait_matrix()
     
-    # Compute Traveller Morphs (Layer 2: 900 dots)
     p_portrait = []
     for g in portrait_groups:
         for dx, dy, _, _ in g:
@@ -266,8 +257,8 @@ def generate_svg(theme="dark", profile_data=None):
     p_ts_matched = match_points_nearest(p_node_matched, p_ts)
     p_return_matched = match_points_nearest(p_ts_matched, p_portrait)
 
-    # Build SVG
     svg = []
+    svg.append('<?xml version="1.0" encoding="UTF-8"?>')
     svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 450" width="100%" height="100%" style="background-color: {bg_color}; border-radius: 12px; font-family: -apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, \'JetBrains Mono\', monospace;">')
     svg.append('  <defs>')
     svg.append(f'    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.5" result="blur" /><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>')
@@ -294,7 +285,7 @@ def generate_svg(theme="dark", profile_data=None):
     # Top Right Handle Pill
     svg.append(f'  <g transform="translate(680, 10)">')
     svg.append(f'    <rect x="0" y="0" width="140" height="22" rx="11" fill="{pill_bg}" stroke="{chrome_secondary}" stroke-width="1" />')
-    svg.append(f'    <text x="70" y="15.5" fill="{chrome_color}" font-size="11" font-weight="600" text-anchor="middle">@{escape_xml(profile_data["github"])}</text>')
+    svg.append(f'    <text x="70" y="15.5" fill="{chrome_color}" font-size="11" font-weight="600" text-anchor="middle">@{clean_text(profile_data["github"])}</text>')
     svg.append(f'  </g>')
 
     # Top Right Pulsing LIVE Indicator
@@ -314,7 +305,7 @@ def generate_svg(theme="dark", profile_data=None):
     svg.append(f'  <text x="28" y="70" fill="{chrome_color}" font-size="11.5" font-weight="700" letter-spacing="1">[ VISUAL.MAP ]</text>')
     svg.append(f'  <text x="318" y="70" fill="{text_secondary}" font-size="9.5" font-weight="600" text-anchor="end">300x340 // DITHER.FS</text>')
 
-    # Layer 1: Dense Portrait Matrix (Meghana's 4th Image Avatar)
+    # Layer 1: Dense Portrait Matrix
     svg.append(f'  <g clip-path="url(#portrait-clip)">')
     for group_idx, dots in enumerate(portrait_groups):
         if not dots:
@@ -328,7 +319,7 @@ def generate_svg(theme="dark", profile_data=None):
         svg.append(f'    </path>')
     svg.append(f'  </g>')
 
-    # Layer 2: Traveller Morph Particles (~900 Points)
+    # Layer 2: Traveller Morph Particles
     svg.append(f'  <g clip-path="url(#portrait-clip)">')
     for i in range(min(len(p_portrait), 900)):
         x0, y0 = round(p_portrait[i][0], 1), round(p_portrait[i][1], 1)
@@ -352,7 +343,7 @@ def generate_svg(theme="dark", profile_data=None):
     svg.append(f'    <rect x="0" y="0" width="290" height="18" rx="4" fill="{header_bar}" stroke="{border_color}" stroke-width="1" />')
     svg.append(f'    <rect x="0" y="0" width="46" height="18" rx="4" fill="{chrome_secondary}" />')
     svg.append(f'    <text x="23" y="13" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">MODE</text>')
-    svg.append(f'    <text x="56" y="13" fill="{accent_emerald}" font-size="9" font-weight="600" letter-spacing="0.5">PARTICLE.MORPH [REACT ➔ NODE ➔ TS]</text>')
+    svg.append(f'    <text x="56" y="13" fill="{accent_emerald}" font-size="9" font-weight="600" letter-spacing="0.5">PARTICLE.MORPH [REACT &#8594; NODE &#8594; TS]</text>')
     svg.append(f'  </g>')
 
     # 3. Right Panel: [ SYSTEM.INFO ]
@@ -364,7 +355,6 @@ def generate_svg(theme="dark", profile_data=None):
     svg.append(f'  <text x="352" y="70" fill="{chrome_color}" font-size="11.5" font-weight="700" letter-spacing="1">[ SYSTEM.INFO ]</text>')
     svg.append(f'  <text x="910" y="70" fill="{accent_emerald}" font-size="9.5" font-weight="600" text-anchor="end">STATUS: ACTIVE // 240 FPS</text>')
 
-    # Top Info Block with exact dotted leaders
     info_fields_top = [
         ("Subject", profile_data["name"]),
         ("Role", profile_data["role"]),
@@ -376,11 +366,11 @@ def generate_svg(theme="dark", profile_data=None):
     cur_y = 102
     for label, val in info_fields_top:
         svg.append(f'  <g transform="translate(356, {cur_y})">')
-        svg.append(f'    <text x="0" y="0" fill="{text_secondary}" font-size="11.5" font-weight="600">{escape_xml(label)}</text>')
+        svg.append(f'    <text x="0" y="0" fill="{text_secondary}" font-size="11.5" font-weight="600">{clean_text(label)}</text>')
         svg.append(f'    <text x="85" y="0" fill="{border_color}" font-size="11" letter-spacing="2">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</text>')
         val_color = accent_emerald if label in ["Status"] else (chrome_color if label in ["Subject", "Role"] else text_primary)
         val_weight = "700" if label in ["Subject", "Status"] else "500"
-        svg.append(f'    <text x="550" y="0" fill="{val_color}" font-size="11.5" font-weight="{val_weight}" text-anchor="end">{escape_xml(val)}</text>')
+        svg.append(f'    <text x="550" y="0" fill="{val_color}" font-size="11.5" font-weight="{val_weight}" text-anchor="end">{clean_text(val)}</text>')
         svg.append(f'  </g>')
         cur_y += 24
 
@@ -399,9 +389,9 @@ def generate_svg(theme="dark", profile_data=None):
 
     for label, val in info_fields_core:
         svg.append(f'  <g transform="translate(356, {cur_y})">')
-        svg.append(f'    <text x="0" y="0" fill="{text_secondary}" font-size="11" font-weight="600">{escape_xml(label)}</text>')
+        svg.append(f'    <text x="0" y="0" fill="{text_secondary}" font-size="11" font-weight="600">{clean_text(label)}</text>')
         svg.append(f'    <text x="100" y="0" fill="{border_color}" font-size="11" letter-spacing="2">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</text>')
-        svg.append(f'    <text x="550" y="0" fill="{chrome_color}" font-size="11" font-weight="500" text-anchor="end">{escape_xml(val)}</text>')
+        svg.append(f'    <text x="550" y="0" fill="{chrome_color}" font-size="11" font-weight="500" text-anchor="end">{clean_text(val)}</text>')
         svg.append(f'  </g>')
         cur_y += 22
 
@@ -419,10 +409,10 @@ def generate_svg(theme="dark", profile_data=None):
 
     for label, val in grid_fields:
         svg.append(f'  <g transform="translate(356, {cur_y})">')
-        svg.append(f'    <text x="0" y="0" fill="{text_secondary}" font-size="10.5" font-weight="600">{escape_xml(label)}</text>')
+        svg.append(f'    <text x="0" y="0" fill="{text_secondary}" font-size="10.5" font-weight="600">{clean_text(label)}</text>')
         svg.append(f'    <text x="95" y="0" fill="{border_color}" font-size="11" letter-spacing="2">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</text>')
         val_color = accent_purple if "GitHub" in label else (accent_emerald if "Portfolio" in label else text_primary)
-        svg.append(f'    <text x="550" y="0" fill="{val_color}" font-size="10.5" font-weight="500" text-anchor="end">{escape_xml(val)}</text>')
+        svg.append(f'    <text x="550" y="0" fill="{val_color}" font-size="10.5" font-weight="500" text-anchor="end">{clean_text(val)}</text>')
         svg.append(f'  </g>')
         cur_y += 20
 
@@ -434,15 +424,15 @@ if __name__ == "__main__":
     os.makedirs("assets", exist_ok=True)
     os.makedirs("data", exist_ok=True)
     
-    with open("data/profile_data.json", "r") as f:
+    with open("data/profile_data.json", "r", encoding="utf-8") as f:
         pdata = json.load(f)
         
-    print("Generating dark.svg...")
+    print("Generating dark.svg with cleaned entities...")
     dark_svg = generate_svg(theme="dark", profile_data=pdata)
     with open("assets/dark.svg", "w", encoding="utf-8") as f:
         f.write(dark_svg)
         
-    print("Generating light.svg...")
+    print("Generating light.svg with cleaned entities...")
     light_svg = generate_svg(theme="light", profile_data=pdata)
     with open("assets/light.svg", "w", encoding="utf-8") as f:
         f.write(light_svg)
