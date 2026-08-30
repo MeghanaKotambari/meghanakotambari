@@ -318,11 +318,9 @@ def generate_svg(theme="dark", profile_data=None):
     svg.append(f'    <text x="56" y="13" fill="{accent_emerald}" font-size="9" font-weight="600" letter-spacing="0.5">PARTICLE.MORPH [CORE &#8594; REACT &#8594; NODE &#8594; TS]</text>')
     svg.append(f'  </g>')
 
-    # ==========================================
     # 3. Right Panel: [ SYSTEM.INFO ]
-    # ==========================================
     svg.append(f'  <!-- Right Panel: SYSTEM.INFO -->')
-    svg.append(f'  <rect x="340" y="52" width="582" height="382" rx="8" fill="{card_bg}" stroke="{border_color}" stroke-width="1" />')
+    svg.append(f'  <rect x="340" y="52" width="582" height="388" rx="8" fill="{card_bg}" stroke="{border_color}" stroke-width="1" />')
     svg.append(f'  <rect x="340" y="52" width="582" height="26" rx="8" fill="{header_bar}" />')
     svg.append(f'  <path d="M340 66 L340 78 L922 78 L922 66 Z" fill="{header_bar}" />')
     svg.append(f'  <line x1="340" y1="78" x2="922" y2="78" stroke="{border_color}" stroke-width="1" />')
@@ -337,20 +335,20 @@ def generate_svg(theme="dark", profile_data=None):
         ("ToolChain", profile_data["tools"])
     ]
 
-    cur_y = 102
+    cur_y = 96
     for label, val in info_fields_top:
         svg.append(f'  <g transform="translate(356, {cur_y})">')
-        svg.append(f'    <text x="0" y="0" fill="{text_secondary}" font-size="11.5" font-weight="600">{clean_text(label)}</text>')
+        svg.append(f'    <text x="0" y="0" fill="{text_secondary}" font-size="11" font-weight="600">{clean_text(label)}</text>')
         svg.append(f'    <text x="85" y="0" fill="{border_color}" font-size="11" letter-spacing="2">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</text>')
         val_color = accent_emerald if label in ["Status"] else (chrome_color if label in ["Subject", "Role"] else text_primary)
         val_weight = "700" if label in ["Subject", "Status"] else "500"
-        svg.append(f'    <text x="550" y="0" fill="{val_color}" font-size="11.5" font-weight="{val_weight}" text-anchor="end">{clean_text(val)}</text>')
+        svg.append(f'    <text x="550" y="0" fill="{val_color}" font-size="11" font-weight="{val_weight}" text-anchor="end">{clean_text(val)}</text>')
         svg.append(f'  </g>')
-        cur_y += 24
+        cur_y += 21
 
     # Divider
-    svg.append(f'  <line x1="356" y1="{cur_y + 2}" x2="906" y2="{cur_y + 2}" stroke="{border_color}" stroke-width="1" stroke-dasharray="3 3" />')
-    cur_y += 22
+    svg.append(f'  <line x1="356" y1="{cur_y + 1}" x2="906" y2="{cur_y + 1}" stroke="{border_color}" stroke-width="1" stroke-dasharray="3 3" />')
+    cur_y += 18
 
     # Core Stacks Block
     info_fields_core = [
@@ -363,15 +361,15 @@ def generate_svg(theme="dark", profile_data=None):
 
     for label, val in info_fields_core:
         svg.append(f'  <g transform="translate(356, {cur_y})">')
-        svg.append(f'    <text x="0" y="0" fill="{text_secondary}" font-size="11" font-weight="600">{clean_text(label)}</text>')
+        svg.append(f'    <text x="0" y="0" fill="{text_secondary}" font-size="10.5" font-weight="600">{clean_text(label)}</text>')
         svg.append(f'    <text x="100" y="0" fill="{border_color}" font-size="11" letter-spacing="2">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</text>')
-        svg.append(f'    <text x="550" y="0" fill="{chrome_color}" font-size="11" font-weight="500" text-anchor="end">{clean_text(val)}</text>')
+        svg.append(f'    <text x="550" y="0" fill="{chrome_color}" font-size="10.5" font-weight="500" text-anchor="end">{clean_text(val)}</text>')
         svg.append(f'  </g>')
-        cur_y += 22
+        cur_y += 19
 
     # Divider
-    svg.append(f'  <line x1="356" y1="{cur_y + 2}" x2="906" y2="{cur_y + 2}" stroke="{border_color}" stroke-width="1" stroke-dasharray="3 3" />')
-    cur_y += 22
+    svg.append(f'  <line x1="356" y1="{cur_y + 1}" x2="906" y2="{cur_y + 1}" stroke="{border_color}" stroke-width="1" stroke-dasharray="3 3" />')
+    cur_y += 18
 
     # Grid Links Block
     grid_fields = [
@@ -383,12 +381,13 @@ def generate_svg(theme="dark", profile_data=None):
 
     for label, val in grid_fields:
         svg.append(f'  <g transform="translate(356, {cur_y})">')
-        svg.append(f'    <text x="0" y="0" fill="{text_secondary}" font-size="10.5" font-weight="600">{clean_text(label)}</text>')
+        svg.append(f'    <text x="0" y="0" fill="{text_secondary}" font-size="10" font-weight="600">{clean_text(label)}</text>')
         svg.append(f'    <text x="95" y="0" fill="{border_color}" font-size="11" letter-spacing="2">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</text>')
         val_color = accent_purple if "GitHub" in label else (accent_emerald if "Portfolio" in label else text_primary)
-        svg.append(f'    <text x="550" y="0" fill="{val_color}" font-size="10.5" font-weight="500" text-anchor="end">{clean_text(val)}</text>')
+        svg.append(f'    <text x="550" y="0" fill="{val_color}" font-size="10" font-weight="500" text-anchor="end">{clean_text(val)}</text>')
         svg.append(f'  </g>')
-        cur_y += 20
+        cur_y += 18
+
 
     svg.append('</svg>')
     return "\n".join(svg)
