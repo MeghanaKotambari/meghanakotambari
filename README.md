@@ -301,17 +301,22 @@ $ sys.telemetry --active-context
       </p>
     </td>
     <td width="50%" valign="top">
-      <h4>🏨 04 / IIIT-Dharwad Sleep-Pod Booking Platform</h4>
-      <p>Production sleep-pod reservation system engineered for high availability and frictionless user booking flows during incubation at IIIT-Dharwad Research Park.</p>
+      <h4>🍲 04 / Ruchio — Food Discovery Mobile App</h4>
+      <p>
+        <img src="https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React Native" />
+        <img src="https://img.shields.io/badge/Mobile_App-0891B2?style=flat-square&logo=android&logoColor=white" alt="Mobile App" />
+      </p>
+      <p>A modern food discovery mobile application designed to help users explore food options through an engaging, intuitive, and mobile-first experience.</p>
       <ul>
-        <li>Integrated Razorpay payment processing and dynamic inventory slot allocation.</li>
-        <li>Deployed robust AWS cloud microservices ensuring high backend reliability.</li>
+        <li>Engineered dynamic culinary exploration feeds, filter algorithms, and item details.</li>
+        <li>Built responsive, cross-platform UI components with fluid native animations.</li>
       </ul>
       <p>
-        <code>React</code> · <code>Node.js</code> · <code>AWS</code> · <code>Razorpay</code> · <code>Express</code>
+        <code>React Native</code> · <code>JavaScript</code> · <code>Redux Toolkit</code> · <code>REST APIs</code> · <code>Mobile UI/UX</code>
       </p>
       <p>
-        <a href="https://github.com/meghanakotambari"><b>Production Telemetry ↗</b></a>
+        <a href="https://github.com/meghanakotambari"><b>Explore App ↗</b></a> &nbsp;|&nbsp; 
+        <a href="https://github.com/meghanakotambari"><b>Repository ↗</b></a>
       </p>
     </td>
   </tr>
