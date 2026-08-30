@@ -119,68 +119,64 @@ $ sys.telemetry --active-context
 ---
 
 <!-- ================================================================= -->
-<!-- SECTION 5: CAPABILITY MATRIX // 5-BOX MODERN TECH STACK          -->
+<!-- SECTION 5: CAPABILITY MATRIX // TECH STACK                      -->
 <!-- ================================================================= -->
 
 ### 🛠️ `TECH_STACK // CAPABILITY_MATRIX`
 
 <table>
   <tr>
-    <td width="33%" valign="top">
-      <h4>💻 Languages</h4>
-      <p>
-        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" /><br/>
-        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" /><br/>
-        <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" /><br/>
-        <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
-      </p>
-    </td>
-    <td width="33%" valign="top">
-      <h4>🎨 Frontend & Mobile</h4>
-      <p>
-        <img src="https://img.shields.io/badge/React.js-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" /><br/>
-        <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" /><br/>
-        <img src="https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React Native" /><br/>
-        <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind" /><br/>
-        <img src="https://img.shields.io/badge/Shadcn_UI-000000?style=flat-square&logo=shadcnui&logoColor=white" alt="Shadcn" /><br/>
-        <img src="https://img.shields.io/badge/Redux_Toolkit-764ABC?style=flat-square&logo=redux&logoColor=white" alt="Redux" /><br/>
-        <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white" alt="Framer Motion" />
-      </p>
-    </td>
-    <td width="34%" valign="top">
-      <h4>⚙️ Backend & Systems</h4>
-      <p>
-        <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" /><br/>
-        <img src="https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white" alt="Express" /><br/>
-        <img src="https://img.shields.io/badge/RESTful_APIs-0891B2?style=flat-square&logo=fastapi&logoColor=white" alt="REST" /><br/>
-        <img src="https://img.shields.io/badge/JWT_Auth-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" alt="JWT" /><br/>
-        <img src="https://img.shields.io/badge/RBAC-10B981?style=flat-square&logo=auth0&logoColor=white" alt="RBAC" /><br/>
-        <img src="https://img.shields.io/badge/AI_Integration-8A2BE2?style=flat-square&logo=openai&logoColor=white" alt="AI Integration" />
-      </p>
+    <td width="24%" align="right"><b>💻 Languages</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+      <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+      <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
+      <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
     </td>
   </tr>
   <tr>
-    <td width="50%" valign="top" colspan="2">
-      <h4>🗄️ Databases & Cloud</h4>
-      <p>
-        <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB" />
-        <img src="https://img.shields.io/badge/Mongoose-880000?style=flat-square&logo=mongoose&logoColor=white" alt="Mongoose" />
-        <img src="https://img.shields.io/badge/AWS_Cloud-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white" alt="AWS" />
-        <img src="https://img.shields.io/badge/Cloudinary-3448C5?style=flat-square&logo=cloudinary&logoColor=white" alt="Cloudinary" />
-      </p>
+    <td width="24%" align="right"><b>🎨 Frontend & Mobile</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/React.js-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
+      <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" />
+      <img src="https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React Native" />
+      <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind" />
+      <img src="https://img.shields.io/badge/Shadcn_UI-000000?style=flat-square&logo=shadcnui&logoColor=white" alt="Shadcn" />
+      <img src="https://img.shields.io/badge/Redux_Toolkit-764ABC?style=flat-square&logo=redux&logoColor=white" alt="Redux" />
+      <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white" alt="Framer Motion" />
     </td>
-    <td width="50%" valign="top">
-      <h4>🛠️ Tools, Payments & DevOps</h4>
-      <p>
-        <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
-        <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
-        <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white" alt="Postman" /><br/>
-        <img src="https://img.shields.io/badge/Razorpay-0C2340?style=flat-square&logo=razorpay&logoColor=2B83EA" alt="Razorpay" />
-        <img src="https://img.shields.io/badge/Stripe-008CDD?style=flat-square&logo=stripe&logoColor=white" alt="Stripe" />
-        <img src="https://img.shields.io/badge/PWA-5A0FC8?style=flat-square&logo=pwa&logoColor=white" alt="PWA" /><br/>
-        <img src="https://img.shields.io/badge/CI/CD-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="CI/CD" />
-        <img src="https://img.shields.io/badge/Agile-555555?style=flat-square&logo=jira&logoColor=white" alt="Agile" />
-      </p>
+  </tr>
+  <tr>
+    <td width="24%" align="right"><b>⚙️ Backend & Systems</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
+      <img src="https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white" alt="Express" />
+      <img src="https://img.shields.io/badge/RESTful_APIs-0891B2?style=flat-square&logo=fastapi&logoColor=white" alt="REST" />
+      <img src="https://img.shields.io/badge/JWT_Auth-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" alt="JWT" />
+      <img src="https://img.shields.io/badge/RBAC-10B981?style=flat-square&logo=auth0&logoColor=white" alt="RBAC" />
+      <img src="https://img.shields.io/badge/AI_Integration-8A2BE2?style=flat-square&logo=openai&logoColor=white" alt="AI Integration" />
+    </td>
+  </tr>
+  <tr>
+    <td width="24%" align="right"><b>🗄️ Databases & Cloud</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB" />
+      <img src="https://img.shields.io/badge/Mongoose-880000?style=flat-square&logo=mongoose&logoColor=white" alt="Mongoose" />
+      <img src="https://img.shields.io/badge/AWS_Cloud-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white" alt="AWS" />
+      <img src="https://img.shields.io/badge/Cloudinary-3448C5?style=flat-square&logo=cloudinary&logoColor=white" alt="Cloudinary" />
+    </td>
+  </tr>
+  <tr>
+    <td width="24%" align="right"><b>🛠️ Tools & DevOps</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
+      <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
+      <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white" alt="Postman" />
+      <img src="https://img.shields.io/badge/Razorpay-0C2340?style=flat-square&logo=razorpay&logoColor=2B83EA" alt="Razorpay" />
+      <img src="https://img.shields.io/badge/Stripe-008CDD?style=flat-square&logo=stripe&logoColor=white" alt="Stripe" />
+      <img src="https://img.shields.io/badge/PWA-5A0FC8?style=flat-square&logo=pwa&logoColor=white" alt="PWA" />
+      <img src="https://img.shields.io/badge/CI/CD-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="CI/CD" />
+      <img src="https://img.shields.io/badge/Agile-555555?style=flat-square&logo=jira&logoColor=white" alt="Agile" />
     </td>
   </tr>
 </table>
@@ -195,74 +191,86 @@ $ sys.telemetry --active-context
 
 <table>
   <tr>
+    <!-- Project 01 -->
     <td width="50%" valign="top">
       <h4>🏢 01 / ERPGo — Multi-Tenant Educational ERP</h4>
-      <p>Comprehensive enterprise ERP platform engineered with 16 integrated modules spanning Academics, HR, Payroll, Finance, Exams, and Hostel management.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Multi--Tenant_SaaS-0891B2?style=flat-square" alt="SaaS" />
+        <img src="https://img.shields.io/badge/RBAC_&_JWT-10B981?style=flat-square" alt="RBAC" />
+      </p>
+      <p>Enterprise educational ERP platform engineered with 16 integrated modules spanning Academics, HR, Payroll, Finance, Exams, and Hostel operations.</p>
       <ul>
-        <li>Implemented strict tenant isolation, RBAC, and immutable audit logging.</li>
-        <li>Automated mission-critical workflows for fees, payroll calculations, and timetables.</li>
+        <li>Implemented strict tenant isolation, role-based access control, and immutable audit logging.</li>
+        <li>Engineered automated calculation pipelines for fee collections, payroll, and exam management.</li>
       </ul>
       <p>
-        <code>React.js</code> · <code>Node.js</code> · <code>Express.js</code> · <code>MongoDB</code> · <code>JWT</code> · <code>RBAC</code>
+        <code>React.js</code> · <code>Node.js</code> · <code>Express.js</code> · <code>MongoDB</code> · <code>JWT</code>
       </p>
       <p>
-        <a href="https://github.com/meghanakotambari"><b>Explore Architecture ↗</b></a> &nbsp;|&nbsp; 
-        <a href="https://github.com/meghanakotambari"><b>System Source ↗</b></a>
+        <a href="https://github.com/meghanakotambari"><b>Explore System ↗</b></a> &nbsp;|&nbsp; 
+        <a href="https://github.com/meghanakotambari"><b>Source Code ↗</b></a>
       </p>
     </td>
+    <!-- Project 02 -->
     <td width="50%" valign="top">
       <h4>🎯 02 / GrindLog — Placement Prep PWA Engine</h4>
       <p>
-        <img src="https://img.shields.io/badge/👥_2--User_Live_Sparring-10B981?style=flat-square" alt="2 Users" />
+        <img src="https://img.shields.io/badge/👥_2--User_Live_Sync-10B981?style=flat-square" alt="2 Users" />
         <img src="https://img.shields.io/badge/PWA_Offline_Ready-0891B2?style=flat-square" alt="PWA" />
       </p>
-      <p>Mobile-first installable Progressive Web App (PWA) tailored for structured DSA practice, aptitude roadmaps, day-wise coding tracker, and <b>2-user synchronized peer interview prep</b>.</p>
+      <p>Mobile-first installable Progressive Web App (PWA) tailored for structured DSA practice, aptitude roadmaps, and 2-user synchronized peer interview prep.</p>
       <ul>
-        <li>Engineered offline-capable caching with background sync service workers.</li>
-        <li>Built dynamic streak analytics, performance timelines, and topic radar stats.</li>
+        <li>Built 2-user live interview sparring mode with dynamic topic radar stats and analytics timelines.</li>
+        <li>Implemented offline-first service worker caching and background sync for uninterrupted preparation.</li>
       </ul>
       <p>
-        <code>MERN Stack</code> · <code>PWA</code> · <code>Tailwind CSS</code> · <code>2-User Sync</code>
+        <code>MERN Stack</code> · <code>PWA</code> · <code>Tailwind CSS</code> · <code>Service Workers</code>
       </p>
       <p>
         <a href="https://github.com/meghanakotambari"><b>Launch PWA Demo ↗</b></a> &nbsp;|&nbsp; 
-        <a href="https://github.com/meghanakotambari"><b>Repository ↗</b></a>
+        <a href="https://github.com/meghanakotambari"><b>Source Code ↗</b></a>
       </p>
     </td>
   </tr>
   <tr>
+    <!-- Project 03 -->
     <td width="50%" valign="top">
       <h4>🍔 03 / OrderMe — Restaurant & Food Hub</h4>
+      <p>
+        <img src="https://img.shields.io/badge/Food_Ordering_Hub-0891B2?style=flat-square" alt="Hub" />
+        <img src="https://img.shields.io/badge/Stripe_Payments-635BFF?style=flat-square&logo=stripe&logoColor=white" alt="Stripe" />
+      </p>
       <p>End-to-end food ordering and restaurant management platform with live state tracking, dynamic menu inventory, and dual Dine-in / Parcel flows.</p>
       <ul>
-        <li>Integrated Stripe payment gateway with cryptographic webhook validation.</li>
-        <li>Constructed real-time operational merchant dashboards and sales analytics.</li>
+        <li>Integrated Stripe payment gateway with cryptographic webhook validation and automated transactions.</li>
+        <li>Constructed real-time operational merchant dashboards, live order tracking, and sales analytics.</li>
       </ul>
       <p>
         <code>MERN Stack</code> · <code>Stripe</code> · <code>Cloudinary</code> · <code>JWT</code> · <code>REST</code>
       </p>
       <p>
-        <a href="https://github.com/meghanakotambari"><b>Live System ↗</b></a> &nbsp;|&nbsp; 
-        <a href="https://github.com/meghanakotambari"><b>Repository ↗</b></a>
+        <a href="https://github.com/meghanakotambari"><b>Live Platform ↗</b></a> &nbsp;|&nbsp; 
+        <a href="https://github.com/meghanakotambari"><b>Source Code ↗</b></a>
       </p>
     </td>
+    <!-- Project 04 -->
     <td width="50%" valign="top">
       <h4>🍲 04 / Ruchio — Food Discovery Mobile App</h4>
       <p>
         <img src="https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React Native" />
-        <img src="https://img.shields.io/badge/Mobile_App-0891B2?style=flat-square&logo=android&logoColor=white" alt="Mobile App" />
+        <img src="https://img.shields.io/badge/Mobile_Application-0891B2?style=flat-square&logo=android&logoColor=white" alt="Mobile App" />
       </p>
-      <p>A modern food discovery mobile application designed to help users explore food options through an engaging, intuitive, and mobile-first experience.</p>
+      <p>Modern cross-platform food discovery mobile application designed to help users explore culinary options through an engaging, intuitive UI.</p>
       <ul>
-        <li>Engineered dynamic culinary exploration feeds, filter algorithms, and item details.</li>
-        <li>Built responsive, cross-platform UI components with fluid native animations.</li>
+        <li>Engineered dynamic culinary exploration feeds, smart dish categorization, and personalized favorites.</li>
+        <li>Built responsive cross-platform mobile components with fluid native animations and offline caching.</li>
       </ul>
       <p>
-        <code>React Native</code> · <code>JavaScript</code> · <code>Redux Toolkit</code> · <code>REST APIs</code> · <code>Mobile UI/UX</code>
+        <code>React Native</code> · <code>JavaScript</code> · <code>Redux Toolkit</code> · <code>REST APIs</code>
       </p>
       <p>
         <a href="https://github.com/meghanakotambari"><b>Explore App ↗</b></a> &nbsp;|&nbsp; 
-        <a href="https://github.com/meghanakotambari"><b>Repository ↗</b></a>
+        <a href="https://github.com/meghanakotambari"><b>Source Code ↗</b></a>
       </p>
     </td>
   </tr>
