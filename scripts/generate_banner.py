@@ -368,9 +368,10 @@ def generate_svg(theme="dark", profile_data=None):
     cur_y += 20
 
     # Grid Block (4 fields, 20px line height)
+    port_display = profile_data["portfolio"].replace("https://", "").replace("http://", "").rstrip("/")
     grid_fields = [
         ("Grid.Mail", profile_data["email"]),
-        ("Grid.Portfolio", profile_data["portfolio"]),
+        ("Grid.Portfolio", port_display),
         ("Grid.LinkedIn", "linkedin.com/in/meghana-kotambari-58a4332b0"),
         ("Grid.GitHub", f"github.com/{profile_data['github']}")
     ]
