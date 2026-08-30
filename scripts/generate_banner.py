@@ -205,9 +205,9 @@ def generate_svg(theme="dark", profile_data=None):
     svg.append(f'    <text x="28" y="70" fill="{chrome_color}" font-size="11.5" font-weight="700" letter-spacing="1">[ TECH.STACK ]</text>')
     svg.append(f'    <text x="{18+left_w-10}" y="70" fill="{text_secondary}" font-size="9" font-weight="600" text-anchor="end" letter-spacing="0.5">RADAR.MATRIX // 240 FPS</text>')
 
-    # Inside Visual Tech Matrix Area (Enlarged Center)
+    # Inside Visual Tech Matrix Area (Centered vertically with balanced margins)
     svg.append(f'    <g clip-path="url(#tech-clip)">')
-    cx, cy = 198, 226
+    cx, cy = 198, 250
 
     # Top Status labels under header
     svg.append(f'      <path d="M26 86 L32 86 M26 86 L26 92" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
