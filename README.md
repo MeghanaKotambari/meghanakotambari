@@ -62,7 +62,7 @@ $ sys.telemetry --active-context
 ### 💼 `EXPERIENCE // 4_INDUSTRIAL_INTERNSHIPS`
 
 <details open>
-<summary><b>🏢 01 / Full Stack Developer Intern — IIIT Dharwad Research Park</b> &nbsp; <code>July 2026 – Present</code></button></summary>
+<summary><b>🏢 01 / Full Stack Developer Intern — IIIT Dharwad Research Park</b> &nbsp; <code>July 2026 – Present</code></summary>
 <br/>
 
 > 📍 **Location:** Dharwad, India *(Hybrid)* &nbsp;|&nbsp; 🏷️ **Domain:** Sleep-Pod Booking Platform & Cloud Infrastructure
@@ -74,7 +74,7 @@ $ sys.telemetry --active-context
 
 </details>
 
-<br/>
+<hr style="border: 0; border-top: 1px solid #1E293B; margin: 18px 0;" />
 
 <details open>
 <summary><b>🤖 02 / Backend Developer Intern — Yumaris Agency</b> &nbsp; <code>Mar 2026 – Sep 2026</code></summary>
@@ -89,7 +89,7 @@ $ sys.telemetry --active-context
 
 </details>
 
-<br/>
+<hr style="border: 0; border-top: 1px solid #1E293B; margin: 18px 0;" />
 
 <details open>
 <summary><b>📱 03 / React Native Developer Intern — ARMB</b> &nbsp; <code>Mar 2026 – Sep 2026</code></summary>
@@ -105,7 +105,7 @@ $ sys.telemetry --active-context
 
 </details>
 
-<br/>
+<hr style="border: 0; border-top: 1px solid #1E293B; margin: 18px 0;" />
 
 <details open>
 <summary><b>🌐 04 / Full Stack Web Developer Intern — LettrBlack</b> &nbsp; <code>Sep 2025 – Feb 2026</code></summary>

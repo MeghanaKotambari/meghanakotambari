@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 """
 Futuristic 3D Quantum Hologram & Tech Morph Hero Generator for Meghana Kotambari
-Theme: term://meghana.os/profile.sh --live
-Replaces avatar with an interactive 3D Holographic Quantum Matrix & Tech Particle Engine
+Features:
+- Dual Gyroscopic 3D Orbital Rings + Glowing Satellite Beacons
+- 360-degree Sweeping Radar Scanner Line
+- Multi-Tech Particle Morphing Engine (Core -> React -> Node -> TS -> Core)
+- Interactive CSS Hover Glows on Panels & Telemetry Rows
+- Generous Safe Margins inside the box frame
 """
 
 import json
@@ -23,14 +27,12 @@ def generate_logo_points(logo_type, num_points=750, width=280, height=300, offse
     points = []
     
     if logo_type == "core":
-        # 3D Quantum Octahedron / Diamond Wireframe Point Cloud
-        # 6 Vertices + dense edge points + inner core
+        # 3D Quantum Diamond Wireframe Matrix
         vertices = [
             (0, -95, 0), (0, 95, 0),
             (75, 0, 0), (-75, 0, 0),
             (0, 0, 75), (0, 0, -75)
         ]
-        # Edges between vertices
         edges = [
             (0, 2), (0, 3), (0, 4), (0, 5),
             (1, 2), (1, 3), (1, 4), (1, 5),
@@ -41,16 +43,13 @@ def generate_logo_points(logo_type, num_points=750, width=280, height=300, offse
             v1, v2 = vertices[u], vertices[v]
             for i in range(points_per_edge):
                 t = i / float(points_per_edge)
-                # 3D coordinates
                 px = v1[0] + t * (v2[0] - v1[0])
                 py = v1[1] + t * (v2[1] - v1[1])
                 pz = v1[2] + t * (v2[2] - v1[2])
-                # Isometric projection
                 iso_x = cx + (px - pz) * math.cos(math.pi / 6) * 0.85
                 iso_y = cy + py * 0.85 + (px + pz) * math.sin(math.pi / 6) * 0.45
                 points.append((iso_x, iso_y))
                 
-        # Glowing nucleus core
         n_nucleus = num_points - len(points)
         for i in range(n_nucleus):
             r = math.sqrt(random.random()) * 22
@@ -58,7 +57,6 @@ def generate_logo_points(logo_type, num_points=750, width=280, height=300, offse
             points.append((cx + r * math.cos(th), cy + r * math.sin(th)))
 
     elif logo_type == "react":
-        # React Logo: Nucleus + 3 Rotated Ellipses
         n_nucleus = int(num_points * 0.18)
         for i in range(n_nucleus):
             r = math.sqrt(random.random()) * 18
@@ -78,7 +76,6 @@ def generate_logo_points(logo_type, num_points=750, width=280, height=300, offse
                 points.append((cx + rx, cy + ry))
                 
     elif logo_type == "nodejs":
-        # Node.js Hexagon + Structure
         radius = 92
         n_hex = int(num_points * 0.55)
         for i in range(n_hex):
@@ -86,9 +83,8 @@ def generate_logo_points(logo_type, num_points=750, width=280, height=300, offse
             t = random.random()
             a1 = side * math.pi / 3 - math.pi / 6
             a2 = (side + 1) * math.pi / 3 - math.pi / 6
-            x1, y1 = cx + radius * math.cos(a1), cy + radius * math.sin(a1)
-            x2, y2 = cx + radius * math.cos(a2), cy + radius * math.sin(a2)
-            points.append((x1 + t * (x2 - x1), y1 + t * (y2 - y1)))
+            points.append((cx + radius * math.cos(a1) + t * (radius * math.cos(a2) - radius * math.cos(a1)),
+                           cy + radius * math.sin(a1) + t * (radius * math.sin(a2) - radius * math.sin(a1))))
             
         n_inner = num_points - len(points)
         for i in range(n_inner):
@@ -101,7 +97,6 @@ def generate_logo_points(logo_type, num_points=750, width=280, height=300, offse
                 points.append((cx - 38 + random.random() * 76, cy - 48 + random.random() * 96))
 
     elif logo_type == "typescript":
-        # TypeScript Badge & TS Glyphs
         s = 82
         badge_points = int(num_points * 0.45)
         for i in range(badge_points):
@@ -212,6 +207,12 @@ def generate_svg(theme="dark", profile_data=None):
     svg.append(f'    <filter id="glow-cyan" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="blur" /><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>')
     svg.append(f'    <filter id="glow-emerald" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2" result="blur" /><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>')
     svg.append('    <clipPath id="hologram-clip"><rect x="20" y="55" width="306" height="370" rx="8" /></clipPath>')
+    svg.append('    <style>')
+    svg.append('      .panel-box { transition: filter 0.3s ease, transform 0.3s ease; }')
+    svg.append('      .panel-box:hover { filter: drop-shadow(0 0 16px rgba(34, 211, 238, 0.4)); }')
+    svg.append('      .info-row { cursor: default; transition: opacity 0.2s ease; }')
+    svg.append('      .info-row:hover text { fill: #22D3EE !important; font-weight: 700; }')
+    svg.append('    </style>')
     svg.append('  </defs>')
 
     # Master Window Frame
@@ -245,49 +246,70 @@ def generate_svg(theme="dark", profile_data=None):
     svg.append(f'  </g>')
 
     # ==========================================
-    # 2. Left Panel: [ VISUAL.MAP ]
+    # 2. Left Panel: [ VISUAL.MAP ] (Quantum Radar & Gyroscope Core)
     # ==========================================
     svg.append(f'  <!-- Left Panel: VISUAL.MAP -->')
-    svg.append(f'  <rect x="18" y="52" width="310" height="404" rx="8" fill="{card_bg}" stroke="{border_color}" stroke-width="1" />')
-    svg.append(f'  <rect x="18" y="52" width="310" height="26" rx="8" fill="{header_bar}" />')
-    svg.append(f'  <path d="M18 66 L18 78 L328 78 L328 66 Z" fill="{header_bar}" />')
-    svg.append(f'  <line x1="18" y1="78" x2="328" y2="78" stroke="{border_color}" stroke-width="1" />')
-    svg.append(f'  <text x="28" y="70" fill="{chrome_color}" font-size="11.5" font-weight="700" letter-spacing="1">[ VISUAL.MAP ]</text>')
-    svg.append(f'  <text x="318" y="70" fill="{text_secondary}" font-size="9.5" font-weight="600" text-anchor="end">300x340 // DITHER.FS</text>')
+    svg.append(f'  <g class="panel-box">')
+    svg.append(f'    <rect x="18" y="52" width="310" height="404" rx="8" fill="{card_bg}" stroke="{border_color}" stroke-width="1" />')
+    svg.append(f'    <rect x="18" y="52" width="310" height="26" rx="8" fill="{header_bar}" />')
+    svg.append(f'    <path d="M18 66 L18 78 L328 78 L328 66 Z" fill="{header_bar}" />')
+    svg.append(f'    <line x1="18" y1="78" x2="328" y2="78" stroke="{border_color}" stroke-width="1" />')
+    svg.append(f'    <text x="28" y="70" fill="{chrome_color}" font-size="11.5" font-weight="700" letter-spacing="1">[ VISUAL.MAP ]</text>')
+    svg.append(f'    <text x="318" y="70" fill="{text_secondary}" font-size="9.5" font-weight="600" text-anchor="end">RADAR.GYRO // 240 FPS</text>')
 
     # Background HUD Radar Grid & Technical Reticles
-    svg.append(f'  <g clip-path="url(#hologram-clip)">')
+    svg.append(f'    <g clip-path="url(#hologram-clip)">')
     cx, cy = 173, 230
+    
+    # 360-degree Sweeping Radar Scanner Line
+    svg.append(f'      <g transform="translate({cx}, {cy})">')
+    svg.append(f'        <line x1="0" y1="0" x2="0" y2="-120" stroke="{chrome_color}" stroke-width="1.8" opacity="0.6" filter="url(#glow-cyan)">')
+    svg.append(f'          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite" />')
+    svg.append(f'        </line>')
+    svg.append(f'      </g>')
+
     # Radar concentric circles
-    svg.append(f'    <circle cx="{cx}" cy="{cy}" r="120" stroke="{border_color}" stroke-width="1" stroke-dasharray="4 4" fill="none" opacity="0.4" />')
-    svg.append(f'    <circle cx="{cx}" cy="{cy}" r="80" stroke="{border_color}" stroke-width="1" stroke-dasharray="2 4" fill="none" opacity="0.5" />')
-    svg.append(f'    <circle cx="{cx}" cy="{cy}" r="40" stroke="{border_color}" stroke-width="1" fill="none" opacity="0.3" />')
+    svg.append(f'      <circle cx="{cx}" cy="{cy}" r="120" stroke="{border_color}" stroke-width="1" stroke-dasharray="4 4" fill="none" opacity="0.4" />')
+    svg.append(f'      <circle cx="{cx}" cy="{cy}" r="80" stroke="{border_color}" stroke-width="1" stroke-dasharray="2 4" fill="none" opacity="0.5" />')
+    svg.append(f'      <circle cx="{cx}" cy="{cy}" r="40" stroke="{border_color}" stroke-width="1" fill="none" opacity="0.3" />')
+    
     # Crosshair axes
-    svg.append(f'    <line x1="{cx-125}" y1="{cy}" x2="{cx+125}" y2="{cy}" stroke="{border_color}" stroke-width="0.8" stroke-dasharray="2 4" opacity="0.4" />')
-    svg.append(f'    <line x1="{cx}" y1="{cy-125}" x2="{cx}" y2="{cy+125}" stroke="{border_color}" stroke-width="0.8" stroke-dasharray="2 4" opacity="0.4" />')
-    # Corner HUD crosshairs
-    svg.append(f'    <path d="M26 86 L34 86 M26 86 L26 94" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
-    svg.append(f'    <path d="M320 86 L312 86 M320 86 L320 94" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
-    svg.append(f'    <path d="M26 420 L34 420 M26 420 L26 412" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
-    svg.append(f'    <path d="M320 420 L312 420 M320 420 L320 412" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
+    svg.append(f'      <line x1="{cx-125}" y1="{cy}" x2="{cx+125}" y2="{cy}" stroke="{border_color}" stroke-width="0.8" stroke-dasharray="2 4" opacity="0.4" />')
+    svg.append(f'      <line x1="{cx}" y1="{cy-125}" x2="{cx}" y2="{cy+125}" stroke="{border_color}" stroke-width="0.8" stroke-dasharray="2 4" opacity="0.4" />')
+    
+    # Dual Rotating 3D Gyroscopic Rings
+    svg.append(f'      <ellipse cx="{cx}" cy="{cy}" rx="100" ry="38" stroke="{chrome_secondary}" stroke-width="1.2" fill="none" opacity="0.5">')
+    svg.append(f'        <animateTransform attributeName="transform" type="rotate" from="0 {cx} {cy}" to="360 {cx} {cy}" dur="12s" repeatCount="indefinite" />')
+    svg.append(f'      </ellipse>')
+    svg.append(f'      <ellipse cx="{cx}" cy="{cy}" rx="100" ry="38" stroke="{accent_purple}" stroke-width="1.2" fill="none" opacity="0.5">')
+    svg.append(f'        <animateTransform attributeName="transform" type="rotate" from="60 {cx} {cy}" to="420 {cx} {cy}" dur="10s" repeatCount="indefinite" />')
+    svg.append(f'      </ellipse>')
+
+    # Corner HUD crosshairs & telemetry locks
+    svg.append(f'      <path d="M26 86 L34 86 M26 86 L26 94" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
+    svg.append(f'      <path d="M320 86 L312 86 M320 86 L320 94" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
+    svg.append(f'      <path d="M26 420 L34 420 M26 420 L26 412" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
+    svg.append(f'      <path d="M320 420 L312 420 M320 420 L320 412" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
+    svg.append(f'      <text x="32" y="98" fill="{text_secondary}" font-size="8" font-family="monospace">TRK: 0x88F2 // LOCK_OK</text>')
+    svg.append(f'      <text x="312" y="98" fill="{accent_emerald}" font-size="8" font-family="monospace" text-anchor="end">LIVE_SYNC</text>')
 
     # Animated Holographic 3D Rotating Octahedron Wireframe Lines (Layer 1)
-    svg.append(f'    <g stroke="{chrome_color}" stroke-width="1.8" fill="none" opacity="0.85" filter="url(#glow-cyan)">')
+    svg.append(f'      <g stroke="{chrome_color}" stroke-width="1.8" fill="none" opacity="0.85" filter="url(#glow-cyan)">')
     d1 = f"M{cx} {cy-95} L{cx+75} {cy} L{cx} {cy+95} L{cx-75} {cy} Z"
     d2 = f"M{cx} {cy-95} L{cx+30} {cy-25} L{cx} {cy+95} L{cx-30} {cy+25} Z"
     d3 = f"M{cx} {cy-95} L{cx-75} {cy} L{cx} {cy+95} L{cx+75} {cy} Z"
-    svg.append(f'      <path d="{d1}">')
-    svg.append(f'        <animate attributeName="d" values="{d1};{d2};{d3};{d2};{d1}" dur="8s" repeatCount="indefinite" />')
-    svg.append(f'        <animate attributeName="opacity" values="0.9;0.9;0;0;0;0;0;0.9;0.9" keyTimes="0;0.28;0.34;0.52;0.68;0.84;0.92;0.96;1" dur="14s" repeatCount="indefinite" />')
-    svg.append(f'      </path>')
+    svg.append(f'        <path d="{d1}">')
+    svg.append(f'          <animate attributeName="d" values="{d1};{d2};{d3};{d2};{d1}" dur="8s" repeatCount="indefinite" />')
+    svg.append(f'          <animate attributeName="opacity" values="0.9;0.9;0;0;0;0;0;0.9;0.9" keyTimes="0;0.28;0.34;0.52;0.68;0.84;0.92;0.96;1" dur="14s" repeatCount="indefinite" />')
+    svg.append(f'        </path>')
     
     # Internal Axis Cross
-    svg.append(f'      <line x1="{cx-75}" y1="{cy}" x2="{cx+75}" y2="{cy}" stroke="{accent_emerald}" stroke-width="1.2">')
-    svg.append(f'        <animate attributeName="x1" values="{cx-75};{cx-30};{cx+75};{cx+30};{cx-75}" dur="8s" repeatCount="indefinite" />')
-    svg.append(f'        <animate attributeName="x2" values="{cx+75};{cx+30};{cx-75};{cx-30};{cx+75}" dur="8s" repeatCount="indefinite" />')
-    svg.append(f'        <animate attributeName="opacity" values="0.8;0.8;0;0;0;0;0;0.8;0.8" keyTimes="0;0.28;0.34;0.52;0.68;0.84;0.92;0.96;1" dur="14s" repeatCount="indefinite" />')
-    svg.append(f'      </line>')
-    svg.append(f'    </g>')
+    svg.append(f'        <line x1="{cx-75}" y1="{cy}" x2="{cx+75}" y2="{cy}" stroke="{accent_emerald}" stroke-width="1.2">')
+    svg.append(f'          <animate attributeName="x1" values="{cx-75};{cx-30};{cx+75};{cx+30};{cx-75}" dur="8s" repeatCount="indefinite" />')
+    svg.append(f'          <animate attributeName="x2" values="{cx+75};{cx+30};{cx-75};{cx-30};{cx+75}" dur="8s" repeatCount="indefinite" />')
+    svg.append(f'          <animate attributeName="opacity" values="0.8;0.8;0;0;0;0;0;0.8;0.8" keyTimes="0;0.28;0.34;0.52;0.68;0.84;0.92;0.96;1" dur="14s" repeatCount="indefinite" />')
+    svg.append(f'        </line>')
+    svg.append(f'      </g>')
 
     # 750 Hologram Morph Particles (Layer 2)
     for i in range(len(p_core)):
@@ -296,35 +318,37 @@ def generate_svg(theme="dark", profile_data=None):
         x2, y2 = round(p_node_matched[i][0], 1), round(p_node_matched[i][1], 1)
         x3, y3 = round(p_ts_matched[i][0], 1), round(p_ts_matched[i][1], 1)
         
-        svg.append(f'    <circle cx="{x0:g}" cy="{y0:g}" r="1.3" fill="{chrome_color}">')
+        svg.append(f'      <circle cx="{x0:g}" cy="{y0:g}" r="1.3" fill="{chrome_color}">')
         key_times = "0;0.28;0.38;0.52;0.58;0.70;0.76;0.88;0.94;1"
         cx_vals = f"{x0:g};{x0:g};{x1:g};{x1:g};{x2:g};{x2:g};{x3:g};{x3:g};{x0:g};{x0:g}"
         cy_vals = f"{y0:g};{y0:g};{y1:g};{y1:g};{y2:g};{y2:g};{y3:g};{y3:g};{y0:g};{y0:g}"
-        svg.append(f'      <animate attributeName="cx" values="{cx_vals}" keyTimes="{key_times}" dur="14s" repeatCount="indefinite" />')
-        svg.append(f'      <animate attributeName="cy" values="{cy_vals}" keyTimes="{key_times}" dur="14s" repeatCount="indefinite" />')
-        svg.append(f'      <animate attributeName="fill" values="{chrome_color};{chrome_color};{chrome_color};{chrome_color};{accent_emerald};{accent_emerald};{chrome_color};{chrome_color};{chrome_color};{chrome_color}" keyTimes="{key_times}" dur="14s" repeatCount="indefinite" />')
-        svg.append(f'      <animate attributeName="opacity" values="0.85;0.85;0.95;0.95;0.95;0.95;0.95;0.95;0.85;0.85" keyTimes="{key_times}" dur="14s" repeatCount="indefinite" />')
-        svg.append(f'    </circle>')
-    svg.append(f'  </g>')
+        svg.append(f'        <animate attributeName="cx" values="{cx_vals}" keyTimes="{key_times}" dur="14s" repeatCount="indefinite" />')
+        svg.append(f'        <animate attributeName="cy" values="{cy_vals}" keyTimes="{key_times}" dur="14s" repeatCount="indefinite" />')
+        svg.append(f'        <animate attributeName="fill" values="{chrome_color};{chrome_color};{chrome_color};{chrome_color};{accent_emerald};{accent_emerald};{chrome_color};{chrome_color};{chrome_color};{chrome_color}" keyTimes="{key_times}" dur="14s" repeatCount="indefinite" />')
+        svg.append(f'        <animate attributeName="opacity" values="0.85;0.85;0.95;0.95;0.95;0.95;0.95;0.95;0.85;0.85" keyTimes="{key_times}" dur="14s" repeatCount="indefinite" />')
+        svg.append(f'      </circle>')
+    svg.append(f'    </g>')
 
     # Bottom Mode Indicator Pill on Visual Map
-    svg.append(f'  <g transform="translate(28, 432)">')
-    svg.append(f'    <rect x="0" y="0" width="290" height="18" rx="4" fill="{header_bar}" stroke="{border_color}" stroke-width="1" />')
-    svg.append(f'    <rect x="0" y="0" width="46" height="18" rx="4" fill="{chrome_secondary}" />')
-    svg.append(f'    <text x="23" y="13" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">MODE</text>')
-    svg.append(f'    <text x="56" y="13" fill="{accent_emerald}" font-size="9" font-weight="600" letter-spacing="0.5">PARTICLE.MORPH [CORE &#8594; REACT &#8594; NODE &#8594; TS]</text>')
+    svg.append(f'    <g transform="translate(28, 432)">')
+    svg.append(f'      <rect x="0" y="0" width="290" height="18" rx="4" fill="{header_bar}" stroke="{border_color}" stroke-width="1" />')
+    svg.append(f'      <rect x="0" y="0" width="46" height="18" rx="4" fill="{chrome_secondary}" />')
+    svg.append(f'      <text x="23" y="13" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">MODE</text>')
+    svg.append(f'      <text x="56" y="13" fill="{accent_emerald}" font-size="9" font-weight="600" letter-spacing="0.5">PARTICLE.MORPH [CORE &#8594; REACT &#8594; NODE &#8594; TS]</text>')
+    svg.append(f'    </g>')
     svg.append(f'  </g>')
 
     # ==========================================
     # 3. Right Panel: [ SYSTEM.INFO ]
     # ==========================================
     svg.append(f'  <!-- Right Panel: SYSTEM.INFO -->')
-    svg.append(f'  <rect x="340" y="52" width="582" height="404" rx="8" fill="{card_bg}" stroke="{border_color}" stroke-width="1" />')
-    svg.append(f'  <rect x="340" y="52" width="582" height="26" rx="8" fill="{header_bar}" />')
-    svg.append(f'  <path d="M340 66 L340 78 L922 78 L922 66 Z" fill="{header_bar}" />')
-    svg.append(f'  <line x1="340" y1="78" x2="922" y2="78" stroke="{border_color}" stroke-width="1" />')
-    svg.append(f'  <text x="352" y="70" fill="{chrome_color}" font-size="11.5" font-weight="700" letter-spacing="1">[ SYSTEM.INFO ]</text>')
-    svg.append(f'  <text x="910" y="70" fill="{accent_emerald}" font-size="9.5" font-weight="600" text-anchor="end">STATUS: ACTIVE // 240 FPS</text>')
+    svg.append(f'  <g class="panel-box">')
+    svg.append(f'    <rect x="340" y="52" width="582" height="404" rx="8" fill="{card_bg}" stroke="{border_color}" stroke-width="1" />')
+    svg.append(f'    <rect x="340" y="52" width="582" height="26" rx="8" fill="{header_bar}" />')
+    svg.append(f'    <path d="M340 66 L340 78 L922 78 L922 66 Z" fill="{header_bar}" />')
+    svg.append(f'    <line x1="340" y1="78" x2="922" y2="78" stroke="{border_color}" stroke-width="1" />')
+    svg.append(f'    <text x="352" y="70" fill="{chrome_color}" font-size="11.5" font-weight="700" letter-spacing="1">[ SYSTEM.INFO ]</text>')
+    svg.append(f'    <text x="910" y="70" fill="{accent_emerald}" font-size="9.5" font-weight="600" text-anchor="end">STATUS: ACTIVE // 240 FPS</text>')
 
     info_fields_top = [
         ("Subject", profile_data["name"]),
@@ -336,17 +360,17 @@ def generate_svg(theme="dark", profile_data=None):
 
     cur_y = 96
     for label, val in info_fields_top:
-        svg.append(f'  <g transform="translate(356, {cur_y})">')
-        svg.append(f'    <text x="0" y="0" fill="{text_secondary}" font-size="11" font-weight="600">{clean_text(label)}</text>')
-        svg.append(f'    <text x="85" y="0" fill="{border_color}" font-size="11" letter-spacing="2">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</text>')
+        svg.append(f'    <g class="info-row" transform="translate(356, {cur_y})">')
+        svg.append(f'      <text x="0" y="0" fill="{text_secondary}" font-size="11" font-weight="600">{clean_text(label)}</text>')
+        svg.append(f'      <text x="85" y="0" fill="{border_color}" font-size="11" letter-spacing="2">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</text>')
         val_color = accent_emerald if label in ["Status"] else (chrome_color if label in ["Subject", "Role"] else text_primary)
         val_weight = "700" if label in ["Subject", "Status"] else "500"
-        svg.append(f'    <text x="550" y="0" fill="{val_color}" font-size="11" font-weight="{val_weight}" text-anchor="end">{clean_text(val)}</text>')
-        svg.append(f'  </g>')
+        svg.append(f'      <text x="550" y="0" fill="{val_color}" font-size="11" font-weight="{val_weight}" text-anchor="end">{clean_text(val)}</text>')
+        svg.append(f'    </g>')
         cur_y += 22
 
     # Divider
-    svg.append(f'  <line x1="356" y1="{cur_y + 1}" x2="906" y2="{cur_y + 1}" stroke="{border_color}" stroke-width="1" stroke-dasharray="3 3" />')
+    svg.append(f'    <line x1="356" y1="{cur_y + 1}" x2="906" y2="{cur_y + 1}" stroke="{border_color}" stroke-width="1" stroke-dasharray="3 3" />')
     cur_y += 18
 
     # Core Stacks Block
@@ -359,15 +383,15 @@ def generate_svg(theme="dark", profile_data=None):
     ]
 
     for label, val in info_fields_core:
-        svg.append(f'  <g transform="translate(356, {cur_y})">')
-        svg.append(f'    <text x="0" y="0" fill="{text_secondary}" font-size="10.5" font-weight="600">{clean_text(label)}</text>')
-        svg.append(f'    <text x="100" y="0" fill="{border_color}" font-size="11" letter-spacing="2">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</text>')
-        svg.append(f'    <text x="550" y="0" fill="{chrome_color}" font-size="10.5" font-weight="500" text-anchor="end">{clean_text(val)}</text>')
-        svg.append(f'  </g>')
+        svg.append(f'    <g class="info-row" transform="translate(356, {cur_y})">')
+        svg.append(f'      <text x="0" y="0" fill="{text_secondary}" font-size="10.5" font-weight="600">{clean_text(label)}</text>')
+        svg.append(f'      <text x="100" y="0" fill="{border_color}" font-size="11" letter-spacing="2">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</text>')
+        svg.append(f'      <text x="550" y="0" fill="{chrome_color}" font-size="10.5" font-weight="500" text-anchor="end">{clean_text(val)}</text>')
+        svg.append(f'    </g>')
         cur_y += 20
 
     # Divider
-    svg.append(f'  <line x1="356" y1="{cur_y + 1}" x2="906" y2="{cur_y + 1}" stroke="{border_color}" stroke-width="1" stroke-dasharray="3 3" />')
+    svg.append(f'    <line x1="356" y1="{cur_y + 1}" x2="906" y2="{cur_y + 1}" stroke="{border_color}" stroke-width="1" stroke-dasharray="3 3" />')
     cur_y += 18
 
     # Grid Links Block
@@ -379,14 +403,15 @@ def generate_svg(theme="dark", profile_data=None):
     ]
 
     for label, val in grid_fields:
-        svg.append(f'  <g transform="translate(356, {cur_y})">')
-        svg.append(f'    <text x="0" y="0" fill="{text_secondary}" font-size="10" font-weight="600">{clean_text(label)}</text>')
-        svg.append(f'    <text x="95" y="0" fill="{border_color}" font-size="11" letter-spacing="2">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</text>')
+        svg.append(f'    <g class="info-row" transform="translate(356, {cur_y})">')
+        svg.append(f'      <text x="0" y="0" fill="{text_secondary}" font-size="10" font-weight="600">{clean_text(label)}</text>')
+        svg.append(f'      <text x="95" y="0" fill="{border_color}" font-size="11" letter-spacing="2">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</text>')
         val_color = accent_purple if "GitHub" in label else (accent_emerald if "Portfolio" in label else text_primary)
-        svg.append(f'    <text x="550" y="0" fill="{val_color}" font-size="10" font-weight="500" text-anchor="end">{clean_text(val)}</text>')
-        svg.append(f'  </g>')
+        svg.append(f'      <text x="550" y="0" fill="{val_color}" font-size="10" font-weight="500" text-anchor="end">{clean_text(val)}</text>')
+        svg.append(f'    </g>')
         cur_y += 19
 
+    svg.append(f'  </g>')
 
     svg.append('</svg>')
     return "\n".join(svg)
@@ -399,12 +424,12 @@ if __name__ == "__main__":
     with open("data/profile_data.json", "r", encoding="utf-8") as f:
         pdata = json.load(f)
         
-    print("Generating dark.svg with 3D Holographic Core & Particle Morphs...")
+    print("Generating dark.svg with Quantum Radar & Gyroscope Core...")
     dark_svg = generate_svg(theme="dark", profile_data=pdata)
     with open("assets/dark.svg", "w", encoding="utf-8") as f:
         f.write(dark_svg)
         
-    print("Generating light.svg with 3D Holographic Core & Particle Morphs...")
+    print("Generating light.svg with Quantum Radar & Gyroscope Core...")
     light_svg = generate_svg(theme="light", profile_data=pdata)
     with open("assets/light.svg", "w", encoding="utf-8") as f:
         f.write(light_svg)
