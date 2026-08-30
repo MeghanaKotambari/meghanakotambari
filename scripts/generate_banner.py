@@ -1,158 +1,24 @@
 #!/usr/bin/env python3
 """
-Futuristic 3D Quantum Hologram & Tech Morph Hero Generator for Meghana Kotambari
+Futuristic Tech Stack Matrix Hero Generator for Meghana Kotambari
 Features:
-- Dual Gyroscopic 3D Orbital Rings + Glowing Satellite Beacons
-- 360-degree Sweeping Radar Scanner Line
-- Multi-Tech Particle Morphing Engine (Core -> React -> Node -> TS -> Core)
-- Interactive CSS Hover Glows on Panels & Telemetry Rows
-- Generous Safe Margins inside the box frame
+- [ TECH.STACK ] Live Matrix with 12 Connected Radial Technology Nodes
+- Center Core: FULL STACK DEVELOPER
+- Connected nodes: React, React Native, Node.js, Express.js, TypeScript, JavaScript, MongoDB, PostgreSQL, Tailwind CSS, Redux, AWS, Docker
+- Animated flowing data pulses along connection lines
+- Glowing nodes with subtle pulsing / floating animations
+- Terminal Status Bar: ● 12+ CORE TECHNOLOGIES    //    STACK: ACTIVE
+- Untouched [ SYSTEM.INFO ] right panel with generous padding
 """
 
 import json
 import math
 import os
-import random
 import html
-import numpy as np
 
 def clean_text(text):
     escaped = html.escape(str(text), quote=True)
     return escaped.replace("·", "&#183;").replace("—", "&#8212;").replace("➔", "&#8594;")
-
-
-def generate_logo_points(logo_type, num_points=750, width=280, height=300, offset_x=30, offset_y=65):
-    cx = offset_x + width / 2.0
-    cy = offset_y + height / 2.0
-    points = []
-    
-    if logo_type == "core":
-        # 3D Quantum Diamond Wireframe Matrix
-        vertices = [
-            (0, -95, 0), (0, 95, 0),
-            (75, 0, 0), (-75, 0, 0),
-            (0, 0, 75), (0, 0, -75)
-        ]
-        edges = [
-            (0, 2), (0, 3), (0, 4), (0, 5),
-            (1, 2), (1, 3), (1, 4), (1, 5),
-            (2, 4), (4, 3), (3, 5), (5, 2)
-        ]
-        points_per_edge = int(num_points * 0.7) // len(edges)
-        for u, v in edges:
-            v1, v2 = vertices[u], vertices[v]
-            for i in range(points_per_edge):
-                t = i / float(points_per_edge)
-                px = v1[0] + t * (v2[0] - v1[0])
-                py = v1[1] + t * (v2[1] - v1[1])
-                pz = v1[2] + t * (v2[2] - v1[2])
-                iso_x = cx + (px - pz) * math.cos(math.pi / 6) * 0.85
-                iso_y = cy + py * 0.85 + (px + pz) * math.sin(math.pi / 6) * 0.45
-                points.append((iso_x, iso_y))
-                
-        n_nucleus = num_points - len(points)
-        for i in range(n_nucleus):
-            r = math.sqrt(random.random()) * 22
-            th = random.random() * 2 * math.pi
-            points.append((cx + r * math.cos(th), cy + r * math.sin(th)))
-
-    elif logo_type == "react":
-        n_nucleus = int(num_points * 0.18)
-        for i in range(n_nucleus):
-            r = math.sqrt(random.random()) * 18
-            th = random.random() * 2 * math.pi
-            points.append((cx + r * math.cos(th), cy + r * math.sin(th)))
-            
-        n_ellipse = (num_points - len(points)) // 3
-        angles = [0, math.pi / 3, 2 * math.pi / 3]
-        a, b = 92, 34
-        for rot in angles:
-            for i in range(n_ellipse):
-                t = (2 * math.pi * i) / n_ellipse + (random.random() - 0.5) * 0.05
-                ex = a * math.cos(t)
-                ey = b * math.sin(t)
-                rx = ex * math.cos(rot) - ey * math.sin(rot)
-                ry = ex * math.sin(rot) + ey * math.cos(rot)
-                points.append((cx + rx, cy + ry))
-                
-    elif logo_type == "nodejs":
-        radius = 92
-        n_hex = int(num_points * 0.55)
-        for i in range(n_hex):
-            side = random.randint(0, 5)
-            t = random.random()
-            a1 = side * math.pi / 3 - math.pi / 6
-            a2 = (side + 1) * math.pi / 3 - math.pi / 6
-            points.append((cx + radius * math.cos(a1) + t * (radius * math.cos(a2) - radius * math.cos(a1)),
-                           cy + radius * math.sin(a1) + t * (radius * math.sin(a2) - radius * math.sin(a1))))
-            
-        n_inner = num_points - len(points)
-        for i in range(n_inner):
-            sub = random.random()
-            if sub < 0.33:
-                points.append((cx - 38, cy - 48 + random.random() * 96))
-            elif sub < 0.66:
-                points.append((cx + 38, cy - 48 + random.random() * 96))
-            else:
-                points.append((cx - 38 + random.random() * 76, cy - 48 + random.random() * 96))
-
-    elif logo_type == "typescript":
-        s = 82
-        badge_points = int(num_points * 0.45)
-        for i in range(badge_points):
-            side = random.randint(0, 3)
-            t = (random.random() - 0.5) * 2 * s
-            if side == 0:
-                points.append((cx + t, cy - s))
-            elif side == 1:
-                points.append((cx + s, cy + t))
-            elif side == 2:
-                points.append((cx + t, cy + s))
-            else:
-                points.append((cx - s, cy + t))
-                
-        n_t = int((num_points - len(points)) * 0.45)
-        for i in range(n_t):
-            if random.random() < 0.5:
-                points.append((cx - 62 + random.random() * 42, cy - 24))
-            else:
-                points.append((cx - 41, cy - 24 + random.random() * 62))
-                
-        n_s = num_points - len(points)
-        for i in range(n_s):
-            t = random.random()
-            if t < 0.25:
-                points.append((cx + 5 + random.random() * 34, cy - 24))
-            elif t < 0.5:
-                points.append((cx + 5, cy - 24 + random.random() * 30))
-            elif t < 0.75:
-                points.append((cx + 5 + random.random() * 34, cy + 6))
-            elif t < 0.9:
-                points.append((cx + 39, cy + 6 + random.random() * 30))
-            else:
-                points.append((cx + 5 + random.random() * 34, cy + 36))
-
-    while len(points) < num_points:
-        points.append((cx + (random.random() - 0.5) * 60, cy + (random.random() - 0.5) * 60))
-    return points[:num_points]
-
-
-def match_points_nearest(source_pts, target_pts):
-    unassigned = list(range(len(target_pts)))
-    target_arr = np.array(target_pts)
-    matched_target = []
-    
-    for sx, sy in source_pts:
-        if not unassigned:
-            break
-        remaining_targets = target_arr[unassigned]
-        dists = np.sum((remaining_targets - np.array([sx, sy])) ** 2, axis=1)
-        best_idx_in_remaining = np.argmin(dists)
-        best_target_idx = unassigned[best_idx_in_remaining]
-        matched_target.append(target_pts[best_target_idx])
-        unassigned.pop(best_idx_in_remaining)
-        
-    return matched_target
 
 
 def generate_svg(theme="dark", profile_data=None):
@@ -175,6 +41,9 @@ def generate_svg(theme="dark", profile_data=None):
         grid_dot = "#1E293B"
         header_bar = "#0F172A"
         pill_bg = "#0F172A"
+        node_bg = "#0B1528"
+        node_stroke = "#1E3A5F"
+        center_bg = "#091B33"
     else:
         bg_color = "#F8FAFC"
         card_bg = "#FFFFFF"
@@ -188,28 +57,25 @@ def generate_svg(theme="dark", profile_data=None):
         grid_dot = "#CBD5E1"
         header_bar = "#E2E8F0"
         pill_bg = "#FFFFFF"
-
-    # Compute Hologram Particles (750 Points)
-    p_core = generate_logo_points("core", num_points=750)
-    p_react = generate_logo_points("react", num_points=750)
-    p_node = generate_logo_points("nodejs", num_points=750)
-    p_ts = generate_logo_points("typescript", num_points=750)
-    
-    p_react_matched = match_points_nearest(p_core, p_react)
-    p_node_matched = match_points_nearest(p_react_matched, p_node)
-    p_ts_matched = match_points_nearest(p_node_matched, p_ts)
-    p_return_matched = match_points_nearest(p_ts_matched, p_core)
+        node_bg = "#F1F5F9"
+        node_stroke = "#CBD5E1"
+        center_bg = "#E0F2FE"
 
     svg = []
     svg.append('<?xml version="1.0" encoding="UTF-8"?>')
     svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 470" width="100%" height="100%" style="background-color: {bg_color}; border-radius: 12px; font-family: -apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, \'JetBrains Mono\', monospace;">')
     svg.append('  <defs>')
-    svg.append(f'    <filter id="glow-cyan" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="blur" /><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>')
+    svg.append(f'    <filter id="glow-cyan" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.5" result="blur" /><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>')
     svg.append(f'    <filter id="glow-emerald" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2" result="blur" /><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>')
-    svg.append('    <clipPath id="hologram-clip"><rect x="20" y="55" width="306" height="370" rx="8" /></clipPath>')
+    svg.append('    <clipPath id="tech-clip"><rect x="20" y="55" width="306" height="370" rx="8" /></clipPath>')
     svg.append('    <style>')
-    svg.append('      .panel-box { transition: filter 0.3s ease, transform 0.3s ease; }')
-    svg.append('      .panel-box:hover { filter: drop-shadow(0 0 16px rgba(34, 211, 238, 0.4)); }')
+    svg.append('      @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }')
+    svg.append('      .tech-node { transition: transform 0.25s ease, filter 0.25s ease; cursor: default; }')
+    svg.append('      .tech-node:hover { transform: scale(1.08); filter: drop-shadow(0 0 8px #22D3EE); }')
+    svg.append('      .tech-node:hover rect { stroke: #22D3EE !important; fill: #0F223D !important; }')
+    svg.append('      .tech-node:hover text { fill: #22D3EE !important; font-weight: 700; }')
+    svg.append('      .panel-box { transition: filter 0.3s ease; }')
+    svg.append('      .panel-box:hover { filter: drop-shadow(0 0 16px rgba(34, 211, 238, 0.35)); }')
     svg.append('      .info-row { cursor: default; transition: opacity 0.2s ease; }')
     svg.append('      .info-row:hover text { fill: #22D3EE !important; font-weight: 700; }')
     svg.append('    </style>')
@@ -245,102 +111,131 @@ def generate_svg(theme="dark", profile_data=None):
     svg.append(f'    <text x="10" y="4.5" fill="{accent_emerald}" font-size="11.5" font-weight="700" letter-spacing="1">LIVE</text>')
     svg.append(f'  </g>')
 
-    # ==========================================
-    # 2. Left Panel: [ VISUAL.MAP ] (Quantum Radar & Gyroscope Core)
-    # ==========================================
-    svg.append(f'  <!-- Left Panel: VISUAL.MAP -->')
+    # =========================================================================
+    # 2. Left Panel: [ TECH.STACK ] (Interactive Developer Tech Matrix)
+    # =========================================================================
+    svg.append(f'  <!-- Left Panel: TECH.STACK -->')
     svg.append(f'  <g class="panel-box">')
     svg.append(f'    <rect x="18" y="52" width="310" height="404" rx="8" fill="{card_bg}" stroke="{border_color}" stroke-width="1" />')
     svg.append(f'    <rect x="18" y="52" width="310" height="26" rx="8" fill="{header_bar}" />')
     svg.append(f'    <path d="M18 66 L18 78 L328 78 L328 66 Z" fill="{header_bar}" />')
     svg.append(f'    <line x1="18" y1="78" x2="328" y2="78" stroke="{border_color}" stroke-width="1" />')
-    svg.append(f'    <text x="28" y="70" fill="{chrome_color}" font-size="11.5" font-weight="700" letter-spacing="1">[ VISUAL.MAP ]</text>')
-    svg.append(f'    <text x="318" y="70" fill="{text_secondary}" font-size="9.5" font-weight="600" text-anchor="end">RADAR.GYRO // 240 FPS</text>')
-
-    # Background HUD Radar Grid & Technical Reticles
-    svg.append(f'    <g clip-path="url(#hologram-clip)">')
-    cx, cy = 173, 230
     
-    # 360-degree Sweeping Radar Scanner Line
-    svg.append(f'      <g transform="translate({cx}, {cy})">')
-    svg.append(f'        <line x1="0" y1="0" x2="0" y2="-120" stroke="{chrome_color}" stroke-width="1.8" opacity="0.6" filter="url(#glow-cyan)">')
-    svg.append(f'          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite" />')
-    svg.append(f'        </line>')
-    svg.append(f'      </g>')
-
-    # Radar concentric circles
-    svg.append(f'      <circle cx="{cx}" cy="{cy}" r="120" stroke="{border_color}" stroke-width="1" stroke-dasharray="4 4" fill="none" opacity="0.4" />')
-    svg.append(f'      <circle cx="{cx}" cy="{cy}" r="80" stroke="{border_color}" stroke-width="1" stroke-dasharray="2 4" fill="none" opacity="0.5" />')
-    svg.append(f'      <circle cx="{cx}" cy="{cy}" r="40" stroke="{border_color}" stroke-width="1" fill="none" opacity="0.3" />')
+    # Left Header: [ TECH.STACK ]
+    svg.append(f'    <text x="28" y="70" fill="{chrome_color}" font-size="11.5" font-weight="700" letter-spacing="1">[ TECH.STACK ]</text>')
     
-    # Crosshair axes
-    svg.append(f'      <line x1="{cx-125}" y1="{cy}" x2="{cx+125}" y2="{cy}" stroke="{border_color}" stroke-width="0.8" stroke-dasharray="2 4" opacity="0.4" />')
-    svg.append(f'      <line x1="{cx}" y1="{cy-125}" x2="{cx}" y2="{cy+125}" stroke="{border_color}" stroke-width="0.8" stroke-dasharray="2 4" opacity="0.4" />')
+    # Right Header: LIVE Indicator with dot
+    svg.append(f'    <circle cx="282" cy="65.5" r="3.5" fill="{accent_emerald}" filter="url(#glow-emerald)">')
+    svg.append(f'      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />')
+    svg.append(f'    </circle>')
+    svg.append(f'    <text x="318" y="70" fill="{accent_emerald}" font-size="10" font-weight="700" letter-spacing="1" text-anchor="end">LIVE</text>')
+
+    # Inside Visual Tech Matrix Area
+    svg.append(f'    <g clip-path="url(#tech-clip)">')
+    cx, cy = 173, 234
+
+    # Background Technical Grid & Radial Orbits
+    svg.append(f'      <circle cx="{cx}" cy="{cy}" r="126" stroke="{border_color}" stroke-width="1" stroke-dasharray="4 4" fill="none" opacity="0.3" />')
+    svg.append(f'      <circle cx="{cx}" cy="{cy}" r="88" stroke="{border_color}" stroke-width="1" stroke-dasharray="2 4" fill="none" opacity="0.4" />')
+    svg.append(f'      <circle cx="{cx}" cy="{cy}" r="52" stroke="{border_color}" stroke-width="1" fill="none" opacity="0.25" />')
     
-    # Dual Rotating 3D Gyroscopic Rings
-    svg.append(f'      <ellipse cx="{cx}" cy="{cy}" rx="100" ry="38" stroke="{chrome_secondary}" stroke-width="1.2" fill="none" opacity="0.5">')
-    svg.append(f'        <animateTransform attributeName="transform" type="rotate" from="0 {cx} {cy}" to="360 {cx} {cy}" dur="12s" repeatCount="indefinite" />')
-    svg.append(f'      </ellipse>')
-    svg.append(f'      <ellipse cx="{cx}" cy="{cy}" rx="100" ry="38" stroke="{accent_purple}" stroke-width="1.2" fill="none" opacity="0.5">')
-    svg.append(f'        <animateTransform attributeName="transform" type="rotate" from="60 {cx} {cy}" to="420 {cx} {cy}" dur="10s" repeatCount="indefinite" />')
-    svg.append(f'      </ellipse>')
+    # Background subtle crosshairs
+    svg.append(f'      <line x1="{cx-130}" y1="{cy}" x2="{cx+130}" y2="{cy}" stroke="{border_color}" stroke-width="0.8" stroke-dasharray="2 4" opacity="0.35" />')
+    svg.append(f'      <line x1="{cx}" y1="{cy-130}" x2="{cx}" y2="{cy+130}" stroke="{border_color}" stroke-width="0.8" stroke-dasharray="2 4" opacity="0.35" />')
 
-    # Corner HUD crosshairs & telemetry locks
-    svg.append(f'      <path d="M26 86 L34 86 M26 86 L26 94" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
-    svg.append(f'      <path d="M320 86 L312 86 M320 86 L320 94" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
-    svg.append(f'      <path d="M26 420 L34 420 M26 420 L26 412" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
-    svg.append(f'      <path d="M320 420 L312 420 M320 420 L320 412" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
-    svg.append(f'      <text x="32" y="98" fill="{text_secondary}" font-size="8" font-family="monospace">TRK: 0x88F2 // LOCK_OK</text>')
-    svg.append(f'      <text x="312" y="98" fill="{accent_emerald}" font-size="8" font-family="monospace" text-anchor="end">LIVE_SYNC</text>')
+    # Corner Technical Reticles
+    svg.append(f'      <path d="M26 86 L32 86 M26 86 L26 92" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.5"/>')
+    svg.append(f'      <path d="M320 86 L314 86 M320 86 L320 92" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.5"/>')
+    svg.append(f'      <path d="M26 422 L32 422 M26 422 L26 416" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.5"/>')
+    svg.append(f'      <path d="M320 422 L314 422 M320 420 M320 422 L320 416" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.5"/>')
 
-    # Animated Holographic 3D Rotating Octahedron Wireframe Lines (Layer 1)
-    svg.append(f'      <g stroke="{chrome_color}" stroke-width="1.8" fill="none" opacity="0.85" filter="url(#glow-cyan)">')
-    d1 = f"M{cx} {cy-95} L{cx+75} {cy} L{cx} {cy+95} L{cx-75} {cy} Z"
-    d2 = f"M{cx} {cy-95} L{cx+30} {cy-25} L{cx} {cy+95} L{cx-30} {cy+25} Z"
-    d3 = f"M{cx} {cy-95} L{cx-75} {cy} L{cx} {cy+95} L{cx+75} {cy} Z"
-    svg.append(f'        <path d="{d1}">')
-    svg.append(f'          <animate attributeName="d" values="{d1};{d2};{d3};{d2};{d1}" dur="8s" repeatCount="indefinite" />')
-    svg.append(f'          <animate attributeName="opacity" values="0.9;0.9;0;0;0;0;0;0.9;0.9" keyTimes="0;0.28;0.34;0.52;0.68;0.84;0.92;0.96;1" dur="14s" repeatCount="indefinite" />')
-    svg.append(f'        </path>')
-    
-    # Internal Axis Cross
-    svg.append(f'        <line x1="{cx-75}" y1="{cy}" x2="{cx+75}" y2="{cy}" stroke="{accent_emerald}" stroke-width="1.2">')
-    svg.append(f'          <animate attributeName="x1" values="{cx-75};{cx-30};{cx+75};{cx+30};{cx-75}" dur="8s" repeatCount="indefinite" />')
-    svg.append(f'          <animate attributeName="x2" values="{cx+75};{cx+30};{cx-75};{cx-30};{cx+75}" dur="8s" repeatCount="indefinite" />')
-    svg.append(f'          <animate attributeName="opacity" values="0.8;0.8;0;0;0;0;0;0.8;0.8" keyTimes="0;0.28;0.34;0.52;0.68;0.84;0.92;0.96;1" dur="14s" repeatCount="indefinite" />')
-    svg.append(f'        </line>')
-    svg.append(f'      </g>')
+    # 12 Technology Nodes Definition
+    # (name, radius_x, radius_y, angle_deg, color_accent)
+    tech_nodes = [
+        ("React", 0, -114, "#61DAFB"),
+        ("TypeScript", 66, -98, "#3178C6"),
+        ("Node.js", 108, -54, "#339933"),
+        ("Express.js", 116, 0, "#94A3B8"),
+        ("PostgreSQL", 108, 54, "#336791"),
+        ("MongoDB", 66, 98, "#47A248"),
+        ("React Native", 0, 114, "#61DAFB"),
+        ("Tailwind CSS", -66, 98, "#06B6D4"),
+        ("Redux", -108, 54, "#764ABC"),
+        ("AWS", -116, 0, "#FF9900"),
+        ("Docker", -108, -54, "#2496ED"),
+        ("JavaScript", -66, -98, "#F7DF1E")
+    ]
 
-    # 750 Hologram Morph Particles (Layer 2)
-    for i in range(len(p_core)):
-        x0, y0 = round(p_core[i][0], 1), round(p_core[i][1], 1)
-        x1, y1 = round(p_react_matched[i][0], 1), round(p_react_matched[i][1], 1)
-        x2, y2 = round(p_node_matched[i][0], 1), round(p_node_matched[i][1], 1)
-        x3, y3 = round(p_ts_matched[i][0], 1), round(p_ts_matched[i][1], 1)
+    # Draw Connecting Lines from Center to each Tech Node with Flowing Pulse
+    for idx, (name, dx, dy, color) in enumerate(tech_nodes):
+        nx, ny = cx + dx, cy + dy
+        # Base connecting line
+        svg.append(f'      <line x1="{cx}" y1="{cy}" x2="{nx}" y2="{ny}" stroke="{border_color}" stroke-width="1" stroke-dasharray="3 3" opacity="0.7" />')
         
-        svg.append(f'      <circle cx="{x0:g}" cy="{y0:g}" r="1.3" fill="{chrome_color}">')
-        key_times = "0;0.28;0.38;0.52;0.58;0.70;0.76;0.88;0.94;1"
-        cx_vals = f"{x0:g};{x0:g};{x1:g};{x1:g};{x2:g};{x2:g};{x3:g};{x3:g};{x0:g};{x0:g}"
-        cy_vals = f"{y0:g};{y0:g};{y1:g};{y1:g};{y2:g};{y2:g};{y3:g};{y3:g};{y0:g};{y0:g}"
-        svg.append(f'        <animate attributeName="cx" values="{cx_vals}" keyTimes="{key_times}" dur="14s" repeatCount="indefinite" />')
-        svg.append(f'        <animate attributeName="cy" values="{cy_vals}" keyTimes="{key_times}" dur="14s" repeatCount="indefinite" />')
-        svg.append(f'        <animate attributeName="fill" values="{chrome_color};{chrome_color};{chrome_color};{chrome_color};{accent_emerald};{accent_emerald};{chrome_color};{chrome_color};{chrome_color};{chrome_color}" keyTimes="{key_times}" dur="14s" repeatCount="indefinite" />')
-        svg.append(f'        <animate attributeName="opacity" values="0.85;0.85;0.95;0.95;0.95;0.95;0.95;0.95;0.85;0.85" keyTimes="{key_times}" dur="14s" repeatCount="indefinite" />')
+        # Animated glowing photon / pulse along line
+        svg.append(f'      <circle r="1.8" fill="{color}" filter="url(#glow-cyan)">')
+        svg.append(f'        <animate attributeName="cx" values="{cx};{nx};{cx}" dur="{3.5 + (idx % 3)*0.8}s" repeatCount="indefinite" />')
+        svg.append(f'        <animate attributeName="cy" values="{cy};{ny};{cy}" dur="{3.5 + (idx % 3)*0.8}s" repeatCount="indefinite" />')
+        svg.append(f'        <animate attributeName="opacity" values="0.2;0.9;0.2" dur="{3.5 + (idx % 3)*0.8}s" repeatCount="indefinite" />')
         svg.append(f'      </circle>')
+
+    # Center Hub: FULL STACK DEVELOPER
+    cw, ch = 86, 44
+    svg.append(f'      <!-- Center Core: FULL STACK DEVELOPER -->')
+    svg.append(f'      <g transform="translate({cx}, {cy})">')
+    # Center Outer Glow Pulse
+    svg.append(f'        <rect x="{-cw/2 - 3}" y="{-ch/2 - 3}" width="{cw + 6}" height="{ch + 6}" rx="8" fill="none" stroke="{chrome_color}" stroke-width="1" opacity="0.4" filter="url(#glow-cyan)">')
+    svg.append(f'          <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite" />')
+    svg.append(f'        </rect>')
+    # Center Box
+    svg.append(f'        <rect x="{-cw/2}" y="{-ch/2}" width="{cw}" height="{ch}" rx="6" fill="{center_bg}" stroke="{chrome_color}" stroke-width="1.6" />')
+    # Center Stacked Typography
+    svg.append(f'        <text x="0" y="-8" fill="{chrome_color}" font-size="8.5" font-weight="800" letter-spacing="1.5" text-anchor="middle">FULL</text>')
+    svg.append(f'        <text x="0" y="3" fill="{text_primary}" font-size="8.5" font-weight="800" letter-spacing="1.5" text-anchor="middle">STACK</text>')
+    svg.append(f'        <text x="0" y="14" fill="{accent_emerald}" font-size="7.5" font-weight="700" letter-spacing="0.8" text-anchor="middle">DEVELOPER</text>')
+    svg.append(f'      </g>')
+
+    # Render 12 Technology Nodes (Pills & Dots)
+    for idx, (name, dx, dy, color) in enumerate(tech_nodes):
+        nx, ny = cx + dx, cy + dy
+        nw = max(len(name) * 5.8 + 14, 42)
+        nh = 17
+        
+        svg.append(f'      <!-- Node {idx+1}: {name} -->')
+        svg.append(f'      <g class="tech-node" transform="translate({nx}, {ny})">')
+        # Floating micro-animation
+        svg.append(f'        <animateTransform attributeName="transform" type="translate" values="{nx} {ny}; {nx} {ny-2}; {nx} {ny}" dur="{4 + (idx%4)*0.5}s" repeatCount="indefinite" />')
+        
+        # Node Pill Background
+        svg.append(f'        <rect x="{-nw/2}" y="{-nh/2}" width="{nw}" height="{nh}" rx="4" fill="{node_bg}" stroke="{node_stroke}" stroke-width="1" />')
+        
+        # Small Indicator Dot
+        svg.append(f'        <circle cx="{-nw/2 + 6}" cy="0" r="2.2" fill="{color}" filter="url(#glow-cyan)">')
+        svg.append(f'          <animate attributeName="opacity" values="0.7;1;0.7" dur="{2 + (idx%3)}s" repeatCount="indefinite" />')
+        svg.append(f'        </circle>')
+        
+        # Node Label
+        svg.append(f'        <text x="{-nw/2 + 12}" y="3.5" fill="{text_primary}" font-size="8.5" font-weight="600" letter-spacing="0.3">{name}</text>')
+        svg.append(f'      </g>')
+
     svg.append(f'    </g>')
 
-    # Bottom Mode Indicator Pill on Visual Map
+    # Bottom Status Line: ● 12+ CORE TECHNOLOGIES    //    STACK: ACTIVE
+    svg.append(f'    <!-- Bottom Status Line -->')
     svg.append(f'    <g transform="translate(28, 432)">')
     svg.append(f'      <rect x="0" y="0" width="290" height="18" rx="4" fill="{header_bar}" stroke="{border_color}" stroke-width="1" />')
-    svg.append(f'      <rect x="0" y="0" width="46" height="18" rx="4" fill="{chrome_secondary}" />')
-    svg.append(f'      <text x="23" y="13" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">MODE</text>')
-    svg.append(f'      <text x="56" y="13" fill="{accent_emerald}" font-size="9" font-weight="600" letter-spacing="0.5">PARTICLE.MORPH [CORE &#8594; REACT &#8594; NODE &#8594; TS]</text>')
+    svg.append(f'      <circle cx="12" cy="9" r="3" fill="{accent_emerald}" filter="url(#glow-emerald)">')
+    svg.append(f'        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />')
+    svg.append(f'      </circle>')
+    svg.append(f'      <text x="22" y="12.5" fill="{text_primary}" font-size="8.5" font-weight="700" letter-spacing="0.5">12+ CORE TECHNOLOGIES</text>')
+    svg.append(f'      <text x="175" y="12.5" fill="{border_color}" font-size="9" font-weight="600">//</text>')
+    svg.append(f'      <text x="190" y="12.5" fill="{accent_emerald}" font-size="8.5" font-weight="700" letter-spacing="0.5">STACK: ACTIVE</text>')
     svg.append(f'    </g>')
     svg.append(f'  </g>')
 
-    # ==========================================
-    # 3. Right Panel: [ SYSTEM.INFO ]
-    # ==========================================
+    # =========================================================================
+    # 3. Right Panel: [ SYSTEM.INFO ] (Preserved Exactly with Safe Spacing)
+    # =========================================================================
     svg.append(f'  <!-- Right Panel: SYSTEM.INFO -->')
     svg.append(f'  <g class="panel-box">')
     svg.append(f'    <rect x="340" y="52" width="582" height="404" rx="8" fill="{card_bg}" stroke="{border_color}" stroke-width="1" />')
@@ -424,12 +319,12 @@ if __name__ == "__main__":
     with open("data/profile_data.json", "r", encoding="utf-8") as f:
         pdata = json.load(f)
         
-    print("Generating dark.svg with Quantum Radar & Gyroscope Core...")
+    print("Generating dark.svg with [ TECH.STACK ] Matrix...")
     dark_svg = generate_svg(theme="dark", profile_data=pdata)
     with open("assets/dark.svg", "w", encoding="utf-8") as f:
         f.write(dark_svg)
         
-    print("Generating light.svg with Quantum Radar & Gyroscope Core...")
+    print("Generating light.svg with [ TECH.STACK ] Matrix...")
     light_svg = generate_svg(theme="light", profile_data=pdata)
     with open("assets/light.svg", "w", encoding="utf-8") as f:
         f.write(light_svg)
