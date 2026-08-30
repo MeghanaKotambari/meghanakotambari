@@ -7,7 +7,7 @@
 # 👋 Hey, I'm **Meghana Kotambari**! 🚀
 ### 💻 *Full-Stack & React Native Engineer &nbsp;|&nbsp; 4x Industrial Intern &nbsp;|&nbsp; Builder of 40+ Projects*
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&pause=1000&color=22D3EE&center=true&vCenter=true&width=650&lines=Crafting+high-performance+web+%26+mobile+applications...;Engineering+multi-tenant+SaaS+%26+AI-driven+backends...;Turning+complex+ideas+into+scalable+production+systems+⚡" alt="Typing SVG" />
+<img src="assets/typing.svg" alt="Meghana's Typing Bio" width="680" />
 
 <br/><br/>
 
