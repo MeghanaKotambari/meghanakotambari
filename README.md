@@ -1,149 +1,238 @@
 <div align="center">
 
-<!-- Animated Header -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:ff6b9d,100:c084fc&height=220&section=header&text=Meghana%20Kotambari&fontSize=50&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Full%20Stack%20Developer%20%7C%20MERN%20Stack%20%7C%20Problem%20Solver&descSize=18&descAlignY=55&descColor=ff6b9d"/>
+<!-- ================================================================= -->
+<!-- SECTION 1: DUAL THEME ANIMATED HERO TERMINAL                     -->
+<!-- ================================================================= -->
 
-<!-- Animated Typing -->
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3000&pause=1000&color=FF6B9D&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=100&lines=%F0%9F%91%8B+Hey+there!+I'm+Meghana;%F0%9F%92%BB+Building+Full+Stack+Web+Apps;%F0%9F%8C%B1+Always+Learning%2C+Always+Growing" alt="Typing SVG" />
-
-<br/>
-
-<!-- Profile Views & Followers -->
-<img src="https://komarev.com/ghpvc/?username=meghanakotambari&label=Profile%20Views&color=ff6b9d&style=for-the-badge&labelColor=0d1117" alt="Profile Views"/>
-<img src="https://img.shields.io/github/followers/meghanakotambari?style=for-the-badge&logo=github&labelColor=0d1117&color=ff6b9d" alt="Followers"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/light.svg" />
+  <img alt="Meghana Kotambari — Live Terminal Interface" src="assets/dark.svg" width="100%" />
+</picture>
 
 </div>
 
----
+<br/>
 
-## 💫 About Me
+<!-- ================================================================= -->
+<!-- SECTION 2: IDENTITY & ENGINEERING PHILOSOPHY                     -->
+<!-- ================================================================= -->
 
-```yaml
-name: Meghana Kotambari
-located_in: India
-current_role: Full Stack Web Developer Intern @ LettrBlack
-journey: Self-taught Computer Science enthusiast
+### ⚡ `ENGINEERING / BUILDING / SHIPPING`
 
-fields_of_interest:
-  - Full Stack Web Development (MERN)
-  - Building Real-World Solutions
-  - Experimenting with New Technologies
-
-completed:
-  - Full Stack Web Development (MERN)
-  - Continuously learning & sharpening skills
-
-philosophy: >
-  Passionate about building, experimenting,
-  and solving real-world problems through code.
+```bash
+Full Stack Developer Intern @ IIIT Dharwad Research Park.
+Specialized in engineering reactive web architectures, modular backend microservices,
+and resilient data pipelines. Focused on clean state machines, distributed systems,
+and turning complex product requirements into high-performance web applications.
 ```
 
+---
 
-<div align="center">
-<img alt="Girl Coding" width="400" src="https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif"/>
-</div>
+<!-- ================================================================= -->
+<!-- SECTION 3: CURRENT FOCUS / TELEMETRY                            -->
+<!-- ================================================================= -->
+
+### 📡 `TELEMETRY // ACTIVE_THREAD`
+
+```zsh
+$ sys.telemetry --active-focus
+
+▸ ACTIVE_ROLE  : Full Stack Developer Intern @ IIIT Dharwad Research Park
+▸ BUILDING     : High-throughput full-stack web platforms & modern cloud backends
+▸ RESEARCHING  : Distributed state management, Next.js App Router, Micro-frontends
+▸ OPTIMIZING   : REST & GraphQL API latency, database indexing, edge deployments
+▸ SHIPPED      : Production MERN applications with secure JWT auth & role access
+```
 
 ---
 
-## 🛠️ Tech Stack
+<!-- ================================================================= -->
+<!-- SECTION 4: TECH STACK MATRIX                                    -->
+<!-- ================================================================= -->
 
-<div align="center">
+### 🛠️ `TECH_STACK // CAPABILITY_MATRIX`
 
-### 🔤 Languages
-<p>
-<img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
-<img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" />
-<img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" />
-<img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" />
-</p>
-
-### ⚙️ Frameworks & Libraries
-<p>
-<img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />
-<img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" />
-<img src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB" />
-<img src="https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white" />
-<img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" />
-<img src="https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white" />
-<img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-<img src="https://img.shields.io/badge/daisyui-5A0EF8?style=for-the-badge&logo=daisyui&logoColor=white" />
-<img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" />
-<img src="https://img.shields.io/badge/chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white" />
-<img src="https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens" />
-<img src="https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white" />
-<img src="https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD" />
-</p>
-
-### 🗄️ Database & Tools
-<p>
-<img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" />
-<img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" />
-<img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" />
-<img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" />
-<img src="https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white" />
-</p>
-
-</div>
-
----
-
-
-
-## 📊 GitHub Stats
-
-<div align="center">
-
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=meghanakotambari&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=ff6b9d&icon_color=ff6b9d&text_color=c9d1d9&ring_color=c084fc" />
-<img width="49%" src="https://nirzak-streak-stats.vercel.app/?user=meghanakotambari&theme=radical&hide_border=true&background=0D1117&stroke=ff6b9d&ring=c084fc&fire=ff6b9d&currStreakLabel=ff6b9d" />
-
-<br/>
-
-<img width="40%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=meghanakotambari&layout=compact&theme=radical&hide_border=true&bg_color=0d1117&title_color=ff6b9d&text_color=c9d1d9" />
-
-</div>
-
----
-
-## 📈 Contribution Graph
-
-<div align="center">
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=meghanakotambari&bg_color=0d1117&color=ff6b9d&line=c084fc&point=ff6b9d&area=true&area_color=c084fc&hide_border=true" />
-</div>
-
----
-
-## ✍️ Dev Quote
-
-<div align="center">
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical&border=true" />
-</div>
+<table>
+  <tr>
+    <td width="20%" align="right"><b>Core Languages</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+      <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+      <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+      <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
+      <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
+    </td>
+  </tr>
+  <tr>
+    <td width="20%" align="right"><b>Frontend & UI</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/React.js-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
+      <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" />
+      <img src="https://img.shields.io/badge/Redux%20Toolkit-764ABC?style=flat-square&logo=redux&logoColor=white" alt="Redux" />
+      <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+      <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
+    </td>
+  </tr>
+  <tr>
+    <td width="20%" align="right"><b>Backend & APIs</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
+      <img src="https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white" alt="Express" />
+      <img src="https://img.shields.io/badge/REST_APIs-0891B2?style=flat-square&logo=fastapi&logoColor=white" alt="REST" />
+      <img src="https://img.shields.io/badge/JWT_Auth-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" alt="JWT" />
+    </td>
+  </tr>
+  <tr>
+    <td width="20%" align="right"><b>Databases & Caching</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB" />
+      <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+      <img src="https://img.shields.io/badge/Mongoose-880000?style=flat-square&logo=mongoose&logoColor=white" alt="Mongoose" />
+    </td>
+  </tr>
+  <tr>
+    <td width="20%" align="right"><b>DevOps & Cloud</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
+      <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions" />
+      <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" />
+      <img src="https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=black" alt="Render" />
+    </td>
+  </tr>
+  <tr>
+    <td width="20%" align="right"><b>Engineering Tools</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
+      <img src="https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white" alt="VS Code" />
+      <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white" alt="Postman" />
+      <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white" alt="Figma" />
+    </td>
+  </tr>
+</table>
 
 ---
 
-## 🐍 Contribution Snake
+<!-- ================================================================= -->
+<!-- SECTION 5: FEATURED SYSTEMS & SELECTED WORK                     -->
+<!-- ================================================================= -->
 
-<div align="center">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/meghanakotambari/meghanakotambari/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/meghanakotambari/meghanakotambari/output/github-snake.svg" />
-  <img alt="github-snake" src="https://raw.githubusercontent.com/meghanakotambari/meghanakotambari/output/github-snake-dark.svg" />
-</picture>
-</div>
+### 🚀 `SELECTED_WORK // PRODUCTION_BUILDS`
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>⚡ 01 / Full-Stack Enterprise Portal</h4>
+      <p>Modular full-stack web ecosystem engineered with reactive UI components, robust asynchronous API endpoints, role-based access control (RBAC), and persistent data models.</p>
+      <p>
+        <code>React</code> · <code>Node.js</code> · <code>Express</code> · <code>MongoDB</code> · <code>TailwindCSS</code>
+      </p>
+      <p>
+        <a href="https://github.com/meghanakotambari"><b>Source Code ↗</b></a> &nbsp;|&nbsp; 
+        <a href="https://github.com/meghanakotambari"><b>Live System ↗</b></a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h4>🛡️ 02 / Auth & Telemetry Control Engine</h4>
+      <p>Microservice backend architecture providing stateless JWT token authentication, rate-limiting middleware, encrypted user sessions, and real-time observability telemetry.</p>
+      <p>
+        <code>TypeScript</code> · <code>Express.js</code> · <code>JWT</code> · <code>PostgreSQL</code> · <code>Docker</code>
+      </p>
+      <p>
+        <a href="https://github.com/meghanakotambari"><b>Source Code ↗</b></a> &nbsp;|&nbsp; 
+        <a href="https://github.com/meghanakotambari"><b>Architecture Doc ↗</b></a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>📊 03 / Real-Time Data Visualization Hub</h4>
+      <p>High-performance analytics dashboard rendering live telemetry metrics, dynamic Chart.js pipelines, and responsive state updates across multi-viewport devices.</p>
+      <p>
+        <code>React.js</code> · <code>Redux Toolkit</code> · <code>Chart.js</code> · <code>Vite</code> · <code>Tailwind</code>
+      </p>
+      <p>
+        <a href="https://github.com/meghanakotambari"><b>Source Code ↗</b></a> &nbsp;|&nbsp; 
+        <a href="https://github.com/meghanakotambari"><b>Live Demo ↗</b></a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h4>📦 04 / Cloud CI/CD Automation Pipeline</h4>
+      <p>Automated deployment workflows featuring automated testing, lint validation, container builds, and zero-downtime continuous deployment to cloud hosts.</p>
+      <p>
+        <code>GitHub Actions</code> · <code>Docker</code> · <code>Vercel</code> · <code>Render</code> · <code>Bash</code>
+      </p>
+      <p>
+        <a href="https://github.com/meghanakotambari"><b>Source Code ↗</b></a> &nbsp;|&nbsp; 
+        <a href="https://github.com/meghanakotambari"><b>Workflow Specs ↗</b></a>
+      </p>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## 🌐 Connect With Me
+<!-- ================================================================= -->
+<!-- SECTION 6: GITHUB METRICS & TELEMETRY                           -->
+<!-- ================================================================= -->
+
+### 📊 `SYSTEM_METRICS // GITHUB_TELEMETRY`
 
 <div align="center">
 
-<a href="https://www.linkedin.com/in/meghana-kotambari-58a4332b0/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117" /></a>
-<a href="mailto:meghanakotambari@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117" /></a>
+<img width="100%" src="https://nirzak-streak-stats.vercel.app/?user=meghanakotambari&theme=radical&hide_border=true&background=0A101F&stroke=22D3EE&ring=10B981&fire=22D3EE&currStreakLabel=10B981&sideLabels=94A3B8&dates=64748B" alt="Meghana's GitHub Streak" />
 
 <br/><br/>
 
-<img src="https://img.shields.io/badge/Thanks%20for%20visiting!-ff6b9d?style=for-the-badge&labelColor=0d1117"/>
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=meghanakotambari&show_icons=true&hide_rank=true&theme=radical&hide_border=true&bg_color=0A101F&title_color=22D3EE&icon_color=10B981&text_color=94A3B8&ring_color=A78BFA" alt="Meghana's GitHub Stats" />
+<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=meghanakotambari&layout=compact&theme=radical&hide_border=true&bg_color=0A101F&title_color=22D3EE&text_color=94A3B8" alt="Top Languages" />
 
 </div>
 
-<!-- Animated Footer -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:c084fc,50:ff6b9d,100:0d1117&height=120&section=footer"/>
+---
+
+<!-- ================================================================= -->
+<!-- SECTION 7: CONTRIBUTION SNAKE (THEME-AWARE)                     -->
+<!-- ================================================================= -->
+
+### 🐍 `TIMELINE // CONTRIBUTION_STREAM`
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/meghanakotambari/meghanakotambari/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/meghanakotambari/meghanakotambari/output/github-snake.svg" />
+  <img alt="Contribution Snake Matrix" src="https://raw.githubusercontent.com/meghanakotambari/meghanakotambari/output/github-snake-dark.svg" width="100%" />
+</picture>
+
+</div>
+
+---
+
+<!-- ================================================================= -->
+<!-- SECTION 8: COMMUNICATION CHANNELS & SOCIAL TERMINALS            -->
+<!-- ================================================================= -->
+
+### 🌐 `COMM_LINK // CONNECT`
+
+<div align="center">
+
+<a href="https://www.linkedin.com/in/meghana-kotambari-58a4332b0/">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+</a>
+&nbsp;
+<a href="mailto:meghanakotambari@gmail.com">
+  <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+</a>
+&nbsp;
+<a href="https://github.com/meghanakotambari">
+  <img src="https://img.shields.io/badge/Portfolio-0891B2?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" />
+</a>
+
+<br/><br/>
+
+```
+[SYSTEM NOTICE]: Open for full-time software engineering opportunities, product collaborations, and technical discussions.
+```
+
+</div>
