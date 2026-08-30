@@ -42,16 +42,144 @@ $ sys.telemetry --active-context
 
 ▸ ACTIVE_ROLE   : Full Stack Developer Intern @ IIIT Dharwad Research Park
 ▸ CURRENT_BUILD : Sleep-pod booking system with automated payment pipelines (Razorpay) & AWS infra
-▸ EXPERIENCE    : 4 Industrial Internships (IIIT Dharwad, Yumaris Agency, LettrBlack, etc.)
+▸ EXPERIENCE    : 4 Industrial Internships (IIIT Dharwad, Yumaris Agency, ARMB, LettrBlack)
 ▸ ACADEMICS     : B.E. Computer Science & Engineering // CGPA: 9.00 (Class of 2027)
 ▸ HACKATHONS    : Winner @ HackToFuture & CodeFiesta 5.0 | Top 10 in 800+ Teams (3x)
-▸ CORE_FOCUS    : Multi-tenant SaaS, AI-driven HRMS backends, Offline PWAs, Cloud Architecture
+▸ CORE_FOCUS    : Multi-tenant SaaS, AI-driven HRMS backends, Cross-Platform Mobile, Offline PWAs
 ```
 
 ---
 
 <!-- ================================================================= -->
-<!-- SECTION 4: CAPABILITY MATRIX // TECH STACK                      -->
+<!-- SECTION 4: 4 INDUSTRIAL INTERNSHIPS (EXPERIENCE MATRIX)          -->
+<!-- ================================================================= -->
+
+### 💼 `EXPERIENCE // 4_INDUSTRIAL_INTERNSHIPS`
+
+<table>
+  <!-- Internship 1: IIIT Dharwad Research Park -->
+  <tr>
+    <td colspan="2" bgcolor="#0A101F">
+      <table width="100%" border="0">
+        <tr>
+          <td width="35%" valign="top">
+            <h3>🏢 Full Stack Developer Intern</h3>
+            <p><b><font color="#22D3EE">IIIT Dharwad Research Park</font></b></p>
+            <p>📍 <i>Dharwad, India (Hybrid)</i> &nbsp;|&nbsp; 🗓️ <i>July 2026 – Present</i></p>
+          </td>
+          <td width="65%" valign="top">
+            <p align="right">
+              <img src="https://img.shields.io/badge/React.js-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
+              <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
+              <img src="https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white" />
+              <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" />
+              <img src="https://img.shields.io/badge/Razorpay-0C2340?style=flat-square&logo=razorpay&logoColor=2B83EA" />
+              <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white" />
+              <img src="https://img.shields.io/badge/RESTful_APIs-0891B2?style=flat-square&logo=fastapi&logoColor=white" />
+            </p>
+            <ul>
+              <li>Developed complete frontend and backend for a production-ready sleep-pod booking platform with responsive UI, user/booking modules, admin operations, and scalable RESTful APIs.</li>
+              <li>Integrated Razorpay for secure payments and AWS services for deployment/data handling, ensuring reliable backend services and seamless end-to-end application integration.</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- Internship 2: Yumaris Agency -->
+  <tr>
+    <td colspan="2" bgcolor="#0A101F">
+      <table width="100%" border="0">
+        <tr>
+          <td width="35%" valign="top">
+            <h3>🤖 Backend Developer Intern</h3>
+            <p><b><font color="#22D3EE">Yumaris Agency</font></b></p>
+            <p>📍 <i>Chennai, India (Remote)</i> &nbsp;|&nbsp; 🗓️ <i>Mar 2026 – Sep 2026</i></p>
+          </td>
+          <td width="65%" valign="top">
+            <p align="right">
+              <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
+              <img src="https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white" />
+              <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" />
+              <img src="https://img.shields.io/badge/AI_Integration-8A2BE2?style=flat-square&logo=openai&logoColor=white" />
+              <img src="https://img.shields.io/badge/JWT_/_RBAC-10B981?style=flat-square&logo=auth0&logoColor=white" />
+              <img src="https://img.shields.io/badge/REST_APIs-0891B2?style=flat-square&logo=fastapi&logoColor=white" />
+            </p>
+            <ul>
+              <li>Developed an AI-powered HRMS backend using Node.js, Express.js, and MongoDB, with 25+ REST APIs, JWT/RBAC, and core HR workflows.</li>
+              <li>Engineered AI features for anomaly detection, performance analysis, candidate scoring, recommendations, alerts, and analytics, with API optimization and testing.</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- Internship 3: ARMB -->
+  <tr>
+    <td colspan="2" bgcolor="#0A101F">
+      <table width="100%" border="0">
+        <tr>
+          <td width="35%" valign="top">
+            <h3>📱 React Native Developer Intern</h3>
+            <p><b><font color="#22D3EE">ARMB</font></b></p>
+            <p>📍 <i>West Bengal, India (Remote)</i> &nbsp;|&nbsp; 🗓️ <i>Mar 2026 – Sep 2026</i></p>
+          </td>
+          <td width="65%" valign="top">
+            <p align="right">
+              <img src="https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
+              <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+              <img src="https://img.shields.io/badge/Redux_Toolkit-764ABC?style=flat-square&logo=redux&logoColor=white" />
+              <img src="https://img.shields.io/badge/REST_APIs-0891B2?style=flat-square&logo=fastapi&logoColor=white" />
+              <img src="https://img.shields.io/badge/Mobile_UI/UX-06B6D4?style=flat-square&logo=figma&logoColor=white" />
+              <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
+            </p>
+            <ul>
+              <li>Developed core frontend modules for a cross-platform React Native service booking application connecting customers with local service providers (electricians, plumbers, technicians, etc.).</li>
+              <li>Engineered the dedicated Service Provider interface, implementing profile management, booking requests handling, real-time availability toggling, and job tracking workflows.</li>
+              <li>Built responsive, accessible mobile UI screens with fluid animations, intuitive navigation flows, and robust backend API integrations.</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- Internship 4: LettrBlack -->
+  <tr>
+    <td colspan="2" bgcolor="#0A101F">
+      <table width="100%" border="0">
+        <tr>
+          <td width="35%" valign="top">
+            <h3>🌐 Full Stack Web Developer Intern</h3>
+            <p><b><font color="#22D3EE">LettrBlack</font></b></p>
+            <p>📍 <i>Bengaluru, India (Remote)</i> &nbsp;|&nbsp; 🗓️ <i>Sep 2025 – Feb 2026</i></p>
+          </td>
+          <td width="65%" valign="top">
+            <p align="right">
+              <img src="https://img.shields.io/badge/React.js-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
+              <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
+              <img src="https://img.shields.io/badge/REST_APIs-0891B2?style=flat-square&logo=fastapi&logoColor=white" />
+              <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
+              <img src="https://img.shields.io/badge/Agile-555555?style=flat-square&logo=jira&logoColor=white" />
+            </p>
+            <ul>
+              <li>Developed community features and interactive quizzes, increasing engagement by 25% and user interaction by 20% through responsive web experiences.</li>
+              <li>Built a real-time News module with dynamic REST API integration and optimized performance, improving content delivery speed by 30% and reducing load time by 25%.</li>
+              <li>Collaborated with backend & UI teams for seamless deployment, state management, and performance optimization.</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+---
+
+<!-- ================================================================= -->
+<!-- SECTION 5: CAPABILITY MATRIX // TECH STACK                      -->
 <!-- ================================================================= -->
 
 ### 🛠️ `TECH_STACK // CAPABILITY_MATRIX`
@@ -62,6 +190,7 @@ $ sys.telemetry --active-context
     <td>
       <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
       <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+      <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
       <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
       <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
     </td>
@@ -113,7 +242,7 @@ $ sys.telemetry --active-context
 ---
 
 <!-- ================================================================= -->
-<!-- SECTION 5: FEATURED SYSTEMS & PRODUCTION WORK                    -->
+<!-- SECTION 6: FEATURED SYSTEMS & PRODUCTION WORK                    -->
 <!-- ================================================================= -->
 
 ### 🚀 `SELECTED_WORK // PRODUCTION_BUILDS`
@@ -137,13 +266,17 @@ $ sys.telemetry --active-context
     </td>
     <td width="50%" valign="top">
       <h4>🎯 02 / GrindLog — Placement Prep PWA Engine</h4>
-      <p>Mobile-first installable Progressive Web App (PWA) tailored for structured DSA practice, aptitude roadmaps, and day-wise interview preparation.</p>
+      <p>
+        <img src="https://img.shields.io/badge/👥_2--User_Live_Sparring-10B981?style=flat-square" alt="2 Users" />
+        <img src="https://img.shields.io/badge/PWA_Offline_Ready-0891B2?style=flat-square" alt="PWA" />
+      </p>
+      <p>Mobile-first installable Progressive Web App (PWA) tailored for structured DSA practice, aptitude roadmaps, day-wise coding tracker, and <b>2-user synchronized peer interview prep</b>.</p>
       <ul>
         <li>Engineered offline-capable caching with background sync service workers.</li>
         <li>Built dynamic streak analytics, performance timelines, and topic radar stats.</li>
       </ul>
       <p>
-        <code>MERN Stack</code> · <code>PWA</code> · <code>Tailwind CSS</code> · <code>Service Workers</code>
+        <code>MERN Stack</code> · <code>PWA</code> · <code>Tailwind CSS</code> · <code>2-User Sync</code>
       </p>
       <p>
         <a href="https://github.com/meghanakotambari"><b>Launch PWA Demo ↗</b></a> &nbsp;|&nbsp; 
@@ -187,7 +320,7 @@ $ sys.telemetry --active-context
 ---
 
 <!-- ================================================================= -->
-<!-- SECTION 6: HACKATHON ACHIEVEMENTS & MILESTONES                   -->
+<!-- SECTION 7: HACKATHON ACHIEVEMENTS & MILESTONES                   -->
 <!-- ================================================================= -->
 
 ### 🏆 `ACHIEVEMENTS // HACKATHON_RECORDS`
@@ -203,13 +336,13 @@ hackathon_victories:
 
 industrial_milestone:
   - summary: "4 Successful Industrial Engineering Internships completed prior to graduation"
-  - domains: "Full-Stack Development, AI-Assisted Backend Services, Multi-Tenant Cloud Architecture"
+  - companies: "IIIT Dharwad Research Park · Yumaris Agency · ARMB · LettrBlack"
 ```
 
 ---
 
 <!-- ================================================================= -->
-<!-- SECTION 7: RESUME SCANNER // DIGITAL CREDENTIALS                -->
+<!-- SECTION 8: RESUME SCANNER // DIGITAL CREDENTIALS                -->
 <!-- ================================================================= -->
 
 ### 📄 `CREDENTIALS // RESUME_SCANNER`
@@ -228,7 +361,7 @@ industrial_milestone:
         <li><b>Current Role:</b> Full Stack Developer Intern @ IIIT Dharwad Research Park</li>
         <li><b>Core Specialization:</b> Full-Stack Web, React Native, AI-Assisted Backends</li>
         <li><b>Education:</b> B.E. Computer Science & Engineering (CGPA: 9.00 // 2027)</li>
-        <li><b>Track Record:</b> 4 Industrial Internships · 2x Hackathon Winner</li>
+        <li><b>Track Record:</b> 4 Industrial Internships (IIIT Dharwad, Yumaris, ARMB, LettrBlack) · 2x Hackathon Winner</li>
       </ul>
       <br/>
       <a href="https://drive.google.com/file/d/1gV66MqHhcaJzJRVpa-82R1VmVX_wMwPq/view?usp=drivesdk" target="_blank">
@@ -241,7 +374,7 @@ industrial_milestone:
 ---
 
 <!-- ================================================================= -->
-<!-- SECTION 8: GITHUB TELEMETRY & STATS                             -->
+<!-- SECTION 9: GITHUB TELEMETRY & STATS                             -->
 <!-- ================================================================= -->
 
 ### 📊 `SYSTEM_METRICS // GITHUB_TELEMETRY`
@@ -260,7 +393,7 @@ industrial_milestone:
 ---
 
 <!-- ================================================================= -->
-<!-- SECTION 9: CONTRIBUTION TIMELINE SNAKE                          -->
+<!-- SECTION 10: CONTRIBUTION TIMELINE SNAKE                         -->
 <!-- ================================================================= -->
 
 ### 🐍 `TIMELINE // CONTRIBUTION_STREAM`
@@ -278,7 +411,7 @@ industrial_milestone:
 ---
 
 <!-- ================================================================= -->
-<!-- SECTION 10: COMMUNICATION LINKS & CONTACT MATRIX                -->
+<!-- SECTION 11: COMMUNICATION LINKS & CONTACT MATRIX                -->
 <!-- ================================================================= -->
 
 ### 🌐 `COMM_LINK // CONNECT`
