@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 96" width="100%" height="96" style="background-color: transparent; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'JetBrains Mono', monospace;">
   <defs>
+    <clipPath id="type-clip">
+      <rect x="0" y="0" width="0" height="50">
+        <animate attributeName="width" values="0;800;800" keyTimes="0;0.18;1" dur="12.5s" fill="freeze" />
+      </rect>
+    </clipPath>
     <style>
       @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
       .cursor-blink { animation: blink 0.7s infinite; fill: #22D3EE; }
-      .main-title { font-size: 26px; font-weight: 900; fill: #F8FAFC; letter-spacing: 0.5px; }
+      .main-title-white { font-size: 26px; font-weight: 900; fill: #FFFFFF; letter-spacing: 0.5px; }
       .sub-line { font-size: 16px; font-weight: 700; fill: #22D3EE; letter-spacing: 0.8px; font-family: 'JetBrains Mono', 'Fira Code', monospace; }
     </style>
   </defs>
-  <!-- Main Title: Hey, I'm Meghana Kotambari! -->
-  <g transform="translate(400.0, 38)">
-    <text x="0" y="0" text-anchor="middle" class="main-title">
-      👋 Hey, I'm <tspan fill="#22D3EE">Meghana Kotambari</tspan>! 🚀
+  <!-- Main Title: Hello, I'm Meghana Kotambari! (PURE WHITE) -->
+  <g clip-path="url(#type-clip)">
+    <text x="400.0" y="38" text-anchor="middle" class="main-title-white">
+      👋 Hello, I'm Meghana Kotambari! 🚀
     </text>
   </g>
-  <!-- Dynamic Blue Cycling Subtitle Lines -->
+  <!-- Dynamic Cyan Cycling Subtitle Lines -->
   <g transform="translate(400.0, 76)">
     <text x="0" y="0" text-anchor="middle" class="sub-line" opacity="1">
       ⚡ Full-Stack &amp; React Native Engineer <tspan class="cursor-blink">|</tspan>

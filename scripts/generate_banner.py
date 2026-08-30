@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
 Pixel-Perfect Tech Stack Matrix & System Dashboard Generator
-Faithfully matches Meghana's authentic tech stack (SQL & Docker removed):
+Faithfully matches the reference image (Screenshot 2):
+- Exact font sizes, line gaps, and letter spacing in [ SYSTEM.INFO ]
 - 12 Radial Tech Nodes: React, Next.js, React Native, Node.js, Express.js, TypeScript, JavaScript, MongoDB, Git, Tailwind CSS, Redux, AWS
 - Center Hub: FULL STACK DEVELOPER
-- Right Panel: [ SYSTEM.INFO ] Clean telemetry with no Docker/SQL
+- Crisp typography and comfortable breathing room
 """
 
 import json
@@ -21,7 +22,6 @@ def get_tech_logo(name, cx, cy, color):
     svg_icons = []
     
     if name == "React":
-        # React Atom
         svg_icons.append(f'<g transform="translate({cx}, {cy})">')
         svg_icons.append(f'  <ellipse rx="9.5" ry="3.5" stroke="{color}" stroke-width="1.1" fill="none" />')
         svg_icons.append(f'  <ellipse rx="9.5" ry="3.5" stroke="{color}" stroke-width="1.1" fill="none" transform="rotate(60)" />')
@@ -30,14 +30,12 @@ def get_tech_logo(name, cx, cy, color):
         svg_icons.append(f'</g>')
         
     elif name == "Next.js":
-        # Next.js "N" Monogram
         svg_icons.append(f'<g transform="translate({cx}, {cy})">')
         svg_icons.append(f'  <circle r="7.5" fill="#000000" stroke="{color}" stroke-width="1" />')
         svg_icons.append(f'  <path d="M-3.5 4 L-3.5 -4 L-1.5 -4 L2.5 2.5 L2.5 -4 L4 -4 L4 4 L2 4 L-2 -2 L-2 4 Z" fill="#FFFFFF" />')
         svg_icons.append(f'</g>')
         
     elif name == "React Native":
-        # React Native Logo
         svg_icons.append(f'<g transform="translate({cx}, {cy})">')
         svg_icons.append(f'  <ellipse rx="9" ry="3.2" stroke="{color}" stroke-width="1.1" fill="none" />')
         svg_icons.append(f'  <ellipse rx="9" ry="3.2" stroke="{color}" stroke-width="1.1" fill="none" transform="rotate(60)" />')
@@ -46,41 +44,35 @@ def get_tech_logo(name, cx, cy, color):
         svg_icons.append(f'</g>')
         
     elif name == "Node.js":
-        # Node.js Hexagon
         svg_icons.append(f'<g transform="translate({cx}, {cy}) scale(0.9)">')
         svg_icons.append(f'  <path d="M0 -8 L7 -4 L7 4 L0 8 L-7 4 L-7 -4 Z" stroke="{color}" stroke-width="1.2" fill="none" />')
         svg_icons.append(f'  <text x="0" y="2.5" fill="{color}" font-size="6.5" font-weight="800" text-anchor="middle">JS</text>')
         svg_icons.append(f'</g>')
         
     elif name == "Express.js":
-        # Express.js "ex"
         svg_icons.append(f'<g transform="translate({cx}, {cy})">')
         svg_icons.append(f'  <text x="0" y="3.5" fill="{color}" font-size="8" font-weight="800" text-anchor="middle" font-family="monospace">ex</text>')
         svg_icons.append(f'</g>')
         
     elif name == "TypeScript":
-        # TypeScript "TS"
         svg_icons.append(f'<g transform="translate({cx}, {cy})">')
         svg_icons.append(f'  <rect x="-7.5" y="-6.5" width="15" height="13" rx="2" fill="{color}" />')
         svg_icons.append(f'  <text x="0" y="3" fill="#FFFFFF" font-size="7" font-weight="900" text-anchor="middle" font-family="monospace">TS</text>')
         svg_icons.append(f'</g>')
         
     elif name == "JavaScript":
-        # JavaScript "JS"
         svg_icons.append(f'<g transform="translate({cx}, {cy})">')
         svg_icons.append(f'  <rect x="-7.5" y="-6.5" width="15" height="13" rx="2" fill="{color}" />')
         svg_icons.append(f'  <text x="0" y="3.5" fill="#000000" font-size="7.5" font-weight="900" text-anchor="middle" font-family="sans-serif">JS</text>')
         svg_icons.append(f'</g>')
         
     elif name == "MongoDB":
-        # MongoDB Leaf
         svg_icons.append(f'<g transform="translate({cx}, {cy}) scale(0.9)">')
         svg_icons.append(f'  <path d="M0 -8 C3 -4 5 1 0 8 C-5 1 -3 -4 0 -8 Z" fill="{color}" />')
         svg_icons.append(f'  <line x1="0" y1="-7" x2="0" y2="7" stroke="#070D19" stroke-width="0.8" />')
         svg_icons.append(f'</g>')
         
     elif name == "Git":
-        # Git Branch Icon
         svg_icons.append(f'<g transform="translate({cx}, {cy})">')
         svg_icons.append(f'  <rect x="-5.5" y="-5.5" width="11" height="11" rx="2" fill="{color}" transform="rotate(45)" />')
         svg_icons.append(f'  <circle cx="-1.5" cy="0" r="1.3" fill="#FFFFFF" />')
@@ -90,14 +82,12 @@ def get_tech_logo(name, cx, cy, color):
         svg_icons.append(f'</g>')
         
     elif name == "Tailwind CSS":
-        # Tailwind Waves
         svg_icons.append(f'<g transform="translate({cx}, {cy}) scale(0.85)">')
         svg_icons.append(f'  <path d="M-7 1 C-5 -3 0 -3 2 0 C4 3 7 3 8 1 C7 5 3 5 1 2 C-1 -1 -4 -1 -5 2 Z" fill="{color}" />')
         svg_icons.append(f'  <path d="M-5 -3 C-3 -7 2 -7 4 -4 C6 -1 9 -1 10 -3 C9 1 5 1 3 -2 C1 -5 -2 -5 -3 -2 Z" fill="{color}" />')
         svg_icons.append(f'</g>')
         
     elif name == "Redux":
-        # Redux Molecule
         svg_icons.append(f'<g transform="translate({cx}, {cy}) scale(0.9)">')
         svg_icons.append(f'  <circle cx="0" cy="-4.5" r="2" fill="{color}" />')
         svg_icons.append(f'  <circle cx="-4" cy="3" r="2" fill="{color}" />')
@@ -106,7 +96,6 @@ def get_tech_logo(name, cx, cy, color):
         svg_icons.append(f'</g>')
         
     elif name == "AWS":
-        # AWS Text + Arrow
         svg_icons.append(f'<g transform="translate({cx}, {cy})">')
         svg_icons.append(f'  <text x="0" y="0.5" fill="{color}" font-size="6.5" font-weight="900" text-anchor="middle" font-family="monospace">aws</text>')
         svg_icons.append(f'  <path d="M-5 3.5 Q0 6.5 5 3.5" stroke="{color}" stroke-width="1" fill="none" />')
@@ -156,7 +145,7 @@ def generate_svg(theme="dark", profile_data=None):
 
     svg = []
     svg.append('<?xml version="1.0" encoding="UTF-8"?>')
-    svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 470" width="100%" height="100%" style="background-color: {bg_color}; border-radius: 12px; font-family: -apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, \'JetBrains Mono\', monospace;">')
+    svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 460" width="100%" height="100%" style="background-color: {bg_color}; border-radius: 12px; font-family: -apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, \'JetBrains Mono\', monospace;">')
     svg.append('  <defs>')
     svg.append(f'    <filter id="glow-cyan" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.5" result="blur" /><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>')
     svg.append(f'    <filter id="glow-emerald" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2" result="blur" /><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>')
@@ -174,7 +163,7 @@ def generate_svg(theme="dark", profile_data=None):
     svg.append('  </defs>')
 
     # Master Window Frame
-    svg.append(f'  <rect x="1" y="1" width="938" height="468" rx="12" fill="{bg_color}" stroke="{border_color}" stroke-width="1.5" />')
+    svg.append(f'  <rect x="1" y="1" width="938" height="458" rx="12" fill="{bg_color}" stroke="{border_color}" stroke-width="1.5" />')
     
     # Window Top Bar
     svg.append(f'  <rect x="1" y="1" width="938" height="40" rx="12" fill="{header_bar}" />')
@@ -208,7 +197,7 @@ def generate_svg(theme="dark", profile_data=None):
     # =========================================================================
     svg.append(f'  <!-- Left Panel: TECH.STACK -->')
     svg.append(f'  <g class="panel-box">')
-    svg.append(f'    <rect x="18" y="52" width="310" height="404" rx="8" fill="{card_bg}" stroke="{border_color}" stroke-width="1" />')
+    svg.append(f'    <rect x="18" y="52" width="310" height="394" rx="8" fill="{card_bg}" stroke="{border_color}" stroke-width="1" />')
     svg.append(f'    <rect x="18" y="52" width="310" height="26" rx="8" fill="{header_bar}" />')
     svg.append(f'    <path d="M18 66 L18 78 L328 78 L328 66 Z" fill="{header_bar}" />')
     svg.append(f'    <line x1="18" y1="78" x2="328" y2="78" stroke="{border_color}" stroke-width="1" />')
@@ -221,7 +210,7 @@ def generate_svg(theme="dark", profile_data=None):
 
     # Inside Visual Tech Matrix Area
     svg.append(f'    <g clip-path="url(#tech-clip)">')
-    cx, cy = 173, 230
+    cx, cy = 173, 226
 
     # Top Status labels under header: Trx: 0xAF7E // STK_OK & LIVE_SYNC
     svg.append(f'      <path d="M26 86 L32 86 M26 86 L26 92" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
@@ -234,17 +223,17 @@ def generate_svg(theme="dark", profile_data=None):
     svg.append(f'      <circle cx="{cx}" cy="{cy}" r="82" stroke="{border_color}" stroke-width="1" stroke-dasharray="2 3" fill="none" opacity="0.5" />')
     svg.append(f'      <circle cx="{cx}" cy="{cy}" r="50" stroke="{border_color}" stroke-width="1" fill="none" opacity="0.3" />')
 
-    # 12 Technologies (Meghana's authentic stack - SQL & Docker replaced with Next.js and Git)
+    # 12 Technologies (matching reference positions)
     tech_nodes = [
         ("React", 270, "#61DAFB", 112),         # Top (12:00)
-        ("Next.js", 300, "#FFFFFF", 114),       # (1:00) [replaces Docker]
+        ("Next.js", 300, "#FFFFFF", 114),       # (1:00)
         ("React Native", 330, "#61DAFB", 112),  # (2:00)
         ("Node.js", 0, "#339933", 116),         # Right (3:00)
         ("Express.js", 30, "#94A3B8", 114),     # (4:00)
         ("TypeScript", 60, "#3178C6", 112),     # (5:00)
         ("JavaScript", 90, "#F7DF1E", 114),     # Bottom (6:00)
         ("MongoDB", 120, "#47A248", 112),       # (7:00)
-        ("Git", 150, "#F05032", 114),           # (8:00) [replaces PostgreSQL/SQL]
+        ("Git", 150, "#F05032", 114),           # (8:00)
         ("Tailwind CSS", 180, "#06B6D4", 116),  # Left (9:00)
         ("Redux", 210, "#764ABC", 114),         # (10:00)
         ("AWS", 240, "#FF9900", 112)            # (11:00)
@@ -256,39 +245,32 @@ def generate_svg(theme="dark", profile_data=None):
         nx = cx + r * math.cos(rad)
         ny = cy + r * math.sin(rad) * 0.94
         
-        # Radiating line
         svg.append(f'      <line x1="{cx}" y1="{cy}" x2="{nx:.1f}" y2="{ny:.1f}" stroke="{border_color}" stroke-width="1.2" opacity="0.6" />')
         
-        # Intermediate orbit dot
         mid_x = cx + 50 * math.cos(rad)
         mid_y = cy + 50 * math.sin(rad) * 0.94
         svg.append(f'      <circle cx="{mid_x:.1f}" cy="{mid_y:.1f}" r="1.6" fill="{chrome_color}" opacity="0.8" />')
         
-        # Outer orbit dot
         mid_x2 = cx + 82 * math.cos(rad)
         mid_y2 = cy + 82 * math.sin(rad) * 0.94
         svg.append(f'      <circle cx="{mid_x2:.1f}" cy="{mid_y2:.1f}" r="1.6" fill="{chrome_color}" opacity="0.8" />')
 
-        # Flowing photon pulse
         svg.append(f'      <circle r="1.8" fill="{color}" filter="url(#glow-cyan)">')
         svg.append(f'        <animate attributeName="cx" values="{cx};{nx:.1f};{cx}" dur="{3 + (idx % 3)*0.6}s" repeatCount="indefinite" />')
         svg.append(f'        <animate attributeName="cy" values="{cy};{ny:.1f};{cy}" dur="{3 + (idx % 3)*0.6}s" repeatCount="indefinite" />')
         svg.append(f'        <animate attributeName="opacity" values="0.2;1;0.2" dur="{3 + (idx % 3)*0.6}s" repeatCount="indefinite" />')
         svg.append(f'      </circle>')
 
-    # Center Hub: FULL STACK DEVELOPER (Circular glowing double-ring hub)
+    # Center Hub: FULL STACK DEVELOPER
     cr = 38
     svg.append(f'      <!-- Center Core: FULL STACK DEVELOPER -->')
     svg.append(f'      <g transform="translate({cx}, {cy})">')
-    # Outer Pulse Ring
     svg.append(f'        <circle cx="0" cy="0" r="{cr + 3}" fill="none" stroke="{chrome_color}" stroke-width="1" opacity="0.4" filter="url(#glow-cyan)">')
     svg.append(f'          <animate attributeName="r" values="{cr+2};{cr+5};{cr+2}" dur="3s" repeatCount="indefinite" />')
     svg.append(f'          <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite" />')
     svg.append(f'        </circle>')
-    # Main Hub Circle
     svg.append(f'        <circle cx="0" cy="0" r="{cr}" fill="{center_bg}" stroke="{chrome_color}" stroke-width="1.8" />')
     svg.append(f'        <circle cx="0" cy="0" r="{cr-3}" fill="none" stroke="{border_color}" stroke-width="1" stroke-dasharray="2 3" />')
-    # Center Stacked Typography
     svg.append(f'        <text x="0" y="-10" fill="{chrome_color}" font-size="8.5" font-weight="900" letter-spacing="1.2" text-anchor="middle">FULL</text>')
     svg.append(f'        <text x="0" y="2" fill="{text_primary}" font-size="8.5" font-weight="900" letter-spacing="1.2" text-anchor="middle">STACK</text>')
     svg.append(f'        <text x="0" y="14" fill="{chrome_color}" font-size="7.5" font-weight="800" letter-spacing="0.8" text-anchor="middle">DEVELOPER</text>')
@@ -302,16 +284,10 @@ def generate_svg(theme="dark", profile_data=None):
         
         svg.append(f'      <!-- Node {idx+1}: {name} -->')
         svg.append(f'      <g class="tech-node-badge" transform="translate({nx:.1f}, {ny:.1f})">')
-        
-        # Octagonal Badge polygon
         bw = 14
         pts = f"{-bw},-7 {-7},{-bw} {7},{-bw} {bw},-7 {bw},7 {7},{bw} {-7},{bw} {-bw},7"
         svg.append(f'        <polygon class="badge-bg" points="{pts}" fill="{node_bg}" stroke="{node_border}" stroke-width="1.2" />')
-        
-        # Node Icon
         svg.append(get_tech_logo(name, 0, 0, color))
-        
-        # Label below node badge
         svg.append(f'        <text x="0" y="21" fill="{text_primary}" font-size="7.5" font-weight="600" letter-spacing="0.2" text-anchor="middle">{name}</text>')
         svg.append(f'      </g>')
 
@@ -319,8 +295,7 @@ def generate_svg(theme="dark", profile_data=None):
 
     # Bottom Status Line: ● 12+ CORE TECHNOLOGIES    //    STACK: ACTIVE
     svg.append(f'    <!-- Bottom Status Line -->')
-    svg.append(f'    <g transform="translate(28, 430)">')
-    # Corner brackets on status bar
+    svg.append(f'    <g transform="translate(28, 422)">')
     svg.append(f'      <path d="M2 5 L2 0 L7 0" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
     svg.append(f'      <path d="M288 5 L288 0 L283 0" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
     svg.append(f'      <path d="M2 13 L2 18 L7 18" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
@@ -336,17 +311,18 @@ def generate_svg(theme="dark", profile_data=None):
     svg.append(f'  </g>')
 
     # =========================================================================
-    # 3. Right Panel: [ SYSTEM.INFO ] (Matching Reference Telemetry Exactly)
+    # 3. Right Panel: [ SYSTEM.INFO ] (Matching Screenshot 2 Spacing & Letter Size)
     # =========================================================================
     svg.append(f'  <!-- Right Panel: SYSTEM.INFO -->')
     svg.append(f'  <g class="panel-box">')
-    svg.append(f'    <rect x="340" y="52" width="582" height="404" rx="8" fill="{card_bg}" stroke="{border_color}" stroke-width="1" />')
+    svg.append(f'    <rect x="340" y="52" width="582" height="394" rx="8" fill="{card_bg}" stroke="{border_color}" stroke-width="1" />')
     svg.append(f'    <rect x="340" y="52" width="582" height="26" rx="8" fill="{header_bar}" />')
     svg.append(f'    <path d="M340 66 L340 78 L922 78 L922 66 Z" fill="{header_bar}" />')
     svg.append(f'    <line x1="340" y1="78" x2="922" y2="78" stroke="{border_color}" stroke-width="1" />')
     svg.append(f'    <text x="352" y="70" fill="{chrome_color}" font-size="11.5" font-weight="700" letter-spacing="1">[ SYSTEM.INFO ]</text>')
     svg.append(f'    <text x="910" y="70" fill="{accent_emerald}" font-size="9" font-weight="600" text-anchor="end" letter-spacing="0.5">STATUS: ACTIVE // 240 FPS</text>')
 
+    # Top Block (5 fields, generous 24px line height)
     info_fields_top = [
         ("Subject", profile_data["name"]),
         ("Role", profile_data["role"]),
@@ -355,22 +331,22 @@ def generate_svg(theme="dark", profile_data=None):
         ("ToolChain", profile_data["tools"])
     ]
 
-    cur_y = 96
+    cur_y = 100
     for label, val in info_fields_top:
         svg.append(f'    <g class="info-row" transform="translate(356, {cur_y})">')
-        svg.append(f'      <text x="0" y="0" fill="{text_secondary}" font-size="11" font-weight="600">{clean_text(label)}</text>')
+        svg.append(f'      <text x="0" y="0" fill="{text_secondary}" font-size="11.5" font-weight="600">{clean_text(label)}</text>')
         svg.append(f'      <text x="85" y="0" fill="{border_color}" font-size="11" letter-spacing="2">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</text>')
         val_color = accent_emerald if label in ["Status"] else (chrome_color if label in ["Subject", "Role"] else text_primary)
         val_weight = "700" if label in ["Subject", "Status"] else "500"
-        svg.append(f'      <text x="550" y="0" fill="{val_color}" font-size="11" font-weight="{val_weight}" text-anchor="end">{clean_text(val)}</text>')
+        svg.append(f'      <text x="550" y="0" fill="{val_color}" font-size="11.5" font-weight="{val_weight}" text-anchor="end">{clean_text(val)}</text>')
         svg.append(f'    </g>')
-        cur_y += 22
+        cur_y += 24
 
-    # Divider
+    # Divider 1
     svg.append(f'    <line x1="356" y1="{cur_y + 1}" x2="906" y2="{cur_y + 1}" stroke="{border_color}" stroke-width="1" stroke-dasharray="3 3" />')
-    cur_y += 18
+    cur_y += 20
 
-    # Core Stacks Block
+    # Core Block (5 fields, comfortable 22px line height)
     info_fields_core = [
         ("Core.Lang", profile_data["core_languages"]),
         ("Core.Frontend", profile_data["core_frontend"]),
@@ -381,17 +357,17 @@ def generate_svg(theme="dark", profile_data=None):
 
     for label, val in info_fields_core:
         svg.append(f'    <g class="info-row" transform="translate(356, {cur_y})">')
-        svg.append(f'      <text x="0" y="0" fill="{text_secondary}" font-size="10.5" font-weight="600">{clean_text(label)}</text>')
+        svg.append(f'      <text x="0" y="0" fill="{text_secondary}" font-size="11" font-weight="600">{clean_text(label)}</text>')
         svg.append(f'      <text x="100" y="0" fill="{border_color}" font-size="11" letter-spacing="2">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</text>')
-        svg.append(f'      <text x="550" y="0" fill="{chrome_color}" font-size="10.5" font-weight="500" text-anchor="end">{clean_text(val)}</text>')
+        svg.append(f'      <text x="550" y="0" fill="{chrome_color}" font-size="11" font-weight="500" text-anchor="end">{clean_text(val)}</text>')
         svg.append(f'    </g>')
-        cur_y += 20
+        cur_y += 22
 
-    # Divider
+    # Divider 2
     svg.append(f'    <line x1="356" y1="{cur_y + 1}" x2="906" y2="{cur_y + 1}" stroke="{border_color}" stroke-width="1" stroke-dasharray="3 3" />')
-    cur_y += 18
+    cur_y += 20
 
-    # Grid Links Block
+    # Grid Block (4 fields, 20px line height)
     grid_fields = [
         ("Grid.Mail", profile_data["email"]),
         ("Grid.Portfolio", profile_data["portfolio"]),
@@ -401,12 +377,12 @@ def generate_svg(theme="dark", profile_data=None):
 
     for label, val in grid_fields:
         svg.append(f'    <g class="info-row" transform="translate(356, {cur_y})">')
-        svg.append(f'      <text x="0" y="0" fill="{text_secondary}" font-size="10" font-weight="600">{clean_text(label)}</text>')
+        svg.append(f'      <text x="0" y="0" fill="{text_secondary}" font-size="10.5" font-weight="600">{clean_text(label)}</text>')
         svg.append(f'      <text x="95" y="0" fill="{border_color}" font-size="11" letter-spacing="2">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</text>')
         val_color = accent_purple if "GitHub" in label else (accent_emerald if "Portfolio" in label else text_primary)
-        svg.append(f'      <text x="550" y="0" fill="{val_color}" font-size="10" font-weight="500" text-anchor="end">{clean_text(val)}</text>')
+        svg.append(f'      <text x="550" y="0" fill="{val_color}" font-size="10.5" font-weight="500" text-anchor="end">{clean_text(val)}</text>')
         svg.append(f'    </g>')
-        cur_y += 19
+        cur_y += 20
 
     svg.append(f'  </g>')
 
@@ -421,12 +397,12 @@ if __name__ == "__main__":
     with open("data/profile_data.json", "r", encoding="utf-8") as f:
         pdata = json.load(f)
         
-    print("Generating dark.svg with authentic Tech Stack Matrix (No SQL/Docker)...")
+    print("Generating dark.svg with matched Screenshot 2 spacing & font sizes...")
     dark_svg = generate_svg(theme="dark", profile_data=pdata)
     with open("assets/dark.svg", "w", encoding="utf-8") as f:
         f.write(dark_svg)
         
-    print("Generating light.svg with authentic Tech Stack Matrix (No SQL/Docker)...")
+    print("Generating light.svg with matched Screenshot 2 spacing & font sizes...")
     light_svg = generate_svg(theme="light", profile_data=pdata)
     with open("assets/light.svg", "w", encoding="utf-8") as f:
         f.write(light_svg)
