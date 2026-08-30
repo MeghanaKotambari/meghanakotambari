@@ -207,15 +207,15 @@ def generate_svg(theme="dark", profile_data=None):
 
     svg = []
     svg.append('<?xml version="1.0" encoding="UTF-8"?>')
-    svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 450" width="100%" height="100%" style="background-color: {bg_color}; border-radius: 12px; font-family: -apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, \'JetBrains Mono\', monospace;">')
+    svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 470" width="100%" height="100%" style="background-color: {bg_color}; border-radius: 12px; font-family: -apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, \'JetBrains Mono\', monospace;">')
     svg.append('  <defs>')
     svg.append(f'    <filter id="glow-cyan" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="blur" /><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>')
     svg.append(f'    <filter id="glow-emerald" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2" result="blur" /><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>')
-    svg.append('    <clipPath id="hologram-clip"><rect x="20" y="55" width="306" height="350" rx="8" /></clipPath>')
+    svg.append('    <clipPath id="hologram-clip"><rect x="20" y="55" width="306" height="370" rx="8" /></clipPath>')
     svg.append('  </defs>')
 
     # Master Window Frame
-    svg.append(f'  <rect x="1" y="1" width="938" height="448" rx="12" fill="{bg_color}" stroke="{border_color}" stroke-width="1.5" />')
+    svg.append(f'  <rect x="1" y="1" width="938" height="468" rx="12" fill="{bg_color}" stroke="{border_color}" stroke-width="1.5" />')
     
     # Window Top Bar
     svg.append(f'  <rect x="1" y="1" width="938" height="40" rx="12" fill="{header_bar}" />')
@@ -248,7 +248,7 @@ def generate_svg(theme="dark", profile_data=None):
     # 2. Left Panel: [ VISUAL.MAP ]
     # ==========================================
     svg.append(f'  <!-- Left Panel: VISUAL.MAP -->')
-    svg.append(f'  <rect x="18" y="52" width="310" height="382" rx="8" fill="{card_bg}" stroke="{border_color}" stroke-width="1" />')
+    svg.append(f'  <rect x="18" y="52" width="310" height="404" rx="8" fill="{card_bg}" stroke="{border_color}" stroke-width="1" />')
     svg.append(f'  <rect x="18" y="52" width="310" height="26" rx="8" fill="{header_bar}" />')
     svg.append(f'  <path d="M18 66 L18 78 L328 78 L328 66 Z" fill="{header_bar}" />')
     svg.append(f'  <line x1="18" y1="78" x2="328" y2="78" stroke="{border_color}" stroke-width="1" />')
@@ -268,13 +268,11 @@ def generate_svg(theme="dark", profile_data=None):
     # Corner HUD crosshairs
     svg.append(f'    <path d="M26 86 L34 86 M26 86 L26 94" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
     svg.append(f'    <path d="M320 86 L312 86 M320 86 L320 94" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
-    svg.append(f'    <path d="M26 400 L34 400 M26 400 L26 392" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
-    svg.append(f'    <path d="M320 400 L312 400 M320 400 L320 392" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
+    svg.append(f'    <path d="M26 420 L34 420 M26 420 L26 412" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
+    svg.append(f'    <path d="M320 420 L312 420 M320 420 L320 412" stroke="{chrome_secondary}" stroke-width="1" fill="none" opacity="0.6"/>')
 
     # Animated Holographic 3D Rotating Octahedron Wireframe Lines (Layer 1)
-    # Rotating Diamond Polygon that pulses and morphs
     svg.append(f'    <g stroke="{chrome_color}" stroke-width="1.8" fill="none" opacity="0.85" filter="url(#glow-cyan)">')
-    svg.append(f'      <!-- Diamond Outer Facets with 3D rotation animation -->')
     d1 = f"M{cx} {cy-95} L{cx+75} {cy} L{cx} {cy+95} L{cx-75} {cy} Z"
     d2 = f"M{cx} {cy-95} L{cx+30} {cy-25} L{cx} {cy+95} L{cx-30} {cy+25} Z"
     d3 = f"M{cx} {cy-95} L{cx-75} {cy} L{cx} {cy+95} L{cx+75} {cy} Z"
@@ -292,7 +290,6 @@ def generate_svg(theme="dark", profile_data=None):
     svg.append(f'    </g>')
 
     # 750 Hologram Morph Particles (Layer 2)
-    # Transitions smoothly: Quantum Core -> React -> Node.js -> TypeScript -> Quantum Core
     for i in range(len(p_core)):
         x0, y0 = round(p_core[i][0], 1), round(p_core[i][1], 1)
         x1, y1 = round(p_react_matched[i][0], 1), round(p_react_matched[i][1], 1)
@@ -311,16 +308,18 @@ def generate_svg(theme="dark", profile_data=None):
     svg.append(f'  </g>')
 
     # Bottom Mode Indicator Pill on Visual Map
-    svg.append(f'  <g transform="translate(28, 412)">')
+    svg.append(f'  <g transform="translate(28, 432)">')
     svg.append(f'    <rect x="0" y="0" width="290" height="18" rx="4" fill="{header_bar}" stroke="{border_color}" stroke-width="1" />')
     svg.append(f'    <rect x="0" y="0" width="46" height="18" rx="4" fill="{chrome_secondary}" />')
     svg.append(f'    <text x="23" y="13" fill="#FFFFFF" font-size="9" font-weight="700" text-anchor="middle">MODE</text>')
     svg.append(f'    <text x="56" y="13" fill="{accent_emerald}" font-size="9" font-weight="600" letter-spacing="0.5">PARTICLE.MORPH [CORE &#8594; REACT &#8594; NODE &#8594; TS]</text>')
     svg.append(f'  </g>')
 
+    # ==========================================
     # 3. Right Panel: [ SYSTEM.INFO ]
+    # ==========================================
     svg.append(f'  <!-- Right Panel: SYSTEM.INFO -->')
-    svg.append(f'  <rect x="340" y="52" width="582" height="388" rx="8" fill="{card_bg}" stroke="{border_color}" stroke-width="1" />')
+    svg.append(f'  <rect x="340" y="52" width="582" height="404" rx="8" fill="{card_bg}" stroke="{border_color}" stroke-width="1" />')
     svg.append(f'  <rect x="340" y="52" width="582" height="26" rx="8" fill="{header_bar}" />')
     svg.append(f'  <path d="M340 66 L340 78 L922 78 L922 66 Z" fill="{header_bar}" />')
     svg.append(f'  <line x1="340" y1="78" x2="922" y2="78" stroke="{border_color}" stroke-width="1" />')
@@ -344,7 +343,7 @@ def generate_svg(theme="dark", profile_data=None):
         val_weight = "700" if label in ["Subject", "Status"] else "500"
         svg.append(f'    <text x="550" y="0" fill="{val_color}" font-size="11" font-weight="{val_weight}" text-anchor="end">{clean_text(val)}</text>')
         svg.append(f'  </g>')
-        cur_y += 21
+        cur_y += 22
 
     # Divider
     svg.append(f'  <line x1="356" y1="{cur_y + 1}" x2="906" y2="{cur_y + 1}" stroke="{border_color}" stroke-width="1" stroke-dasharray="3 3" />')
@@ -365,7 +364,7 @@ def generate_svg(theme="dark", profile_data=None):
         svg.append(f'    <text x="100" y="0" fill="{border_color}" font-size="11" letter-spacing="2">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</text>')
         svg.append(f'    <text x="550" y="0" fill="{chrome_color}" font-size="10.5" font-weight="500" text-anchor="end">{clean_text(val)}</text>')
         svg.append(f'  </g>')
-        cur_y += 19
+        cur_y += 20
 
     # Divider
     svg.append(f'  <line x1="356" y1="{cur_y + 1}" x2="906" y2="{cur_y + 1}" stroke="{border_color}" stroke-width="1" stroke-dasharray="3 3" />')
@@ -386,7 +385,7 @@ def generate_svg(theme="dark", profile_data=None):
         val_color = accent_purple if "GitHub" in label else (accent_emerald if "Portfolio" in label else text_primary)
         svg.append(f'    <text x="550" y="0" fill="{val_color}" font-size="10" font-weight="500" text-anchor="end">{clean_text(val)}</text>')
         svg.append(f'  </g>')
-        cur_y += 18
+        cur_y += 19
 
 
     svg.append('</svg>')

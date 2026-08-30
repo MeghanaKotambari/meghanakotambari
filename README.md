@@ -10,6 +10,11 @@
   <img alt="Meghana Kotambari — Live Developer OS" src="assets/dark.svg" width="100%" />
 </picture>
 
+<br/><br/>
+
+<!-- Holographic Telemetry Stat Bar -->
+<img src="assets/metrics_hud.svg" alt="Meghana's Telemetry Stats" width="100%" />
+
 </div>
 
 <br/>
