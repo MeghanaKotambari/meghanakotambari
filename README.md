@@ -1,6 +1,17 @@
 <div align="center">
 
 <!-- ================================================================= -->
+<!-- SECTION 0: CASUAL WELCOME & LIVE TYPING INTRO                    -->
+<!-- ================================================================= -->
+
+# 👋 Hey, I'm **Meghana Kotambari**! 🚀
+### 💻 *Full-Stack & React Native Engineer &nbsp;|&nbsp; 4x Industrial Intern &nbsp;|&nbsp; Builder of 40+ Projects*
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&pause=1000&color=22D3EE&center=true&vCenter=true&width=650&lines=Crafting+high-performance+web+%26+mobile+applications...;Engineering+multi-tenant+SaaS+%26+AI-driven+backends...;Turning+complex+ideas+into+scalable+production+systems+⚡" alt="Typing SVG" />
+
+<br/><br/>
+
+<!-- ================================================================= -->
 <!-- SECTION 1: DUAL-THEME LIVE TERMINAL HERO (profile.sh --live)     -->
 <!-- ================================================================= -->
 
@@ -23,7 +34,7 @@
 <!-- SECTION 2: IDENTITY & ENGINEERING PHILOSOPHY                     -->
 <!-- ================================================================= -->
 
-### ⚡ `ENGINEERING / BUILDING / SHIPPING`
+## ⚡ <samp><b>ENGINEERING</b> // <span style="color:#22D3EE;">BUILDING</span> // <span style="color:#10B981;">SHIPPING</span></samp>
 
 ```bash
 Full-stack & React Native engineer with 1.5+ years of hands-on production experience 
@@ -40,7 +51,7 @@ robust product-grade software from zero to scale.
 <!-- SECTION 3: SYSTEM TELEMETRY // ACTIVE THREADS                   -->
 <!-- ================================================================= -->
 
-### 📡 `TELEMETRY // ACTIVE_DEPLOYMENTS`
+## 📡 <samp><b>TELEMETRY</b> // <span style="color:#22D3EE;">ACTIVE_DEPLOYMENTS</span></samp>
 
 ```zsh
 $ sys.telemetry --active-context
@@ -59,7 +70,7 @@ $ sys.telemetry --active-context
 <!-- SECTION 4: 4 INDUSTRIAL INTERNSHIPS (CLEAN RESPONSIVE CARDS)     -->
 <!-- ================================================================= -->
 
-### 💼 `EXPERIENCE // 4_INDUSTRIAL_INTERNSHIPS`
+## 💼 <samp><b>EXPERIENCE</b> // <span style="color:#10B981;">4_INDUSTRIAL_INTERNSHIPS</span></samp>
 
 <details open>
 <summary><b>🏢 01 / Full Stack Developer Intern — IIIT Dharwad Research Park</b> &nbsp; <code>July 2026 – Present</code></summary>
@@ -127,7 +138,7 @@ $ sys.telemetry --active-context
 <!-- SECTION 5: CAPABILITY MATRIX // TECH STACK                      -->
 <!-- ================================================================= -->
 
-### 🛠️ `TECH_STACK // CAPABILITY_MATRIX`
+## 🛠️ <samp><b>TECH_STACK</b> // <span style="color:#A78BFA;">CAPABILITY_MATRIX</span></samp>
 
 <table>
   <tr>
@@ -192,7 +203,7 @@ $ sys.telemetry --active-context
 <!-- SECTION 6: FEATURED SYSTEMS & PRODUCTION WORK                    -->
 <!-- ================================================================= -->
 
-### 🚀 `SELECTED_WORK // PRODUCTION_BUILDS`
+## 🚀 <samp><b>SELECTED_WORK</b> // <span style="color:#38BDF8;">PRODUCTION_BUILDS</span></samp>
 
 <table>
   <tr>
@@ -287,7 +298,7 @@ $ sys.telemetry --active-context
 <!-- SECTION 7: HACKATHON ACHIEVEMENTS & MILESTONES                   -->
 <!-- ================================================================= -->
 
-### 🏆 `ACHIEVEMENTS // HACKATHON_RECORDS`
+## 🏆 <samp><b>ACHIEVEMENTS</b> // <span style="color:#F59E0B;">HACKATHON_RECORDS</span></samp>
 
 ```yaml
 hackathon_victories:
@@ -309,7 +320,7 @@ industrial_milestone:
 <!-- SECTION 8: RESUME SCANNER // DIGITAL CREDENTIALS                -->
 <!-- ================================================================= -->
 
-### 📄 `CREDENTIALS // RESUME_SCANNER`
+## 📄 <samp><b>CREDENTIALS</b> // <span style="color:#22D3EE;">RESUME_SCANNER</span></samp>
 
 <table>
   <tr>
@@ -341,7 +352,7 @@ industrial_milestone:
 <!-- SECTION 9: GITHUB TELEMETRY & METRICS                           -->
 <!-- ================================================================= -->
 
-### 📊 `SYSTEM_METRICS // GITHUB_TELEMETRY`
+## 📊 <samp><b>SYSTEM_METRICS</b> // <span style="color:#10B981;">GITHUB_TELEMETRY</span></samp>
 
 <div align="center">
 
@@ -360,7 +371,7 @@ industrial_milestone:
 <!-- SECTION 10: CONTRIBUTION TIMELINE SNAKE                         -->
 <!-- ================================================================= -->
 
-### 🐍 `TIMELINE // CONTRIBUTION_STREAM`
+## 🐍 <samp><b>TIMELINE</b> // <span style="color:#A78BFA;">CONTRIBUTION_STREAM</span></samp>
 
 <div align="center">
 
@@ -378,7 +389,7 @@ industrial_milestone:
 <!-- SECTION 11: COMMUNICATION LINKS & CONTACT MATRIX                -->
 <!-- ================================================================= -->
 
-### 🌐 `COMM_LINK // CONNECT`
+## 🌐 <samp><b>COMM_LINK</b> // <span style="color:#22D3EE;">CONNECT</span></samp>
 
 <div align="center">
 
