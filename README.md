@@ -1,13 +1,10 @@
 <div align="center">
 
 <!-- ================================================================= -->
-<!-- SECTION 0: CASUAL WELCOME & LIVE TYPING INTRO                    -->
+<!-- SECTION 0: CASUAL WELCOME & LIVE DYNAMIC TYPING INTRO            -->
 <!-- ================================================================= -->
 
-# 👋 Hey, I'm **Meghana Kotambari**! 🚀
-### 💻 *Full-Stack & React Native Engineer &nbsp;|&nbsp; 4x Industrial Intern &nbsp;|&nbsp; Builder of 40+ Projects*
-
-<img src="assets/typing.svg" alt="Meghana's Typing Bio" width="680" />
+<img src="assets/typing.svg" alt="Meghana Kotambari — Live Intro" width="800" />
 
 <br/><br/>
 
@@ -34,7 +31,7 @@
 <!-- SECTION 2: IDENTITY & ENGINEERING PHILOSOPHY                     -->
 <!-- ================================================================= -->
 
-## ⚡ <samp><b>ENGINEERING</b> // <span style="color:#22D3EE;">BUILDING</span> // <span style="color:#10B981;">SHIPPING</span></samp>
+<img src="assets/headers/header_engineering.svg" alt="Engineering // Building // Shipping" width="100%" />
 
 ```bash
 Full-stack & React Native engineer with 1.5+ years of hands-on production experience 
@@ -45,13 +42,13 @@ Driven by strong algorithmic foundations (DSA), high system throughput, and deli
 robust product-grade software from zero to scale.
 ```
 
----
+<br/>
 
 <!-- ================================================================= -->
 <!-- SECTION 3: SYSTEM TELEMETRY // ACTIVE THREADS                   -->
 <!-- ================================================================= -->
 
-## 📡 <samp><b>TELEMETRY</b> // <span style="color:#22D3EE;">ACTIVE_DEPLOYMENTS</span></samp>
+<img src="assets/headers/header_telemetry.svg" alt="Telemetry // Active Deployments" width="100%" />
 
 ```zsh
 $ sys.telemetry --active-context
@@ -64,13 +61,13 @@ $ sys.telemetry --active-context
 ▸ CORE_FOCUS    : Multi-tenant SaaS, AI-driven HRMS backends, Cross-Platform Mobile, Offline PWAs
 ```
 
----
+<br/>
 
 <!-- ================================================================= -->
 <!-- SECTION 4: 4 INDUSTRIAL INTERNSHIPS (CLEAN RESPONSIVE CARDS)     -->
 <!-- ================================================================= -->
 
-## 💼 <samp><b>EXPERIENCE</b> // <span style="color:#10B981;">4_INDUSTRIAL_INTERNSHIPS</span></samp>
+<img src="assets/headers/header_experience.svg" alt="Experience // 4 Industrial Internships" width="100%" />
 
 <details open>
 <summary><b>🏢 01 / Full Stack Developer Intern — IIIT Dharwad Research Park</b> &nbsp; <code>July 2026 – Present</code></summary>
@@ -132,13 +129,13 @@ $ sys.telemetry --active-context
 
 </details>
 
----
+<br/>
 
 <!-- ================================================================= -->
 <!-- SECTION 5: CAPABILITY MATRIX // TECH STACK                      -->
 <!-- ================================================================= -->
 
-## 🛠️ <samp><b>TECH_STACK</b> // <span style="color:#A78BFA;">CAPABILITY_MATRIX</span></samp>
+<img src="assets/headers/header_techstack.svg" alt="Tech Stack // Capability Matrix" width="100%" />
 
 <table>
   <tr>
@@ -197,13 +194,13 @@ $ sys.telemetry --active-context
   </tr>
 </table>
 
----
+<br/>
 
 <!-- ================================================================= -->
 <!-- SECTION 6: FEATURED SYSTEMS & PRODUCTION WORK                    -->
 <!-- ================================================================= -->
 
-## 🚀 <samp><b>SELECTED_WORK</b> // <span style="color:#38BDF8;">PRODUCTION_BUILDS</span></samp>
+<img src="assets/headers/header_projects.svg" alt="Selected Work // Production Builds" width="100%" />
 
 <table>
   <tr>
@@ -292,13 +289,13 @@ $ sys.telemetry --active-context
   </tr>
 </table>
 
----
+<br/>
 
 <!-- ================================================================= -->
 <!-- SECTION 7: HACKATHON ACHIEVEMENTS & MILESTONES                   -->
 <!-- ================================================================= -->
 
-## 🏆 <samp><b>ACHIEVEMENTS</b> // <span style="color:#F59E0B;">HACKATHON_RECORDS</span></samp>
+<img src="assets/headers/header_achievements.svg" alt="Achievements // Hackathon Records" width="100%" />
 
 ```yaml
 hackathon_victories:
@@ -314,13 +311,13 @@ industrial_milestone:
   - companies: "IIIT Dharwad Research Park · Yumaris Agency · ARMB · LettrBlack"
 ```
 
----
+<br/>
 
 <!-- ================================================================= -->
 <!-- SECTION 8: RESUME SCANNER // DIGITAL CREDENTIALS                -->
 <!-- ================================================================= -->
 
-## 📄 <samp><b>CREDENTIALS</b> // <span style="color:#22D3EE;">RESUME_SCANNER</span></samp>
+<img src="assets/headers/header_resume.svg" alt="Credentials // Resume Scanner" width="100%" />
 
 <table>
   <tr>
@@ -346,13 +343,13 @@ industrial_milestone:
   </tr>
 </table>
 
----
+<br/>
 
 <!-- ================================================================= -->
 <!-- SECTION 9: GITHUB TELEMETRY & METRICS                           -->
 <!-- ================================================================= -->
 
-## 📊 <samp><b>SYSTEM_METRICS</b> // <span style="color:#10B981;">GITHUB_TELEMETRY</span></samp>
+<img src="assets/headers/header_metrics.svg" alt="System Metrics // GitHub Telemetry" width="100%" />
 
 <div align="center">
 
@@ -365,13 +362,13 @@ industrial_milestone:
 
 </div>
 
----
+<br/>
 
 <!-- ================================================================= -->
 <!-- SECTION 10: CONTRIBUTION TIMELINE SNAKE                         -->
 <!-- ================================================================= -->
 
-## 🐍 <samp><b>TIMELINE</b> // <span style="color:#A78BFA;">CONTRIBUTION_STREAM</span></samp>
+<img src="assets/headers/header_timeline.svg" alt="Timeline // Contribution Stream" width="100%" />
 
 <div align="center">
 
@@ -383,13 +380,13 @@ industrial_milestone:
 
 </div>
 
----
+<br/>
 
 <!-- ================================================================= -->
 <!-- SECTION 11: COMMUNICATION LINKS & CONTACT MATRIX                -->
 <!-- ================================================================= -->
 
-## 🌐 <samp><b>COMM_LINK</b> // <span style="color:#22D3EE;">CONNECT</span></samp>
+<img src="assets/headers/header_connect.svg" alt="Comm Link // Connect" width="100%" />
 
 <div align="center">
 
