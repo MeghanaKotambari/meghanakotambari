@@ -209,7 +209,39 @@ industrial_milestone:
 ---
 
 <!-- ================================================================= -->
-<!-- SECTION 7: GITHUB TELEMETRY & STATS                             -->
+<!-- SECTION 7: RESUME SCANNER // DIGITAL CREDENTIALS                -->
+<!-- ================================================================= -->
+
+### 📄 `CREDENTIALS // RESUME_SCANNER`
+
+<table>
+  <tr>
+    <td width="38%" align="center" valign="middle">
+      <a href="https://drive.google.com/file/d/1gV66MqHhcaJzJRVpa-82R1VmVX_wMwPq/view?usp=drivesdk" target="_blank">
+        <img src="assets/resume_qr.svg" alt="Scan to View Meghana Kotambari's Resume" width="260" />
+      </a>
+    </td>
+    <td width="62%" valign="top">
+      <h4>⚡ Instant CV Access // PDF Document</h4>
+      <p>Point your smartphone camera at the scanner matrix or click below to view the official verified resume on Google Drive.</p>
+      <ul>
+        <li><b>Current Role:</b> Full Stack Developer Intern @ IIIT Dharwad Research Park</li>
+        <li><b>Core Specialization:</b> Full-Stack Web, React Native, AI-Assisted Backends</li>
+        <li><b>Education:</b> B.E. Computer Science & Engineering (CGPA: 9.00 // 2027)</li>
+        <li><b>Track Record:</b> 4 Industrial Internships · 2x Hackathon Winner</li>
+      </ul>
+      <br/>
+      <a href="https://drive.google.com/file/d/1gV66MqHhcaJzJRVpa-82R1VmVX_wMwPq/view?usp=drivesdk" target="_blank">
+        <img src="https://img.shields.io/badge/Open_Resume_on_Google_Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white" alt="Open Resume" />
+      </a>
+    </td>
+  </tr>
+</table>
+
+---
+
+<!-- ================================================================= -->
+<!-- SECTION 8: GITHUB TELEMETRY & STATS                             -->
 <!-- ================================================================= -->
 
 ### 📊 `SYSTEM_METRICS // GITHUB_TELEMETRY`
@@ -228,7 +260,7 @@ industrial_milestone:
 ---
 
 <!-- ================================================================= -->
-<!-- SECTION 8: CONTRIBUTION TIMELINE SNAKE                          -->
+<!-- SECTION 9: CONTRIBUTION TIMELINE SNAKE                          -->
 <!-- ================================================================= -->
 
 ### 🐍 `TIMELINE // CONTRIBUTION_STREAM`
@@ -246,7 +278,7 @@ industrial_milestone:
 ---
 
 <!-- ================================================================= -->
-<!-- SECTION 9: COMMUNICATION LINKS & CONTACT MATRIX                 -->
+<!-- SECTION 10: COMMUNICATION LINKS & CONTACT MATRIX                -->
 <!-- ================================================================= -->
 
 ### 🌐 `COMM_LINK // CONNECT`

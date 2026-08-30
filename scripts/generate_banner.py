@@ -156,34 +156,44 @@ def match_points_nearest(source_pts, target_pts):
 def generate_dithered_portrait_matrix(width=280, height=310, offset_x=30, offset_y=60):
     """
     Generate an engineered 1-bit Floyd-Steinberg dithered head-and-shoulders
-    monochrome portrait point matrix (~16,000 dots) organized into 60 interleaved hash groups.
+    monochrome portrait point matrix (~15,000 dots) directly from user photo
+    organized into 60 interleaved hash groups.
     """
-    # Create synthetic high-fidelity developer silhouette matrix
-    img = Image.new("L", (width, height), 0)
-    draw = ImageDraw.Draw(img)
+    photo_path = "assets/portrait.jpg" if os.path.exists("assets/portrait.jpg") else "data/portrait.jpg"
     
-    cx = width // 2
-    
-    # Gradient / lighting backdrop
-    for y in range(height):
-        v = int(20 + 35 * (1 - y / height))
-        draw.line([(0, y), (width, y)], fill=v)
+    if os.path.exists(photo_path):
+        from PIL import ImageEnhance, ImageOps
+        img = Image.open(photo_path).convert("L")
+        img = ImageOps.autocontrast(img, cutoff=2)
+        enhancer = ImageEnhance.Contrast(img)
+        img = enhancer.enhance(1.35)
         
-    # Shoulders / Torso silhouette
-    draw.ellipse([cx - 100, height - 120, cx + 100, height + 100], fill=180)
-    # Neck
-    draw.rectangle([cx - 24, height - 145, cx + 24, height - 90], fill=195)
-    # Head / Face oval
-    draw.ellipse([cx - 52, height - 235, cx + 52, height - 125], fill=220)
-    # Hair volume
-    draw.arc([cx - 56, height - 250, cx + 56, height - 140], start=160, end=380, fill=130, width=14)
-    # Glasses / Tech headset visor
-    draw.line([cx - 36, height - 185, cx + 36, height - 185], fill=80, width=3)
-    draw.rectangle([cx - 38, height - 195, cx - 8, height - 175], outline=60, width=2)
-    draw.rectangle([cx + 8, height - 195, cx + 38, height - 175], outline=60, width=2)
-    # Facial contours
-    draw.arc([cx - 22, height - 165, cx + 22, height - 145], start=20, end=160, fill=100, width=2) # smile
-    draw.line([cx, height - 185, cx, height - 168], fill=120, width=2) # nose
+        w, h = img.size
+        target_ratio = width / height
+        current_ratio = w / h
+        
+        if current_ratio > target_ratio:
+            new_w = int(h * target_ratio)
+            left = (w - new_w) // 2
+            img = img.crop((left, 0, left + new_w, h))
+        else:
+            new_h = int(w / target_ratio)
+            top = int((h - new_h) * 0.15) # prioritize head-and-shoulders framing
+            img = img.crop((0, top, w, min(h, top + new_h)))
+            
+        img = img.resize((width, height), Image.Resampling.LANCZOS)
+    else:
+        # Fallback synthetic profile
+        img = Image.new("L", (width, height), 0)
+        draw = ImageDraw.Draw(img)
+        cx = width // 2
+        for y in range(height):
+            v = int(20 + 35 * (1 - y / height))
+            draw.line([(0, y), (width, y)], fill=v)
+        draw.ellipse([cx - 100, height - 120, cx + 100, height + 100], fill=180)
+        draw.rectangle([cx - 24, height - 145, cx + 24, height - 90], fill=195)
+        draw.ellipse([cx - 52, height - 235, cx + 52, height - 125], fill=220)
+        draw.arc([cx - 56, height - 250, cx + 56, height - 140], start=160, end=380, fill=130, width=14)
     
     # Floyd-Steinberg dithering with serpentine scan
     arr = np.array(img, dtype=float)
@@ -214,9 +224,7 @@ def generate_dithered_portrait_matrix(width=280, height=310, offset_x=30, offset
     # Assign each dot to one of 60 non-spatial hash groups for organic shimmer
     grouped_dots = [[] for _ in range(60)]
     for i, (dx, dy) in enumerate(dots):
-        # Controlled pseudo-random hash based on coordinates + prime
         group_id = int((dx * 73856093 ^ dy * 19349663 ^ i * 83492791) % 60)
-        # Add controlled per-dot drift trajectory
         drift_x = math.sin(dy * 0.08) * 12 + (random.random() - 0.5) * 8
         drift_y = math.cos(dx * 0.08) * 8 + (random.random() - 0.5) * 6
         grouped_dots[group_id].append((int(dx), int(dy), round(drift_x, 1), round(drift_y, 1)))
