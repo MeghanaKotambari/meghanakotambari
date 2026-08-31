@@ -5,16 +5,45 @@ Using Meghana Kotambari's real GitHub metrics:
 - Total Contributions: 947+
 - Active Streak: 241 Days 🔥
 - Public Repositories: 17 Repos
-- Repository Forks: 0 Forks
 - System Runtime: 100% Optimal
 - Rank: A+
 - Most Used Languages: JavaScript (60.3%), Python (27.0%), CSS (9.7%), HTML (2.4%), PHP (0.6%), Others (< 0.1%)
+Note: Repository Forks row is omitted when 0 forks to keep telemetry ultra-clean.
 """
 
 import os
 
-def generate_telemetry_svg(output_path="profile/telemetry.svg"):
-    svg_content = '''<svg xmlns="http://www.w3.org/2000/svg" width="876" height="248" viewBox="0 0 876 248" fill="none" role="img" aria-labelledby="title desc">
+def generate_telemetry_svg(output_path="profile/telemetry.svg", forks_count=0):
+    # Stats list
+    stats = [
+        ("Total Contributions:", "947+", "#22D3EE", None),
+        ("Active Streak:", "241 Days", "#10B981", "🔥"),
+        ("Public Repositories:", "17 Repos", "#22D3EE", None),
+    ]
+    if forks_count > 0:
+        stats.append(("Repository Forks:", f"{forks_count} Forks", "#F59E0B", None))
+    stats.append(("System Runtime:", "100% Optimal", "#A78BFA", None))
+
+    # Calculate y-offsets for vertical balance
+    n = len(stats)
+    start_y = 20
+    spacing = 36 if n == 4 else 28
+
+    stats_rows = []
+    for i, (label, val, dot_color, emoji) in enumerate(stats):
+        y = start_y + i * spacing
+        emoji_svg = f'<text x="232" y="9" font-size="12">{emoji}</text>' if emoji else ''
+        stats_rows.append(f'''      <!-- Row {i+1}: {label} -->
+      <g transform="translate(0, {y})">
+        <circle cx="5" cy="5" r="4.5" fill="{dot_color}" opacity="0.95" />
+        <text x="18" y="9" class="stat-label">{label}</text>
+        <text x="165" y="9" class="stat-value">{val}</text>
+        {emoji_svg}
+      </g>''')
+
+    stats_block = "\n".join(stats_rows)
+
+    svg_content = f'''<svg xmlns="http://www.w3.org/2000/svg" width="876" height="248" viewBox="0 0 876 248" fill="none" role="img" aria-labelledby="title desc">
   <title id="title">Meghana Kotambari GitHub Telemetry &amp; Stats</title>
   <desc id="desc">Futuristic HUD telemetry dashboard showing GitHub statistics and most used languages.</desc>
   <defs>
@@ -53,60 +82,60 @@ def generate_telemetry_svg(output_path="profile/telemetry.svg"):
     </clipPath>
 
     <style>
-      .card-title {
+      .card-title {{
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'JetBrains Mono', monospace;
         font-size: 16px;
         font-weight: 700;
         fill: #22D3EE;
         letter-spacing: 0.5px;
-      }
-      .stat-label {
+      }}
+      .stat-label {{
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         font-size: 13.5px;
         font-weight: 600;
         fill: #94A3B8;
-      }
-      .stat-value {
+      }}
+      .stat-value {{
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         font-size: 13.5px;
         font-weight: 700;
         fill: #F8FAFC;
-      }
-      .lang-name {
+      }}
+      .lang-name {{
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         font-size: 13px;
         font-weight: 600;
         fill: #E2E8F0;
-      }
-      .lang-pct {
+      }}
+      .lang-pct {{
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'JetBrains Mono', monospace;
         font-size: 12.5px;
         font-weight: 600;
         fill: #94A3B8;
-      }
-      .rank-grade {
+      }}
+      .rank-grade {{
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'JetBrains Mono', monospace;
         font-size: 22px;
         font-weight: 900;
         fill: #00F0FF;
-      }
-      .rank-sub {
+      }}
+      .rank-sub {{
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'JetBrains Mono', monospace;
         font-size: 9px;
         font-weight: 800;
         fill: #10B981;
         letter-spacing: 2px;
-      }
-      .corner-bracket {
+      }}
+      .corner-bracket {{
         stroke: #22D3EE;
         stroke-width: 1.5;
         fill: none;
         stroke-linecap: square;
-      }
-      .hud-line {
+      }}
+      .hud-line {{
         stroke: #1E293B;
         stroke-width: 1;
-      }
+      }}
     </style>
   </defs>
 
@@ -136,41 +165,7 @@ def generate_telemetry_svg(output_path="profile/telemetry.svg"):
 
     <!-- Telemetry Stats List (Left Side) -->
     <g transform="translate(20, 58)">
-      <!-- Row 1: Total Contributions -->
-      <g transform="translate(0, 18)">
-        <circle cx="5" cy="5" r="4.5" fill="#22D3EE" opacity="0.95" />
-        <text x="18" y="9" class="stat-label">Total Contributions:</text>
-        <text x="165" y="9" class="stat-value">947+</text>
-      </g>
-
-      <!-- Row 2: Active Streak -->
-      <g transform="translate(0, 46)">
-        <circle cx="5" cy="5" r="4.5" fill="#10B981" opacity="0.95" />
-        <text x="18" y="9" class="stat-label">Active Streak:</text>
-        <text x="165" y="9" class="stat-value">241 Days</text>
-        <text x="232" y="9" font-size="12">🔥</text>
-      </g>
-
-      <!-- Row 3: Public Repositories -->
-      <g transform="translate(0, 74)">
-        <circle cx="5" cy="5" r="4.5" fill="#22D3EE" opacity="0.95" />
-        <text x="18" y="9" class="stat-label">Public Repositories:</text>
-        <text x="165" y="9" class="stat-value">17 Repos</text>
-      </g>
-
-      <!-- Row 4: Repository Forks -->
-      <g transform="translate(0, 102)">
-        <circle cx="5" cy="5" r="4.5" fill="#F59E0B" opacity="0.95" />
-        <text x="18" y="9" class="stat-label">Repository Forks:</text>
-        <text x="165" y="9" class="stat-value">0 Forks</text>
-      </g>
-
-      <!-- Row 5: System Runtime -->
-      <g transform="translate(0, 130)">
-        <circle cx="5" cy="5" r="4.5" fill="#A78BFA" opacity="0.95" />
-        <text x="18" y="9" class="stat-label">System Runtime:</text>
-        <text x="165" y="9" class="stat-value">100% Optimal</text>
-      </g>
+{stats_block}
     </g>
 
     <!-- Glowing Circular A+ RANK Badge (Right Side) -->
@@ -291,4 +286,4 @@ def generate_telemetry_svg(output_path="profile/telemetry.svg"):
     print(f"Generated {output_path}")
 
 if __name__ == "__main__":
-    generate_telemetry_svg()
+    generate_telemetry_svg(forks_count=0)
