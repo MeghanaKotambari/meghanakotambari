@@ -3,11 +3,11 @@
 Generate Pixel-Perfect Tech Stack Capability Matrix SVG for Meghana Kotambari
 Features:
 - Exact layout matching the reference graphic
-- 8 category cards with hexagonal/square icons, custom badge pills with colored icons
-- Central animated Cyber Reactor Core with HUD rings, reticles, and glowing circuit bus lines
-- Top telemetry bar, section header, and bottom terminal dispatch footer
-- Tailored specifically to Meghana's tech stack (Docker and SQL removed per request)
-- Fully strict XML/SVG compliant for GitHub rendering
+- 8 category cards with custom badge pills, colored icons, and generous breathing room
+- Rotating central Cyber Reactor Core with dual animated HUD rings and pulsing energy glows
+- Interactive glowing CSS hover effects on all cards and badge pills
+- Tailored specifically to Meghana's tech stack (Docker and SQL removed)
+- 100% strict XML compliant for seamless GitHub rendering
 """
 
 import os
@@ -20,7 +20,7 @@ def build_svg():
     svg.append('<?xml version="1.0" encoding="UTF-8"?>')
     svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="100%" height="{height}" fill="none" role="img" aria-labelledby="title desc">')
     svg.append('  <title id="title">Meghana Kotambari Tech Stack Capability Matrix</title>')
-    svg.append('  <desc id="desc">Futuristic cyber telemetry capability matrix showing developer tech stack, architecture, and core competencies.</desc>')
+    svg.append('  <desc id="desc">Futuristic cyber telemetry capability matrix with rotating animated core and interactive glowing cards.</desc>')
     
     # ------------------ DEFS & GRADIENTS ------------------
     svg.append('  <defs>')
@@ -32,16 +32,11 @@ def build_svg():
     svg.append('    </linearGradient>')
     
     svg.append('    <linearGradient id="cardGrad" x1="0" y1="0" x2="1" y2="1">')
-    svg.append('      <stop offset="0%" stop-color="#080E1C" stop-opacity="0.9" />')
-    svg.append('      <stop offset="100%" stop-color="#060A14" stop-opacity="0.95" />')
-    svg.append('    </linearGradient>')
-    
-    svg.append('    <linearGradient id="pillGrad" x1="0" y1="0" x2="1" y2="0">')
-    svg.append('      <stop offset="0%" stop-color="#0D1526" />')
-    svg.append('      <stop offset="100%" stop-color="#0A101D" />')
+    svg.append('      <stop offset="0%" stop-color="#080E1C" stop-opacity="0.95" />')
+    svg.append('      <stop offset="100%" stop-color="#060A14" stop-opacity="0.98" />')
     svg.append('    </linearGradient>')
 
-    svg.append('    <!-- Neon Glow Filters -->')
+    # Neon Glow Filters
     svg.append('    <filter id="glow-cyan" x="-30%" y="-30%" width="160%" height="160%">')
     svg.append('      <feGaussianBlur stdDeviation="3.5" result="blur" />')
     svg.append('      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>')
@@ -68,11 +63,22 @@ def build_svg():
     svg.append('      <feMerge><feMergeNode in="blur1"/><feMergeNode in="blur2"/><feMergeNode in="SourceGraphic"/></feMerge>')
     svg.append('    </filter>')
 
+    # Interactive CSS Styles with Hover Transitions
     svg.append('    <style>')
     svg.append('      .mono { font-family: \'JetBrains Mono\', Consolas, \'Fira Code\', monospace; }')
     svg.append('      .sans { font-family: -apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, Ubuntu, sans-serif; }')
-    svg.append('      .badge { transition: transform 0.2s ease; cursor: default; }')
+    svg.append('      .tech-card { cursor: pointer; transition: transform 0.25s ease, filter 0.25s ease; }')
+    svg.append('      .tech-card:hover { transform: translateY(-3px); filter: drop-shadow(0 6px 16px rgba(0, 240, 255, 0.2)); }')
+    svg.append('      .tech-card:hover rect.card-bg { stroke: #00F0FF !important; fill: #0B1424 !important; }')
+    svg.append('      .badge { cursor: pointer; transition: transform 0.2s ease, filter 0.2s ease; }')
     svg.append('      .badge:hover { transform: translateY(-2px); }')
+    svg.append('      .badge:hover rect { stroke: #00F0FF !important; fill: #132238 !important; }')
+    svg.append('      @keyframes rotateClockwise { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }')
+    svg.append('      @keyframes rotateCounter { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }')
+    svg.append('      @keyframes pulseCore { 0%, 100% { opacity: 0.9; } 50% { opacity: 1; filter: drop-shadow(0 0 12px #00F0FF); } }')
+    svg.append('      .rotating-outer { transform-origin: 590px 430px; animation: rotateClockwise 20s linear infinite; }')
+    svg.append('      .rotating-inner { transform-origin: 590px 430px; animation: rotateCounter 28s linear infinite; }')
+    svg.append('      .pulse-core { animation: pulseCore 3s ease-in-out infinite; }')
     svg.append('    </style>')
     svg.append('  </defs>')
 
@@ -96,8 +102,6 @@ def build_svg():
     svg.append('  <!-- Telemetry Status Bar -->')
     svg.append('  <g transform="translate(18, 66)">')
     svg.append('    <rect width="1144" height="34" rx="5" fill="#060A14" stroke="#0E1E32" stroke-width="1" />')
-    
-    # 4 Status Columns
     svg.append('    <g transform="translate(24, 22)" class="mono" font-size="11" font-weight="700">')
     svg.append('      <text x="0" y="0" fill="#64748B">STACK.STATUS : <tspan fill="#10B981">ACTIVE</tspan></text>')
     svg.append('      <text x="320" y="0" fill="#64748B">CORE.MODULES : <tspan fill="#00F0FF">LOADED</tspan></text>')
@@ -112,9 +116,9 @@ def build_svg():
     
     # Left Bus Lines
     svg.append('  <g opacity="0.85">')
-    svg.append('    <path d="M 400 200 L 490 200 L 515 285 L 530 330" fill="none" stroke="#00F0FF" stroke-width="1.4" stroke-dasharray="3 3" opacity="0.6"/>')
-    svg.append('    <path d="M 400 200 L 485 200 L 525 350" fill="none" stroke="#00F0FF" stroke-width="1.8" />')
-    svg.append('    <circle cx="400" cy="200" r="3.5" fill="#00F0FF" filter="url(#glow-cyan)" />')
+    svg.append('    <path d="M 400 195 L 490 195 L 515 285 L 530 330" fill="none" stroke="#00F0FF" stroke-width="1.4" stroke-dasharray="3 3" opacity="0.6"/>')
+    svg.append('    <path d="M 400 195 L 485 195 L 525 350" fill="none" stroke="#00F0FF" stroke-width="1.8" />')
+    svg.append('    <circle cx="400" cy="195" r="3.5" fill="#00F0FF" filter="url(#glow-cyan)" />')
     svg.append('    <circle cx="500" cy="290" r="3" fill="#00F0FF" />')
     
     svg.append('    <path d="M 400 370 L 485 370 L 510 405" fill="none" stroke="#A855F7" stroke-width="1.8" />')
@@ -130,8 +134,8 @@ def build_svg():
     svg.append('    <circle cx="485" cy="635" r="3" fill="#0284C7" />')
 
     # Right Bus Lines
-    svg.append('    <path d="M 780 200 L 695 200 L 655 350" fill="none" stroke="#F59E0B" stroke-width="1.8" />')
-    svg.append('    <circle cx="780" cy="200" r="3.5" fill="#F59E0B" filter="url(#glow-amber)" />')
+    svg.append('    <path d="M 780 195 L 695 195 L 655 350" fill="none" stroke="#F59E0B" stroke-width="1.8" />')
+    svg.append('    <circle cx="780" cy="195" r="3.5" fill="#F59E0B" filter="url(#glow-amber)" />')
     svg.append('    <circle cx="680" cy="290" r="3" fill="#F59E0B" />')
 
     svg.append('    <path d="M 780 370 L 695 370 L 670 405" fill="none" stroke="#00F0FF" stroke-width="1.8" />')
@@ -147,26 +151,46 @@ def build_svg():
     svg.append('    <circle cx="695" cy="635" r="3" fill="#EC4899" />')
     svg.append('  </g>')
 
-    # ------------------ CENTRAL CYBER REACTOR CORE ------------------
-    svg.append('  <!-- Central Cyber Reactor Core -->')
-    svg.append(f'  <g transform="translate({cx}, {cy})">')
-    svg.append('    <circle cx="0" cy="0" r="114" fill="none" stroke="#0E2840" stroke-width="1.5" stroke-dasharray="6 8" opacity="0.7" />')
-    svg.append('    <circle cx="0" cy="0" r="102" fill="none" stroke="#133654" stroke-width="1.2" />')
+    # ------------------ ROTATING ANIMATED CYBER REACTOR CORE ------------------
+    svg.append('  <!-- Central Cyber Reactor Core (Animated & Rotating) -->')
     
+    # Outer Rotating Dashed HUD Ring
+    svg.append('  <g class="rotating-inner">')
+    svg.append(f'    <circle cx="{cx}" cy="{cy}" r="114" fill="none" stroke="#0E2840" stroke-width="1.5" stroke-dasharray="6 8" opacity="0.7" />')
+    svg.append(f'    <circle cx="{cx}" cy="{cy}" r="102" fill="none" stroke="#133654" stroke-width="1.2" stroke-dasharray="14 10" />')
+    svg.append('  </g>')
+
+    # Rotating Segment Arcs (Clockwise)
+    svg.append('  <g class="rotating-outer">')
+    svg.append(f'    <g transform="translate({cx}, {cy})">')
+    # 4 Glowing Rotating Segment Arcs
+    svg.append('      <path d="M 0 -92 A 92 92 0 0 1 80 -46" fill="none" stroke="#00F0FF" stroke-width="5.5" stroke-linecap="round" filter="url(#glow-cyan)" />')
+    svg.append('      <path d="M 80 46 A 92 92 0 0 1 0 92" fill="none" stroke="#A855F7" stroke-width="5.5" stroke-linecap="round" filter="url(#glow-purple)" />')
+    svg.append('      <path d="M 0 92 A 92 92 0 0 1 -80 46" fill="none" stroke="#00F0FF" stroke-width="5.5" stroke-linecap="round" filter="url(#glow-cyan)" />')
+    svg.append('      <path d="M -80 -46 A 92 92 0 0 1 0 -92" fill="none" stroke="#38BDF8" stroke-width="5.5" stroke-linecap="round" filter="url(#glow-cyan)" />')
+    # Orbiting Beacon Dots
+    svg.append('      <circle cx="80" cy="-46" r="3" fill="#FFF" />')
+    svg.append('      <circle cx="0" cy="92" r="3" fill="#FFF" />')
+    svg.append('      <circle cx="-80" cy="46" r="3" fill="#FFF" />')
+    svg.append('      <circle cx="0" cy="-92" r="3" fill="#FFF" />')
+    svg.append('    </g>')
+    svg.append('  </g>')
+
+    # Core Center Base & Glowing Reactor
+    svg.append(f'  <g transform="translate({cx}, {cy})" class="pulse-core">')
     svg.append('    <circle cx="0" cy="0" r="92" fill="#050B16" stroke="#102538" stroke-width="2" />')
-    svg.append('    <path d="M 0 -92 A 92 92 0 0 1 80 -46" fill="none" stroke="#00F0FF" stroke-width="5.5" stroke-linecap="round" filter="url(#glow-cyan)" />')
-    svg.append('    <path d="M 80 46 A 92 92 0 0 1 0 92" fill="none" stroke="#A855F7" stroke-width="5.5" stroke-linecap="round" filter="url(#glow-purple)" />')
-    svg.append('    <path d="M 0 92 A 92 92 0 0 1 -80 46" fill="none" stroke="#00F0FF" stroke-width="5.5" stroke-linecap="round" filter="url(#glow-cyan)" />')
-    svg.append('    <path d="M -80 -46 A 92 92 0 0 1 0 -92" fill="none" stroke="#38BDF8" stroke-width="5.5" stroke-linecap="round" filter="url(#glow-cyan)" />')
     
+    # Reticle Triangles
     svg.append('    <polygon points="0,-102 -5,-110 5,-110" fill="#00F0FF" />')
     svg.append('    <polygon points="0,102 -5,110 5,110" fill="#00F0FF" />')
     svg.append('    <polygon points="-102,0 -110,-5 -110,5" fill="#00F0FF" />')
     svg.append('    <polygon points="102,0 110,-5 110,5" fill="#00F0FF" />')
 
+    # Inner Core
     svg.append('    <circle cx="0" cy="0" r="76" fill="#040812" stroke="#0F2B44" stroke-width="1.8" />')
     svg.append('    <circle cx="0" cy="0" r="68" fill="none" stroke="#0D1E30" stroke-width="1" stroke-dasharray="4 4" />')
     
+    # Reactor Typography
     svg.append('    <text x="0" y="-18" text-anchor="middle" class="mono" font-size="14.5" font-weight="900" fill="#00F0FF" letter-spacing="1">FULL STACK</text>')
     svg.append('    <text x="0" y="2" text-anchor="middle" class="mono" font-size="14.5" font-weight="900" fill="#00F0FF" letter-spacing="1">DEVELOPER</text>')
     svg.append('    <text x="0" y="22" text-anchor="middle" class="mono" font-size="15" font-weight="800" fill="#38BDF8">&lt;/&gt;</text>')
@@ -174,14 +198,14 @@ def build_svg():
     svg.append('  </g>')
 
     # ------------------ HELPER FUNCTIONS FOR CARDS & BADGES ------------------
-    def draw_badge(bx, by, label, icon_type, custom_color=None, width_override=None):
+    def draw_badge(bx, by, label, icon_type=None, custom_color=None, width_override=None, height_override=25):
         bw = width_override or (len(label) * 8 + 36)
-        bh = 26
+        bh = height_override
         
         svg.append(f'      <g class="badge" transform="translate({bx}, {by})">')
         svg.append(f'        <rect width="{bw}" height="{bh}" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />')
         
-        ix, iy = 8, 5
+        ix, iy = 7, 4.5
         if icon_type == "js":
             svg.append(f'        <rect x="{ix}" y="{iy}" width="16" height="16" rx="2" fill="#F7DF1E" />')
             svg.append(f'        <text x="{ix+8}" y="{iy+12}" text-anchor="middle" class="sans" font-size="9" font-weight="900" fill="#000">JS</text>')
@@ -273,33 +297,37 @@ def build_svg():
             svg.append(f'        <line x1="{ix+8}" y1="{iy+4}" x2="{ix+8}" y2="{iy+12}" stroke="#EC4899" stroke-width="1" />')
         elif icon_type == "opensource":
             svg.append(f'        <circle cx="{ix+8}" cy="{iy+8}" r="6" fill="none" stroke="#EC4899" stroke-width="1.3" stroke-dasharray="8 3" />')
+        elif icon_type == "dot":
+            # Styled tech dot badge
+            svg.append(f'        <circle cx="{ix+5}" cy="{iy+8}" r="3" fill="{custom_color or "#00F0FF"}" opacity="0.9" />')
+            ix = ix - 2
         else:
-            svg.append(f'        <circle cx="{ix+4}" cy="{iy+8}" r="2" fill="{custom_color or "#38BDF8"}" />')
-            ix = ix - 6
+            svg.append(f'        <circle cx="{ix+5}" cy="{iy+8}" r="2.5" fill="{custom_color or "#38BDF8"}" />')
+            ix = ix - 4
 
         text_x = ix + 21 if icon_type else ix + 14
-        svg.append(f'        <text x="{text_x}" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">{label}</text>')
+        svg.append(f'        <text x="{text_x}" y="16.5" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">{label}</text>')
         svg.append('      </g>')
 
     # ------------------ 8 SECTION CARDS ------------------
     # Card 01: LANGUAGES (Top Left)
     svg.append('  <!-- Card 01: LANGUAGES -->')
-    svg.append('  <g transform="translate(18, 114)">')
-    svg.append('    <rect width="365" height="134" rx="6" fill="url(#cardGrad)" stroke="#0E4A63" stroke-width="1.2" />')
+    svg.append('  <g class="tech-card" transform="translate(18, 114)">')
+    svg.append('    <rect class="card-bg" width="365" height="134" rx="6" fill="url(#cardGrad)" stroke="#0E4A63" stroke-width="1.2" />')
     svg.append('    <polygon points="36,18 52,27 52,45 36,54 20,45 20,27" fill="#081826" stroke="#00F0FF" stroke-width="1.3" />')
     svg.append('    <text x="36" y="40" text-anchor="middle" class="mono" font-size="11" font-weight="900" fill="#00F0FF">&lt;/&gt;</text>')
     svg.append('    <text x="66" y="38" class="mono" font-size="13.5" font-weight="800" fill="#00F0FF" letter-spacing="0.5">01. LANGUAGES</text>')
     draw_badge(66, 52, "JavaScript", "js", width_override=94)
     draw_badge(166, 52, "TypeScript", "ts", width_override=94)
     draw_badge(266, 52, "Python", "python", width_override=82)
-    draw_badge(66, 88, "HTML5", "html5", width_override=78)
-    draw_badge(150, 88, "CSS3", "css3", width_override=76)
+    draw_badge(66, 86, "HTML5", "html5", width_override=78)
+    draw_badge(150, 86, "CSS3", "css3", width_override=76)
     svg.append('  </g>')
 
     # Card 02: FRONTEND & MOBILE (Mid-Upper Left)
     svg.append('  <!-- Card 02: FRONTEND & MOBILE -->')
-    svg.append('  <g transform="translate(18, 258)">')
-    svg.append('    <rect width="365" height="152" rx="6" fill="url(#cardGrad)" stroke="#4C1D95" stroke-width="1.2" />')
+    svg.append('  <g class="tech-card" transform="translate(18, 258)">')
+    svg.append('    <rect class="card-bg" width="365" height="152" rx="6" fill="url(#cardGrad)" stroke="#4C1D95" stroke-width="1.2" />')
     svg.append('    <rect x="20" y="20" width="32" height="32" rx="5" fill="#130E26" stroke="#A855F7" stroke-width="1.3" />')
     svg.append('    <rect x="25" y="25" width="14" height="18" rx="2" fill="none" stroke="#C084FC" stroke-width="1" />')
     svg.append('    <rect x="37" y="31" width="10" height="16" rx="2" fill="none" stroke="#C084FC" stroke-width="1" />')
@@ -315,8 +343,8 @@ def build_svg():
 
     # Card 03: BACKEND & SYSTEMS (Mid-Lower Left)
     svg.append('  <!-- Card 03: BACKEND & SYSTEMS -->')
-    svg.append('  <g transform="translate(18, 420)">')
-    svg.append('    <rect width="365" height="126" rx="6" fill="url(#cardGrad)" stroke="#065F46" stroke-width="1.2" />')
+    svg.append('  <g class="tech-card" transform="translate(18, 420)">')
+    svg.append('    <rect class="card-bg" width="365" height="126" rx="6" fill="url(#cardGrad)" stroke="#065F46" stroke-width="1.2" />')
     svg.append('    <polygon points="36,18 52,27 52,45 36,54 20,45 20,27" fill="#082018" stroke="#10B981" stroke-width="1.3" />')
     svg.append('    <rect x="27" y="28" width="18" height="6" rx="1" fill="none" stroke="#10B981" stroke-width="1" />')
     svg.append('    <rect x="27" y="38" width="18" height="6" rx="1" fill="none" stroke="#10B981" stroke-width="1" />')
@@ -331,8 +359,8 @@ def build_svg():
 
     # Card 04: DATABASE & CLOUD (Bottom Left)
     svg.append('  <!-- Card 04: DATABASE & CLOUD -->')
-    svg.append('  <g transform="translate(18, 556)">')
-    svg.append('    <rect width="365" height="126" rx="6" fill="url(#cardGrad)" stroke="#0369A1" stroke-width="1.2" />')
+    svg.append('  <g class="tech-card" transform="translate(18, 556)">')
+    svg.append('    <rect class="card-bg" width="365" height="126" rx="6" fill="url(#cardGrad)" stroke="#0369A1" stroke-width="1.2" />')
     svg.append('    <polygon points="36,18 52,27 52,45 36,54 20,45 20,27" fill="#081C2E" stroke="#0284C7" stroke-width="1.3" />')
     svg.append('    <path d="M28 38 a4 4 0 0 1 4 -4 a5 5 0 0 1 7 1 a4 4 0 0 1 3 3 z" fill="none" stroke="#00F0FF" stroke-width="1.2" />')
     svg.append('    <text x="66" y="38" class="mono" font-size="13.5" font-weight="800" fill="#38BDF8" letter-spacing="0.5">04. DATABASE &amp; CLOUD</text>')
@@ -344,8 +372,8 @@ def build_svg():
 
     # Card 05: TOOLS & DEVOPS (Top Right)
     svg.append('  <!-- Card 05: TOOLS & DEVOPS -->')
-    svg.append('  <g transform="translate(797, 114)">')
-    svg.append('    <rect width="365" height="152" rx="6" fill="url(#cardGrad)" stroke="#B45309" stroke-width="1.2" />')
+    svg.append('  <g class="tech-card" transform="translate(797, 114)">')
+    svg.append('    <rect class="card-bg" width="365" height="152" rx="6" fill="url(#cardGrad)" stroke="#B45309" stroke-width="1.2" />')
     svg.append('    <polygon points="36,18 52,27 52,45 36,54 20,45 20,27" fill="#241406" stroke="#F59E0B" stroke-width="1.3" />')
     svg.append('    <circle cx="36" cy="36" r="6" fill="none" stroke="#F59E0B" stroke-width="1.8" />')
     svg.append('    <path d="M36 26 v3 M36 43 v3 M26 36 h3 M43 36 h3" stroke="#F59E0B" stroke-width="1.8" />')
@@ -360,46 +388,47 @@ def build_svg():
     draw_badge(142, 118, "VS Code", "vscode", width_override=92)
     svg.append('  </g>')
 
-    # Card 06: ARCHITECTURE & CONCEPTS (Mid-Upper Right)
+    # Card 06: ARCHITECTURE & CONCEPTS (Mid-Upper Right) - Enhanced with proper vertical & horizontal spacing
     svg.append('  <!-- Card 06: ARCHITECTURE & CONCEPTS -->')
-    svg.append('  <g transform="translate(797, 276)">')
-    svg.append('    <rect width="365" height="134" rx="6" fill="url(#cardGrad)" stroke="#0E4A63" stroke-width="1.2" />')
+    svg.append('  <g class="tech-card" transform="translate(797, 276)">')
+    svg.append('    <rect class="card-bg" width="365" height="134" rx="6" fill="url(#cardGrad)" stroke="#0E4A63" stroke-width="1.2" />')
     svg.append('    <rect x="20" y="20" width="32" height="32" rx="5" fill="#081826" stroke="#00F0FF" stroke-width="1.3" />')
     svg.append('    <rect x="32" y="25" width="8" height="6" rx="1" fill="none" stroke="#00F0FF" stroke-width="1" />')
     svg.append('    <rect x="24" y="38" width="8" height="6" rx="1" fill="none" stroke="#00F0FF" stroke-width="1" />')
     svg.append('    <rect x="40" y="38" width="8" height="6" rx="1" fill="none" stroke="#00F0FF" stroke-width="1" />')
     svg.append('    <path d="M36 31 v4 M28 35 h16" stroke="#00F0FF" stroke-width="1" />')
     svg.append('    <text x="66" y="38" class="mono" font-size="13.5" font-weight="800" fill="#00F0FF" letter-spacing="0.5">06. ARCHITECTURE &amp; CONCEPTS</text>')
-    draw_badge(66, 52, "Microservices", None, width_override=98)
-    draw_badge(170, 52, "System Design", None, width_override=102)
-    draw_badge(66, 78, "REST", None, width_override=56)
-    draw_badge(128, 78, "API Design", None, width_override=82)
-    draw_badge(216, 78, "MVC", None, width_override=54)
-    draw_badge(66, 104, "Agile", None, width_override=58)
-    draw_badge(130, 104, "SDLC", None, width_override=58)
-    draw_badge(194, 104, "OOPs", None, width_override=60)
+    # Generously spaced rows (y=50, 78, 106) with 24px badge height for a clean 4px vertical margin
+    draw_badge(66, 50, "Microservices", "dot", custom_color="#00F0FF", width_override=104, height_override=24)
+    draw_badge(176, 50, "System Design", "dot", custom_color="#00F0FF", width_override=108, height_override=24)
+    draw_badge(66, 77, "REST", "dot", custom_color="#00F0FF", width_override=60, height_override=24)
+    draw_badge(132, 77, "API Design", "dot", custom_color="#00F0FF", width_override=88, height_override=24)
+    draw_badge(226, 77, "MVC", "dot", custom_color="#00F0FF", width_override=58, height_override=24)
+    draw_badge(66, 104, "Agile", "dot", custom_color="#00F0FF", width_override=64, height_override=24)
+    draw_badge(136, 104, "SDLC", "dot", custom_color="#00F0FF", width_override=64, height_override=24)
+    draw_badge(206, 104, "OOPs", "dot", custom_color="#00F0FF", width_override=66, height_override=24)
     svg.append('  </g>')
 
-    # Card 07: CORE COMPUTER SCIENCE (Mid-Lower Right)
+    # Card 07: CORE COMPUTER SCIENCE (Mid-Lower Right) - Enhanced with proper vertical & horizontal spacing
     svg.append('  <!-- Card 07: CORE COMPUTER SCIENCE -->')
-    svg.append('  <g transform="translate(797, 420)">')
-    svg.append('    <rect width="365" height="126" rx="6" fill="url(#cardGrad)" stroke="#4C1D95" stroke-width="1.2" />')
+    svg.append('  <g class="tech-card" transform="translate(797, 420)">')
+    svg.append('    <rect class="card-bg" width="365" height="126" rx="6" fill="url(#cardGrad)" stroke="#4C1D95" stroke-width="1.2" />')
     svg.append('    <rect x="20" y="20" width="32" height="32" rx="5" fill="#140D26" stroke="#A855F7" stroke-width="1.3" />')
     svg.append('    <rect x="27" y="27" width="18" height="18" rx="2" fill="none" stroke="#A855F7" stroke-width="1.2" />')
     svg.append('    <rect x="31" y="31" width="10" height="10" fill="#A855F7" opacity="0.4" />')
     svg.append('    <text x="66" y="38" class="mono" font-size="13.5" font-weight="800" fill="#C084FC" letter-spacing="0.5">07. CORE COMPUTER SCIENCE</text>')
-    draw_badge(66, 52, "DSA", None, width_override=60)
-    draw_badge(132, 52, "DBMS", None, width_override=68)
-    draw_badge(206, 52, "OS", None, width_override=52)
-    draw_badge(66, 86, "CN", None, width_override=52)
-    draw_badge(124, 86, "OOPS", None, width_override=62)
-    draw_badge(192, 86, "Computer Networks", None, width_override=130)
+    draw_badge(66, 52, "DSA", "dot", custom_color="#A855F7", width_override=58)
+    draw_badge(130, 52, "DBMS", "dot", custom_color="#A855F7", width_override=68)
+    draw_badge(204, 52, "OS", "dot", custom_color="#A855F7", width_override=52)
+    draw_badge(66, 86, "CN", "dot", custom_color="#A855F7", width_override=52)
+    draw_badge(124, 86, "OOPS", "dot", custom_color="#A855F7", width_override=62)
+    draw_badge(192, 86, "Computer Networks", "dot", custom_color="#A855F7", width_override=130)
     svg.append('  </g>')
 
     # Card 08: SPECIAL INTERESTS (Bottom Right)
     svg.append('  <!-- Card 08: SPECIAL INTERESTS -->')
-    svg.append('  <g transform="translate(797, 556)">')
-    svg.append('    <rect width="365" height="126" rx="6" fill="url(#cardGrad)" stroke="#831843" stroke-width="1.2" />')
+    svg.append('  <g class="tech-card" transform="translate(797, 556)">')
+    svg.append('    <rect class="card-bg" width="365" height="126" rx="6" fill="url(#cardGrad)" stroke="#831843" stroke-width="1.2" />')
     svg.append('    <polygon points="36,18 52,27 52,45 36,54 20,45 20,27" fill="#240A18" stroke="#EC4899" stroke-width="1.3" />')
     svg.append('    <path d="M36 44 L30 38 A4 4 0 0 1 36 32 A4 4 0 0 1 42 38 Z" fill="none" stroke="#F472B6" stroke-width="1.3" />')
     svg.append('    <text x="66" y="38" class="mono" font-size="13.5" font-weight="800" fill="#F472B6" letter-spacing="0.5">08. SPECIAL INTERESTS</text>')
