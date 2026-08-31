@@ -1,4 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="876" height="248" viewBox="0 0 876 248" fill="none" role="img" aria-labelledby="title desc">
+#!/usr/bin/env python3
+"""
+Generate Pixel-Perfect Dark Cyberpunk GitHub Telemetry & Language Stats Card
+Matches the exact UI aesthetics:
+- Dual HUD cards with glowing cyan corner brackets
+- Left card: Telemetry metrics + Glowing Circular Neon A+ Rank Badge
+- Right card: Most Used Languages with segmented capsule progress bar and 2-column legend
+"""
+
+import os
+
+def generate_telemetry_svg(output_path="profile/telemetry.svg"):
+    svg_content = '''<svg xmlns="http://www.w3.org/2000/svg" width="876" height="248" viewBox="0 0 876 248" fill="none" role="img" aria-labelledby="title desc">
   <title id="title">Meghana Kotambari GitHub Telemetry &amp; Stats</title>
   <desc id="desc">Futuristic HUD telemetry dashboard showing GitHub statistics and most used languages.</desc>
   <defs>
@@ -268,3 +280,11 @@
     </g>
   </g>
 </svg>
+'''
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(svg_content)
+    print(f"Generated {output_path}")
+
+if __name__ == "__main__":
+    generate_telemetry_svg()
