@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 800" width="100%" height="100%" fill="none" role="img" aria-labelledby="title desc">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 800" width="100%" height="800" fill="none" role="img" aria-labelledby="title desc">
   <title id="title">Meghana Kotambari Tech Stack Capability Matrix</title>
   <desc id="desc">Futuristic cyber telemetry capability matrix showing developer tech stack, architecture, and core competencies.</desc>
   <defs>
@@ -456,7 +457,7 @@
     <rect x="12" y="10" width="30" height="22" rx="3" fill="#0A1626" stroke="#10B981" stroke-width="1" />
     <text x="27" y="25" text-anchor="middle" class="mono" font-size="12" font-weight="900" fill="#10B981">&gt;_</text>
     <text x="54" y="26" class="mono" font-size="12" font-weight="700" fill="#10B981">echo <tspan fill="#38BDF8">"Building scalable solutions with clean code &amp; great UX"</tspan></text>
-    <text x="1090" y="26" text-anchor="end" class="mono" font-size="11" font-weight="700" fill="#64748B">STATUS: <tspan fill="#10B981">DEPLOYED SUCCESSFULLY</tspan> &nbsp;|&nbsp; </text>
+    <text x="1090" y="26" text-anchor="end" class="mono" font-size="11" font-weight="700" fill="#64748B">STATUS: <tspan fill="#10B981">DEPLOYED SUCCESSFULLY</tspan> | </text>
     <text x="1108" y="27" font-size="14">🚀</text>
   </g>
 </svg>
