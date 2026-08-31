@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="876" height="290" viewBox="0 0 876 290" fill="none" role="img" aria-labelledby="title desc">
-  <title id="title">MeghanaKotambari GitHub Telemetry</title>
+  <title id="title">Meghana Kotambari GitHub Telemetry</title>
   <desc id="desc">Dark telemetry card with GitHub stats and top languages.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="876" y2="290" gradientUnits="userSpaceOnUse">
@@ -42,40 +42,35 @@
     <rect x="0" y="0" width="398" height="216" rx="3" fill="url(#panel)" stroke="#273246" stroke-width="1.2" />
     <path d="M10 11h10M10 11v10" stroke="#22D3EE" stroke-width="1.2" stroke-linecap="round" />
     <path d="M388 205h-10M388 205v-10" stroke="#22D3EE" stroke-width="1.2" stroke-linecap="round" />
-    <text x="26" y="33" fill="#3B82F6" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">MeghanaKotambari's GitHub Stats</text>
+    <text x="26" y="33" fill="#22D3EE" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">⚡ GitHub Telemetry</text>
     <line x1="18" y1="46" x2="380" y2="46" stroke="#273246" stroke-width="1" />
 
     <g font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#DCE2EA">
       <g transform="translate(23 68)">
-        <circle cx="8" cy="8" r="5.5" fill="none" stroke="#4B74FF" stroke-width="1.5" />
-        <path d="M8 4.8v3.4l2.4 1.5" stroke="#4B74FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-        <text x="28" y="12">Total Stars Earned:</text>
-        <text x="250" y="12" fill="#C9D2DE">0</text>
+        <circle cx="8" cy="8" r="5.5" fill="#22D3EE" opacity="0.9" />
+        <text x="28" y="12">Total Contributions:</text>
+        <text x="186" y="12" fill="#F8FAFC">1,585+</text>
       </g>
       <g transform="translate(23 92)">
-        <circle cx="8" cy="8" r="5.5" fill="none" stroke="#4B74FF" stroke-width="1.5" />
-        <path d="M8 4.6v2.9M8 8h3.2" stroke="#4B74FF" stroke-width="1.5" stroke-linecap="round" />
-        <text x="28" y="12">Total Commits (last year):</text>
-        <text x="250" y="12" fill="#C9D2DE">202</text>
+        <circle cx="8" cy="8" r="5.5" fill="#10B981" opacity="0.95" />
+        <text x="28" y="12">Active Streak:</text>
+        <text x="176" y="12" fill="#F8FAFC">72 Days</text>
+        <text x="228" y="12">🔥</text>
       </g>
       <g transform="translate(23 116)">
-        <circle cx="8" cy="8" r="5.5" fill="none" stroke="#4B74FF" stroke-width="1.5" />
-        <path d="M6 6.2v5.6M10 6.2v5.6M6 8h4" stroke="#4B74FF" stroke-width="1.5" stroke-linecap="round" />
-        <text x="28" y="12">Total PRs:</text>
-        <text x="250" y="12" fill="#C9D2DE">3</text>
+        <circle cx="8" cy="8" r="5.5" fill="#F59E0B" opacity="0.95" />
+        <text x="28" y="12">Public Repositories:</text>
+        <text x="186" y="12" fill="#F8FAFC">40 Repos</text>
       </g>
       <g transform="translate(23 140)">
-        <circle cx="8" cy="8" r="5.5" fill="none" stroke="#4B74FF" stroke-width="1.5" />
-        <path d="M8 5.2v5.6" stroke="#4B74FF" stroke-width="1.5" stroke-linecap="round" />
-        <circle cx="8" cy="13.1" r="0.9" fill="#4B74FF" />
-        <text x="28" y="12">Total Issues:</text>
-        <text x="250" y="12" fill="#C9D2DE">0</text>
+        <circle cx="8" cy="8" r="5.5" fill="#A78BFA" opacity="0.95" />
+        <text x="28" y="12">Repository Forks:</text>
+        <text x="186" y="12" fill="#F8FAFC">2 Forks</text>
       </g>
       <g transform="translate(23 164)">
-        <circle cx="8" cy="8" r="5.5" fill="none" stroke="#4B74FF" stroke-width="1.5" />
-        <path d="M5.8 4.8h4.4v6.8H5.8zM7.1 12.4h1.8" stroke="#4B74FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-        <text x="28" y="12">Contributed to (last year):</text>
-        <text x="250" y="12" fill="#C9D2DE">6</text>
+        <circle cx="8" cy="8" r="5.5" fill="#8B5CF6" opacity="0.95" />
+        <text x="28" y="12">System Runtime:</text>
+        <text x="186" y="12" fill="#F8FAFC">100% Optimal</text>
       </g>
     </g>
   </g>
@@ -84,41 +79,43 @@
     <rect x="0" y="0" width="420" height="216" rx="3" fill="url(#panel)" stroke="#273246" stroke-width="1.2" />
     <path d="M10 11h10M10 11v10" stroke="#22D3EE" stroke-width="1.2" stroke-linecap="round" />
     <path d="M410 205h-10M410 205v-10" stroke="#22D3EE" stroke-width="1.2" stroke-linecap="round" />
-    <text x="22" y="33" fill="#3B82F6" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Most Used Languages</text>
+    <text x="22" y="33" fill="#22D3EE" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">🛠 Most Used Languages</text>
     <line x1="16" y1="46" x2="404" y2="46" stroke="#273246" stroke-width="1" />
 
     <g transform="translate(16 60)">
       <rect x="0" y="0" width="388" height="11" rx="5.5" fill="#1B2437" />
-      <rect x="0" y="0" width="225" height="11" rx="5.5" fill="url(#bar-js)" />
-      <rect x="225" y="0" width="103" height="11" fill="url(#bar-py)" />
-      <rect x="328" y="0" width="39" height="11" fill="url(#bar-css)" />
-      <rect x="367" y="0" width="14" height="11" fill="url(#bar-html)" />
-      <rect x="381" y="0" width="7" height="11" rx="0 5.5 5.5 0" fill="url(#bar-php)" />
+      <rect x="0" y="0" width="255" height="11" rx="5.5" fill="url(#bar-js)" />
+      <rect x="255" y="0" width="59" height="11" fill="url(#bar-py)" />
+      <rect x="314" y="0" width="33" height="11" fill="url(#bar-css)" />
+      <rect x="347" y="0" width="16" height="11" fill="url(#bar-html)" />
+      <rect x="363" y="0" width="25" height="11" rx="0 5.5 5.5 0" fill="url(#bar-php)" />
     </g>
 
     <g font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#DCE2EA">
       <g transform="translate(18 98)">
         <circle cx="5" cy="5" r="5" fill="#F5DE53" />
-        <text x="18" y="9">JavaScript 60.33%</text>
+        <text x="18" y="9">JavaScript 65.7%</text>
       </g>
       <g transform="translate(18 128)">
         <circle cx="5" cy="5" r="5" fill="#3C78B4" />
-        <text x="18" y="9">Python 26.99%</text>
+        <text x="18" y="9">TypeScript 14.8%</text>
       </g>
       <g transform="translate(18 158)">
         <circle cx="5" cy="5" r="5" fill="#7A3DB8" />
-        <text x="18" y="9">CSS 9.69%</text>
+        <text x="18" y="9">CSS / Styling 8.6%</text>
       </g>
       <g transform="translate(238 98)">
         <circle cx="5" cy="5" r="5" fill="#EB5A2B" />
-        <text x="18" y="9">HTML 2.45%</text>
+        <text x="18" y="9">Python 4.4%</text>
       </g>
       <g transform="translate(238 128)">
         <circle cx="5" cy="5" r="5" fill="#5E6AA8" />
-        <text x="18" y="9">PHP 0.55%</text>
+        <text x="18" y="9">HTML 4.2%</text>
+      </g>
+      <g transform="translate(238 158)">
+        <circle cx="5" cy="5" r="5" fill="#C084FC" />
+        <text x="18" y="9">Solidity / Others 2.3%</text>
       </g>
     </g>
-
-    <circle cx="392" cy="25" r="4" fill="#EB5A2B" filter="url(#softGlow)" />
   </g>
 </svg>
