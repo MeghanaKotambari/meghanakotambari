@@ -6,44 +6,41 @@ Using Meghana Kotambari's real GitHub metrics:
 - Active Streak: 241 Days 🔥
 - Public Repositories: 17 Repos
 - System Runtime: 100% Optimal
-- Rank: A+
 - Most Used Languages: JavaScript (60.3%), Python (27.0%), CSS (9.7%), HTML (2.4%), PHP (0.6%), Others (< 0.1%)
-Note: Repository Forks row is omitted when 0 forks to keep telemetry ultra-clean.
+Note: Repository Forks and Rank badge removed per user request for an ultra-clean layout.
 """
 
 import os
 
-def generate_telemetry_svg(output_path="profile/telemetry.svg", forks_count=0):
+def generate_telemetry_svg(output_path="profile/telemetry.svg"):
     # Stats list
     stats = [
         ("Total Contributions:", "947+", "#22D3EE", None),
         ("Active Streak:", "241 Days", "#10B981", "🔥"),
         ("Public Repositories:", "17 Repos", "#22D3EE", None),
+        ("System Runtime:", "100% Optimal", "#A78BFA", None),
     ]
-    if forks_count > 0:
-        stats.append(("Repository Forks:", f"{forks_count} Forks", "#F59E0B", None))
-    stats.append(("System Runtime:", "100% Optimal", "#A78BFA", None))
 
-    # Calculate y-offsets for vertical balance
-    n = len(stats)
-    start_y = 20
-    spacing = 36 if n == 4 else 28
+    # 4 rows evenly spaced
+    start_y = 22
+    spacing = 35
 
     stats_rows = []
     for i, (label, val, dot_color, emoji) in enumerate(stats):
         y = start_y + i * spacing
-        emoji_svg = f'<text x="232" y="9" font-size="12">{emoji}</text>' if emoji else ''
+        emoji_svg = f'<text x="282" y="9" font-size="12">{emoji}</text>' if emoji else ''
         stats_rows.append(f'''      <!-- Row {i+1}: {label} -->
       <g transform="translate(0, {y})">
         <circle cx="5" cy="5" r="4.5" fill="{dot_color}" opacity="0.95" />
-        <text x="18" y="9" class="stat-label">{label}</text>
-        <text x="165" y="9" class="stat-value">{val}</text>
+        <text x="20" y="9" class="stat-label">{label}</text>
+        <text x="210" y="9" class="stat-value">{val}</text>
         {emoji_svg}
       </g>''')
 
     stats_block = "\n".join(stats_rows)
 
-    svg_content = f'''<svg xmlns="http://www.w3.org/2000/svg" width="876" height="248" viewBox="0 0 876 248" fill="none" role="img" aria-labelledby="title desc">
+    svg_content = f'''<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="876" height="248" viewBox="0 0 876 248" fill="none" role="img" aria-labelledby="title desc">
   <title id="title">Meghana Kotambari GitHub Telemetry &amp; Stats</title>
   <desc id="desc">Futuristic HUD telemetry dashboard showing GitHub statistics and most used languages.</desc>
   <defs>
@@ -66,16 +63,6 @@ def generate_telemetry_svg(output_path="profile/telemetry.svg", forks_count=0):
       </feMerge>
     </filter>
 
-    <filter id="badgeGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="6" result="blur1" />
-      <feGaussianBlur stdDeviation="3" result="blur2" />
-      <feMerge>
-        <feMergeNode in="blur1" />
-        <feMergeNode in="blur2" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-
     <!-- Progress Bar Clip Mask for Smooth Pill Shape -->
     <clipPath id="progressBarClip">
       <rect x="0" y="0" width="374" height="11" rx="5.5" />
@@ -91,13 +78,13 @@ def generate_telemetry_svg(output_path="profile/telemetry.svg", forks_count=0):
       }}
       .stat-label {{
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        font-size: 13.5px;
+        font-size: 14px;
         font-weight: 600;
         fill: #94A3B8;
       }}
       .stat-value {{
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        font-size: 13.5px;
+        font-size: 14px;
         font-weight: 700;
         fill: #F8FAFC;
       }}
@@ -112,19 +99,6 @@ def generate_telemetry_svg(output_path="profile/telemetry.svg", forks_count=0):
         font-size: 12.5px;
         font-weight: 600;
         fill: #94A3B8;
-      }}
-      .rank-grade {{
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'JetBrains Mono', monospace;
-        font-size: 22px;
-        font-weight: 900;
-        fill: #00F0FF;
-      }}
-      .rank-sub {{
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'JetBrains Mono', monospace;
-        font-size: 9px;
-        font-weight: 800;
-        fill: #10B981;
-        letter-spacing: 2px;
       }}
       .corner-bracket {{
         stroke: #22D3EE;
@@ -163,27 +137,9 @@ def generate_telemetry_svg(output_path="profile/telemetry.svg", forks_count=0):
     <!-- Header Divider Line -->
     <line x1="20" y1="46" x2="396" y2="46" class="hud-line" />
 
-    <!-- Telemetry Stats List (Left Side) -->
-    <g transform="translate(20, 58)">
+    <!-- Telemetry Stats List -->
+    <g transform="translate(24, 58)">
 {stats_block}
-    </g>
-
-    <!-- Glowing Circular A+ RANK Badge (Right Side) -->
-    <g transform="translate(348, 126)">
-      <!-- Outer Cyan Glow Ring -->
-      <circle cx="0" cy="0" r="35" fill="none" stroke="#00F0FF" stroke-width="2.8" opacity="0.95" filter="url(#badgeGlow)" />
-      
-      <!-- Inner Dark Badge Body -->
-      <circle cx="0" cy="0" r="33.5" fill="#060C18" stroke="#00F0FF" stroke-width="1.8" />
-      
-      <!-- Concentric Inner Detail Line -->
-      <circle cx="0" cy="0" r="29" fill="none" stroke="#0A2D42" stroke-width="1" stroke-dasharray="2 3" opacity="0.8" />
-
-      <!-- A+ Typography -->
-      <text x="0" y="2" text-anchor="middle" class="rank-grade">A+</text>
-      
-      <!-- RANK Label -->
-      <text x="0" y="16" text-anchor="middle" class="rank-sub">RANK</text>
     </g>
   </g>
 
@@ -286,4 +242,4 @@ def generate_telemetry_svg(output_path="profile/telemetry.svg", forks_count=0):
     print(f"Generated {output_path}")
 
 if __name__ == "__main__":
-    generate_telemetry_svg(forks_count=0)
+    generate_telemetry_svg()
