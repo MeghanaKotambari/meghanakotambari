@@ -357,8 +357,7 @@ industrial_milestone:
 
 <br/><br/>
 
-<img width="49%" src="./profile/stats.svg" alt="Meghana's GitHub Stats" />
-<img width="49%" src="./profile/top-langs.svg" alt="Top Languages" />
+<img width="100%" src="./profile/telemetry.svg" alt="Meghana's GitHub Telemetry" />
 
 </div>
 
