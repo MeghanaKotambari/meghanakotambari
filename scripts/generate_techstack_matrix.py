@@ -163,12 +163,10 @@ def build_svg():
     # Rotating Segment Arcs (Clockwise)
     svg.append('  <g class="rotating-outer">')
     svg.append(f'    <g transform="translate({cx}, {cy})">')
-    # 4 Glowing Rotating Segment Arcs
     svg.append('      <path d="M 0 -92 A 92 92 0 0 1 80 -46" fill="none" stroke="#00F0FF" stroke-width="5.5" stroke-linecap="round" filter="url(#glow-cyan)" />')
     svg.append('      <path d="M 80 46 A 92 92 0 0 1 0 92" fill="none" stroke="#A855F7" stroke-width="5.5" stroke-linecap="round" filter="url(#glow-purple)" />')
     svg.append('      <path d="M 0 92 A 92 92 0 0 1 -80 46" fill="none" stroke="#00F0FF" stroke-width="5.5" stroke-linecap="round" filter="url(#glow-cyan)" />')
     svg.append('      <path d="M -80 -46 A 92 92 0 0 1 0 -92" fill="none" stroke="#38BDF8" stroke-width="5.5" stroke-linecap="round" filter="url(#glow-cyan)" />')
-    # Orbiting Beacon Dots
     svg.append('      <circle cx="80" cy="-46" r="3" fill="#FFF" />')
     svg.append('      <circle cx="0" cy="92" r="3" fill="#FFF" />')
     svg.append('      <circle cx="-80" cy="46" r="3" fill="#FFF" />')
@@ -198,14 +196,14 @@ def build_svg():
     svg.append('  </g>')
 
     # ------------------ HELPER FUNCTIONS FOR CARDS & BADGES ------------------
-    def draw_badge(bx, by, label, icon_type=None, custom_color=None, width_override=None, height_override=25):
+    def draw_badge(bx, by, label, icon_type=None, custom_color=None, width_override=None, height_override=26):
         bw = width_override or (len(label) * 8 + 36)
         bh = height_override
         
         svg.append(f'      <g class="badge" transform="translate({bx}, {by})">')
         svg.append(f'        <rect width="{bw}" height="{bh}" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />')
         
-        ix, iy = 7, 4.5
+        ix, iy = 7, 5
         if icon_type == "js":
             svg.append(f'        <rect x="{ix}" y="{iy}" width="16" height="16" rx="2" fill="#F7DF1E" />')
             svg.append(f'        <text x="{ix+8}" y="{iy+12}" text-anchor="middle" class="sans" font-size="9" font-weight="900" fill="#000">JS</text>')
@@ -298,7 +296,6 @@ def build_svg():
         elif icon_type == "opensource":
             svg.append(f'        <circle cx="{ix+8}" cy="{iy+8}" r="6" fill="none" stroke="#EC4899" stroke-width="1.3" stroke-dasharray="8 3" />')
         elif icon_type == "dot":
-            # Styled tech dot badge
             svg.append(f'        <circle cx="{ix+5}" cy="{iy+8}" r="3" fill="{custom_color or "#00F0FF"}" opacity="0.9" />')
             ix = ix - 2
         else:
@@ -306,7 +303,7 @@ def build_svg():
             ix = ix - 4
 
         text_x = ix + 21 if icon_type else ix + 14
-        svg.append(f'        <text x="{text_x}" y="16.5" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">{label}</text>')
+        svg.append(f'        <text x="{text_x}" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">{label}</text>')
         svg.append('      </g>')
 
     # ------------------ 8 SECTION CARDS ------------------
@@ -318,10 +315,10 @@ def build_svg():
     svg.append('    <text x="36" y="40" text-anchor="middle" class="mono" font-size="11" font-weight="900" fill="#00F0FF">&lt;/&gt;</text>')
     svg.append('    <text x="66" y="38" class="mono" font-size="13.5" font-weight="800" fill="#00F0FF" letter-spacing="0.5">01. LANGUAGES</text>')
     draw_badge(66, 52, "JavaScript", "js", width_override=94)
-    draw_badge(166, 52, "TypeScript", "ts", width_override=94)
-    draw_badge(266, 52, "Python", "python", width_override=82)
+    draw_badge(168, 52, "TypeScript", "ts", width_override=94)
+    draw_badge(270, 52, "Python", "python", width_override=82)
     draw_badge(66, 86, "HTML5", "html5", width_override=78)
-    draw_badge(150, 86, "CSS3", "css3", width_override=76)
+    draw_badge(152, 86, "CSS3", "css3", width_override=76)
     svg.append('  </g>')
 
     # Card 02: FRONTEND & MOBILE (Mid-Upper Left)
@@ -333,12 +330,12 @@ def build_svg():
     svg.append('    <rect x="37" y="31" width="10" height="16" rx="2" fill="none" stroke="#C084FC" stroke-width="1" />')
     svg.append('    <text x="66" y="40" class="mono" font-size="13.5" font-weight="800" fill="#C084FC" letter-spacing="0.5">02. FRONTEND &amp; MOBILE</text>')
     draw_badge(66, 54, "React.js", "react", width_override=82)
-    draw_badge(154, 54, "Next.js", "nextjs", width_override=78)
-    draw_badge(238, 54, "React Native", "react", width_override=112)
+    draw_badge(156, 54, "Next.js", "nextjs", width_override=78)
+    draw_badge(242, 54, "React Native", "react", width_override=112)
     draw_badge(66, 86, "Tailwind CSS", "tailwind", width_override=106)
-    draw_badge(178, 86, "Shadcn UI", "shadcn", width_override=94)
+    draw_badge(180, 86, "Shadcn UI", "shadcn", width_override=94)
     draw_badge(66, 118, "Redux Toolkit", "redux", width_override=110)
-    draw_badge(182, 118, "Framer Motion", "framer", width_override=116)
+    draw_badge(184, 118, "Framer Motion", "framer", width_override=116)
     svg.append('  </g>')
 
     # Card 03: BACKEND & SYSTEMS (Mid-Lower Left)
@@ -350,11 +347,11 @@ def build_svg():
     svg.append('    <rect x="27" y="38" width="18" height="6" rx="1" fill="none" stroke="#10B981" stroke-width="1" />')
     svg.append('    <text x="66" y="38" class="mono" font-size="13.5" font-weight="800" fill="#10B981" letter-spacing="0.5">03. BACKEND &amp; SYSTEMS</text>')
     draw_badge(66, 52, "Node.js", "nodejs", width_override=82)
-    draw_badge(154, 52, "Express.js", "express", width_override=92)
-    draw_badge(252, 52, "RESTful APIs", "rest", width_override=100)
+    draw_badge(156, 52, "Express.js", "express", width_override=92)
+    draw_badge(256, 52, "RESTful APIs", "rest", width_override=100)
     draw_badge(66, 86, "JWT", "jwt", width_override=64)
-    draw_badge(136, 86, "RBAC", "rbac", width_override=74)
-    draw_badge(216, 86, "AI Integration", "ai", width_override=112)
+    draw_badge(138, 86, "RBAC", "rbac", width_override=74)
+    draw_badge(220, 86, "AI Integration", "ai", width_override=112)
     svg.append('  </g>')
 
     # Card 04: DATABASE & CLOUD (Bottom Left)
@@ -365,9 +362,9 @@ def build_svg():
     svg.append('    <path d="M28 38 a4 4 0 0 1 4 -4 a5 5 0 0 1 7 1 a4 4 0 0 1 3 3 z" fill="none" stroke="#00F0FF" stroke-width="1.2" />')
     svg.append('    <text x="66" y="38" class="mono" font-size="13.5" font-weight="800" fill="#38BDF8" letter-spacing="0.5">04. DATABASE &amp; CLOUD</text>')
     draw_badge(66, 52, "MongoDB", "mongodb", width_override=94)
-    draw_badge(166, 52, "Mongoose", "mongoose", width_override=96)
+    draw_badge(168, 52, "Mongoose", "mongoose", width_override=96)
     draw_badge(66, 86, "AWS", "aws", width_override=74)
-    draw_badge(146, 86, "Cloudinary", "cloudinary", width_override=96)
+    draw_badge(148, 86, "Cloudinary", "cloudinary", width_override=96)
     svg.append('  </g>')
 
     # Card 05: TOOLS & DEVOPS (Top Right)
@@ -379,16 +376,16 @@ def build_svg():
     svg.append('    <path d="M36 26 v3 M36 43 v3 M26 36 h3 M43 36 h3" stroke="#F59E0B" stroke-width="1.8" />')
     svg.append('    <text x="66" y="38" class="mono" font-size="13.5" font-weight="800" fill="#F59E0B" letter-spacing="0.5">05. TOOLS &amp; DEVOPS</text>')
     draw_badge(66, 54, "Git", "git", width_override=66)
-    draw_badge(138, 54, "GitHub", "github", width_override=82)
-    draw_badge(226, 54, "Postman", "postman", width_override=88)
+    draw_badge(140, 54, "GitHub", "github", width_override=82)
+    draw_badge(230, 54, "Postman", "postman", width_override=88)
     draw_badge(66, 86, "CI/CD", "cicd", width_override=78)
-    draw_badge(150, 86, "Razorpay", "razorpay", width_override=94)
-    draw_badge(250, 86, "Stripe", "stripe", width_override=78)
+    draw_badge(152, 86, "Razorpay", "razorpay", width_override=94)
+    draw_badge(254, 86, "Stripe", "stripe", width_override=78)
     draw_badge(66, 118, "PWA", "pwa", width_override=70)
-    draw_badge(142, 118, "VS Code", "vscode", width_override=92)
+    draw_badge(144, 118, "VS Code", "vscode", width_override=92)
     svg.append('  </g>')
 
-    # Card 06: ARCHITECTURE & CONCEPTS (Mid-Upper Right) - Enhanced with proper vertical & horizontal spacing
+    # Card 06: ARCHITECTURE & CONCEPTS (Mid-Upper Right) - Extra Generous Spacing
     svg.append('  <!-- Card 06: ARCHITECTURE & CONCEPTS -->')
     svg.append('  <g class="tech-card" transform="translate(797, 276)">')
     svg.append('    <rect class="card-bg" width="365" height="134" rx="6" fill="url(#cardGrad)" stroke="#0E4A63" stroke-width="1.2" />')
@@ -398,18 +395,20 @@ def build_svg():
     svg.append('    <rect x="40" y="38" width="8" height="6" rx="1" fill="none" stroke="#00F0FF" stroke-width="1" />')
     svg.append('    <path d="M36 31 v4 M28 35 h16" stroke="#00F0FF" stroke-width="1" />')
     svg.append('    <text x="66" y="38" class="mono" font-size="13.5" font-weight="800" fill="#00F0FF" letter-spacing="0.5">06. ARCHITECTURE &amp; CONCEPTS</text>')
-    # Generously spaced rows (y=50, 78, 106) with 24px badge height for a clean 4px vertical margin
-    draw_badge(66, 50, "Microservices", "dot", custom_color="#00F0FF", width_override=104, height_override=24)
-    draw_badge(176, 50, "System Design", "dot", custom_color="#00F0FF", width_override=108, height_override=24)
+    # Row 1 (y=48): 14px horizontal gap
+    draw_badge(66, 48, "Microservices", "dot", custom_color="#00F0FF", width_override=108, height_override=24)
+    draw_badge(184, 48, "System Design", "dot", custom_color="#00F0FF", width_override=112, height_override=24)
+    # Row 2 (y=77): 7px vertical gap, 12px horizontal gap
     draw_badge(66, 77, "REST", "dot", custom_color="#00F0FF", width_override=60, height_override=24)
-    draw_badge(132, 77, "API Design", "dot", custom_color="#00F0FF", width_override=88, height_override=24)
-    draw_badge(226, 77, "MVC", "dot", custom_color="#00F0FF", width_override=58, height_override=24)
+    draw_badge(136, 77, "API Design", "dot", custom_color="#00F0FF", width_override=90, height_override=24)
+    draw_badge(236, 77, "MVC", "dot", custom_color="#00F0FF", width_override=58, height_override=24)
+    # Row 3 (y=104): 7px vertical gap, 12px horizontal gap
     draw_badge(66, 104, "Agile", "dot", custom_color="#00F0FF", width_override=64, height_override=24)
-    draw_badge(136, 104, "SDLC", "dot", custom_color="#00F0FF", width_override=64, height_override=24)
-    draw_badge(206, 104, "OOPs", "dot", custom_color="#00F0FF", width_override=66, height_override=24)
+    draw_badge(140, 104, "SDLC", "dot", custom_color="#00F0FF", width_override=64, height_override=24)
+    draw_badge(214, 104, "OOPs", "dot", custom_color="#00F0FF", width_override=66, height_override=24)
     svg.append('  </g>')
 
-    # Card 07: CORE COMPUTER SCIENCE (Mid-Lower Right) - Enhanced with proper vertical & horizontal spacing
+    # Card 07: CORE COMPUTER SCIENCE (Mid-Lower Right)
     svg.append('  <!-- Card 07: CORE COMPUTER SCIENCE -->')
     svg.append('  <g class="tech-card" transform="translate(797, 420)">')
     svg.append('    <rect class="card-bg" width="365" height="126" rx="6" fill="url(#cardGrad)" stroke="#4C1D95" stroke-width="1.2" />')
@@ -418,11 +417,11 @@ def build_svg():
     svg.append('    <rect x="31" y="31" width="10" height="10" fill="#A855F7" opacity="0.4" />')
     svg.append('    <text x="66" y="38" class="mono" font-size="13.5" font-weight="800" fill="#C084FC" letter-spacing="0.5">07. CORE COMPUTER SCIENCE</text>')
     draw_badge(66, 52, "DSA", "dot", custom_color="#A855F7", width_override=58)
-    draw_badge(130, 52, "DBMS", "dot", custom_color="#A855F7", width_override=68)
-    draw_badge(204, 52, "OS", "dot", custom_color="#A855F7", width_override=52)
+    draw_badge(134, 52, "DBMS", "dot", custom_color="#A855F7", width_override=68)
+    draw_badge(212, 52, "OS", "dot", custom_color="#A855F7", width_override=52)
     draw_badge(66, 86, "CN", "dot", custom_color="#A855F7", width_override=52)
-    draw_badge(124, 86, "OOPS", "dot", custom_color="#A855F7", width_override=62)
-    draw_badge(192, 86, "Computer Networks", "dot", custom_color="#A855F7", width_override=130)
+    draw_badge(128, 86, "OOPS", "dot", custom_color="#A855F7", width_override=62)
+    draw_badge(200, 86, "Computer Networks", "dot", custom_color="#A855F7", width_override=130)
     svg.append('  </g>')
 
     # Card 08: SPECIAL INTERESTS (Bottom Right)
@@ -433,9 +432,9 @@ def build_svg():
     svg.append('    <path d="M36 44 L30 38 A4 4 0 0 1 36 32 A4 4 0 0 1 42 38 Z" fill="none" stroke="#F472B6" stroke-width="1.3" />')
     svg.append('    <text x="66" y="38" class="mono" font-size="13.5" font-weight="800" fill="#F472B6" letter-spacing="0.5">08. SPECIAL INTERESTS</text>')
     draw_badge(66, 52, "UI/UX Design", "uiux", width_override=112)
-    draw_badge(184, 52, "Problem Solving", "problem", width_override=126)
+    draw_badge(188, 52, "Problem Solving", "problem", width_override=126)
     draw_badge(66, 86, "Learning", "learning", width_override=92)
-    draw_badge(164, 86, "Open Source", "opensource", width_override=106)
+    draw_badge(168, 86, "Open Source", "opensource", width_override=106)
     svg.append('  </g>')
 
     # ------------------ BOTTOM TERMINAL DISPATCH FOOTER ------------------
