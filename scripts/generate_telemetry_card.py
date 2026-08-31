@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 """
 Generate Pixel-Perfect Dark Cyberpunk GitHub Telemetry & Language Stats Card
-Matches the exact UI aesthetics:
-- Dual HUD cards with glowing cyan corner brackets
-- Left card: Telemetry metrics + Glowing Circular Neon A+ Rank Badge
-- Right card: Most Used Languages with segmented capsule progress bar and 2-column legend
+Using Meghana Kotambari's real GitHub metrics:
+- Total Contributions: 947+
+- Active Streak: 241 Days 🔥
+- Public Repositories: 17 Repos
+- Repository Forks: 0 Forks
+- System Runtime: 100% Optimal
+- Rank: A+
+- Most Used Languages: JavaScript (60.3%), Python (27.0%), CSS (9.7%), HTML (2.4%), PHP (0.6%), Others (< 0.1%)
 """
 
 import os
@@ -136,29 +140,29 @@ def generate_telemetry_svg(output_path="profile/telemetry.svg"):
       <g transform="translate(0, 18)">
         <circle cx="5" cy="5" r="4.5" fill="#22D3EE" opacity="0.95" />
         <text x="18" y="9" class="stat-label">Total Contributions:</text>
-        <text x="165" y="9" class="stat-value">1,585+</text>
+        <text x="165" y="9" class="stat-value">947+</text>
       </g>
 
       <!-- Row 2: Active Streak -->
       <g transform="translate(0, 46)">
         <circle cx="5" cy="5" r="4.5" fill="#10B981" opacity="0.95" />
         <text x="18" y="9" class="stat-label">Active Streak:</text>
-        <text x="165" y="9" class="stat-value">72 Days</text>
-        <text x="220" y="9" font-size="12">🔥</text>
+        <text x="165" y="9" class="stat-value">241 Days</text>
+        <text x="232" y="9" font-size="12">🔥</text>
       </g>
 
       <!-- Row 3: Public Repositories -->
       <g transform="translate(0, 74)">
         <circle cx="5" cy="5" r="4.5" fill="#22D3EE" opacity="0.95" />
         <text x="18" y="9" class="stat-label">Public Repositories:</text>
-        <text x="165" y="9" class="stat-value">40 Repos</text>
+        <text x="165" y="9" class="stat-value">17 Repos</text>
       </g>
 
       <!-- Row 4: Repository Forks -->
       <g transform="translate(0, 102)">
         <circle cx="5" cy="5" r="4.5" fill="#F59E0B" opacity="0.95" />
         <text x="18" y="9" class="stat-label">Repository Forks:</text>
-        <text x="165" y="9" class="stat-value">2 Forks</text>
+        <text x="165" y="9" class="stat-value">0 Forks</text>
       </g>
 
       <!-- Row 5: System Runtime -->

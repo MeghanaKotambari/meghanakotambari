@@ -1,261 +1,462 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1514" height="1078" viewBox="0 0 1514 1078" fill="none" role="img" aria-labelledby="title desc">
-  <title id="title">Tech Stack Capability Matrix</title>
-  <desc id="desc">Dark neon capability matrix matching the reference layout without Docker.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 800" width="100%" height="100%" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Meghana Kotambari Tech Stack Capability Matrix</title>
+  <desc id="desc">Futuristic cyber telemetry capability matrix showing developer tech stack, architecture, and core competencies.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1514" y2="1078" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#04070B" />
-      <stop offset="1" stop-color="#050911" />
+    <!-- Background Gradients -->
+    <linearGradient id="canvasBg" x1="0" y1="0" x2="1180" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#050811" />
+      <stop offset="50%" stop-color="#060B16" />
+      <stop offset="100%" stop-color="#04070D" />
     </linearGradient>
-    <linearGradient id="frame" x1="0" y1="0" x2="1514" y2="0" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0E4A63" />
-      <stop offset="1" stop-color="#1B2140" />
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080E1C" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#060A14" stop-opacity="0.95" />
     </linearGradient>
-    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
-      <stop stop-color="#21F3FF" />
-      <stop offset="1" stop-color="#22D3EE" />
+    <linearGradient id="pillGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0D1526" />
+      <stop offset="100%" stop-color="#0A101D" />
     </linearGradient>
-    <linearGradient id="purple" x1="0" y1="0" x2="1" y2="0">
-      <stop stop-color="#A855F7" />
-      <stop offset="1" stop-color="#8B5CF6" />
-    </linearGradient>
-    <linearGradient id="green" x1="0" y1="0" x2="1" y2="0">
-      <stop stop-color="#22C55E" />
-      <stop offset="1" stop-color="#10B981" />
-    </linearGradient>
-    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="0">
-      <stop stop-color="#F59E0B" />
-      <stop offset="1" stop-color="#FB923C" />
-    </linearGradient>
-    <linearGradient id="pink" x1="0" y1="0" x2="1" y2="0">
-      <stop stop-color="#EC4899" />
-      <stop offset="1" stop-color="#F472B6" />
-    </linearGradient>
-    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="10" />
+    <!-- Neon Glow Filters -->
+    <filter id="glow-cyan" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <filter id="glow-purple" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-green" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-amber" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-pink" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="coreGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur1" />
+      <feGaussianBlur stdDeviation="3" result="blur2" />
+      <feMerge><feMergeNode in="blur1"/><feMergeNode in="blur2"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .mono { font-family: 'JetBrains Mono', Consolas, 'Fira Code', monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, sans-serif; }
+      .badge { transition: transform 0.2s ease; cursor: default; }
+      .badge:hover { transform: translateY(-2px); }
+    </style>
   </defs>
-
-  <rect width="1514" height="1078" rx="14" fill="url(#bg)" />
-  <rect x="16" y="16" width="1482" height="1046" rx="12" stroke="#0E3642" stroke-width="2" fill="none" />
-  <rect x="24" y="24" width="1466" height="1030" rx="10" stroke="#143646" stroke-width="1" fill="none" opacity="0.7" />
-
-  <g font-family="Segoe UI, Arial, sans-serif">
-    <rect x="40" y="40" width="1434" height="66" rx="8" stroke="#0D475C" stroke-width="1.5" fill="#050A12" />
-    <text x="60" y="82" font-size="28" font-weight="800" fill="url(#cyan)">[ TECH_STACK ]</text>
-    <text x="288" y="82" font-size="28" font-weight="800" fill="#A855F7">//</text>
-    <text x="352" y="82" font-size="28" font-weight="800" fill="#C084FC">CAPABILITY_MATRIX</text>
-    <text x="1315" y="79" font-size="18" fill="#9CC6DF">SYS.PRODUCTION_STACK</text>
-    <circle cx="1448" cy="74" r="6" fill="#22C55E" />
+  <!-- Canvas & Outer Frame -->
+  <rect width="1180" height="800" rx="10" fill="url(#canvasBg)" stroke="#132338" stroke-width="1.5" />
+  <rect x="8" y="8" width="1164" height="784" rx="8" fill="none" stroke="#0B1828" stroke-width="1" />
+  <!-- Top Header Box -->
+  <g transform="translate(18, 16)">
+    <rect width="1144" height="42" rx="5" fill="#080E1A" stroke="#142C44" stroke-width="1" />
+    <text x="16" y="27" class="mono" font-size="16" font-weight="800" fill="#00F0FF" letter-spacing="1">[ TECH_STACK ] <tspan fill="#A855F7">//</tspan> <tspan fill="#C084FC">CAPABILITY_MATRIX</tspan></text>
+    <text x="1108" y="26" text-anchor="end" class="mono" font-size="11" font-weight="700" fill="#64748B" letter-spacing="1">SYS.PRODUCTION_STACK</text>
+    <circle cx="1122" cy="22" r="4.5" fill="#10B981" filter="url(#glow-green)">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+    </circle>
   </g>
-
-  <rect x="40" y="122" width="1434" height="78" rx="8" stroke="#0D475C" stroke-width="1.5" fill="#050A12" />
-  <g font-family="Segoe UI, Arial, sans-serif" font-size="20" letter-spacing="0.5">
-    <text x="96" y="170" fill="#C3D5EA">STACK.STATUS :</text>
-    <text x="257" y="170" fill="#22C55E">ACTIVE</text>
-    <text x="492" y="170" fill="#C3D5EA">CORE.MODULES :</text>
-    <text x="683" y="170" fill="#22D3EE">LOADED</text>
-    <text x="897" y="170" fill="#C3D5EA">STACK.VERSION :</text>
-    <text x="1070" y="170" fill="#C084FC">2.0.1</text>
-    <text x="1275" y="170" fill="#C3D5EA">LAST.UPDATE :</text>
-    <text x="1434" y="170" fill="#22C55E">NOW</text>
+  <!-- Telemetry Status Bar -->
+  <g transform="translate(18, 66)">
+    <rect width="1144" height="34" rx="5" fill="#060A14" stroke="#0E1E32" stroke-width="1" />
+    <g transform="translate(24, 22)" class="mono" font-size="11" font-weight="700">
+      <text x="0" y="0" fill="#64748B">STACK.STATUS : <tspan fill="#10B981">ACTIVE</tspan></text>
+      <text x="320" y="0" fill="#64748B">CORE.MODULES : <tspan fill="#00F0FF">LOADED</tspan></text>
+      <text x="640" y="0" fill="#64748B">STACK.VERSION : <tspan fill="#A855F7">2.0.1</tspan></text>
+      <text x="960" y="0" fill="#64748B">LAST.UPDATE : <tspan fill="#10B981">NOW</tspan></text>
+    </g>
   </g>
-
-  <g>
-    <rect x="40" y="218" width="498" height="290" rx="10" stroke="#0B7285" stroke-width="1.4" fill="#050A12" />
-    <rect x="40" y="540" width="498" height="330" rx="10" stroke="#7C3AED" stroke-width="1.4" fill="#050A12" />
-    <rect x="40" y="904" width="498" height="134" rx="10" stroke="#16A34A" stroke-width="1.4" fill="#050A12" />
-
-    <rect x="976" y="218" width="498" height="290" rx="10" stroke="#F59E0B" stroke-width="1.4" fill="#050A12" />
-    <rect x="976" y="540" width="498" height="198" rx="10" stroke="#22D3EE" stroke-width="1.4" fill="#050A12" />
-    <rect x="976" y="772" width="498" height="160" rx="10" stroke="#8B5CF6" stroke-width="1.4" fill="#050A12" />
-    <rect x="976" y="972" width="498" height="72" rx="10" stroke="#EC4899" stroke-width="1.4" fill="#050A12" />
+  <!-- Connecting Circuit Bus Lines -->
+  <g opacity="0.85">
+    <path d="M 400 200 L 490 200 L 515 285 L 530 330" fill="none" stroke="#00F0FF" stroke-width="1.4" stroke-dasharray="3 3" opacity="0.6"/>
+    <path d="M 400 200 L 485 200 L 525 350" fill="none" stroke="#00F0FF" stroke-width="1.8" />
+    <circle cx="400" cy="200" r="3.5" fill="#00F0FF" filter="url(#glow-cyan)" />
+    <circle cx="500" cy="290" r="3" fill="#00F0FF" />
+    <path d="M 400 370 L 485 370 L 510 405" fill="none" stroke="#A855F7" stroke-width="1.8" />
+    <circle cx="400" cy="370" r="3.5" fill="#A855F7" filter="url(#glow-purple)" />
+    <circle cx="485" cy="370" r="3" fill="#A855F7" />
+    <path d="M 400 520 L 485 520 L 510 455" fill="none" stroke="#10B981" stroke-width="1.8" />
+    <circle cx="400" cy="520" r="3.5" fill="#10B981" filter="url(#glow-green)" />
+    <circle cx="485" cy="520" r="3" fill="#10B981" />
+    <path d="M 400 635 L 485 635 L 530 520" fill="none" stroke="#0284C7" stroke-width="1.8" />
+    <circle cx="400" cy="635" r="3.5" fill="#0284C7" filter="url(#glow-cyan)" />
+    <circle cx="485" cy="635" r="3" fill="#0284C7" />
+    <path d="M 780 200 L 695 200 L 655 350" fill="none" stroke="#F59E0B" stroke-width="1.8" />
+    <circle cx="780" cy="200" r="3.5" fill="#F59E0B" filter="url(#glow-amber)" />
+    <circle cx="680" cy="290" r="3" fill="#F59E0B" />
+    <path d="M 780 370 L 695 370 L 670 405" fill="none" stroke="#00F0FF" stroke-width="1.8" />
+    <circle cx="780" cy="370" r="3.5" fill="#00F0FF" filter="url(#glow-cyan)" />
+    <circle cx="695" cy="370" r="3" fill="#00F0FF" />
+    <path d="M 780 520 L 695 520 L 670 455" fill="none" stroke="#A855F7" stroke-width="1.8" />
+    <circle cx="780" cy="520" r="3.5" fill="#A855F7" filter="url(#glow-purple)" />
+    <circle cx="695" cy="520" r="3" fill="#A855F7" />
+    <path d="M 780 635 L 695 635 L 650 520" fill="none" stroke="#EC4899" stroke-width="1.8" />
+    <circle cx="780" cy="635" r="3.5" fill="#EC4899" filter="url(#glow-pink)" />
+    <circle cx="695" cy="635" r="3" fill="#EC4899" />
   </g>
-
-  <g font-family="Segoe UI, Arial, sans-serif" fill="#DCE7F2">
-    <g transform="translate(74 254)">
-      <path d="M22 0l26 15v30l-26 15-26-15V15z" stroke="#14B8C8" stroke-width="2.2" fill="none" />
-      <text x="73" y="24" font-size="22" font-weight="800" fill="url(#cyan)">01. LANGUAGES</text>
-      <line x1="73" y1="39" x2="455" y2="39" stroke="#0F3E50" />
-      <g font-size="18">
-        <rect x="73" y="58" width="140" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-        <rect x="223" y="58" width="142" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-        <rect x="375" y="58" width="122" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-        <rect x="73" y="106" width="112" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-        <rect x="195" y="106" width="108" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-        <text x="85" y="82"><tspan fill="#F7DF1E">JS</tspan><tspan dx="10" fill="#DCE7F2">JavaScript</tspan></text>
-        <text x="235" y="82"><tspan fill="#3178C6">TS</tspan><tspan dx="10" fill="#DCE7F2">TypeScript</tspan></text>
-        <text x="387" y="82"><tspan fill="#3776AB">🐍</tspan><tspan dx="10" fill="#DCE7F2">Python</tspan></text>
-        <text x="86" y="130"><tspan fill="#F97316">HTML5</tspan></text>
-        <text x="208" y="130"><tspan fill="#3B82F6">CSS3</tspan></text>
+  <!-- Central Cyber Reactor Core -->
+  <g transform="translate(590, 430)">
+    <circle cx="0" cy="0" r="114" fill="none" stroke="#0E2840" stroke-width="1.5" stroke-dasharray="6 8" opacity="0.7" />
+    <circle cx="0" cy="0" r="102" fill="none" stroke="#133654" stroke-width="1.2" />
+    <circle cx="0" cy="0" r="92" fill="#050B16" stroke="#102538" stroke-width="2" />
+    <path d="M 0 -92 A 92 92 0 0 1 80 -46" fill="none" stroke="#00F0FF" stroke-width="5.5" stroke-linecap="round" filter="url(#glow-cyan)" />
+    <path d="M 80 46 A 92 92 0 0 1 0 92" fill="none" stroke="#A855F7" stroke-width="5.5" stroke-linecap="round" filter="url(#glow-purple)" />
+    <path d="M 0 92 A 92 92 0 0 1 -80 46" fill="none" stroke="#00F0FF" stroke-width="5.5" stroke-linecap="round" filter="url(#glow-cyan)" />
+    <path d="M -80 -46 A 92 92 0 0 1 0 -92" fill="none" stroke="#38BDF8" stroke-width="5.5" stroke-linecap="round" filter="url(#glow-cyan)" />
+    <polygon points="0,-102 -5,-110 5,-110" fill="#00F0FF" />
+    <polygon points="0,102 -5,110 5,110" fill="#00F0FF" />
+    <polygon points="-102,0 -110,-5 -110,5" fill="#00F0FF" />
+    <polygon points="102,0 110,-5 110,5" fill="#00F0FF" />
+    <circle cx="0" cy="0" r="76" fill="#040812" stroke="#0F2B44" stroke-width="1.8" />
+    <circle cx="0" cy="0" r="68" fill="none" stroke="#0D1E30" stroke-width="1" stroke-dasharray="4 4" />
+    <text x="0" y="-18" text-anchor="middle" class="mono" font-size="14.5" font-weight="900" fill="#00F0FF" letter-spacing="1">FULL STACK</text>
+    <text x="0" y="2" text-anchor="middle" class="mono" font-size="14.5" font-weight="900" fill="#00F0FF" letter-spacing="1">DEVELOPER</text>
+    <text x="0" y="22" text-anchor="middle" class="mono" font-size="15" font-weight="800" fill="#38BDF8">&lt;/&gt;</text>
+    <text x="0" y="44" text-anchor="middle" class="mono" font-size="8.5" font-weight="800" fill="#00F0FF" letter-spacing="1.5">BUILD • SHIP • SCALE</text>
+  </g>
+  <!-- Card 01: LANGUAGES -->
+  <g transform="translate(18, 114)">
+    <rect width="365" height="134" rx="6" fill="url(#cardGrad)" stroke="#0E4A63" stroke-width="1.2" />
+    <polygon points="36,18 52,27 52,45 36,54 20,45 20,27" fill="#081826" stroke="#00F0FF" stroke-width="1.3" />
+    <text x="36" y="40" text-anchor="middle" class="mono" font-size="11" font-weight="900" fill="#00F0FF">&lt;/&gt;</text>
+    <text x="66" y="38" class="mono" font-size="13.5" font-weight="800" fill="#00F0FF" letter-spacing="0.5">01. LANGUAGES</text>
+      <g class="badge" transform="translate(66, 52)">
+        <rect width="94" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <rect x="8" y="5" width="16" height="16" rx="2" fill="#F7DF1E" />
+        <text x="16" y="17" text-anchor="middle" class="sans" font-size="9" font-weight="900" fill="#000">JS</text>
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">JavaScript</text>
       </g>
-    </g>
-
-    <g transform="translate(74 575)">
-      <path d="M22 0l26 15v30l-26 15-26-15V15z" stroke="#A855F7" stroke-width="2.2" fill="none" />
-      <text x="73" y="24" font-size="22" font-weight="800" fill="url(#purple)">02. FRONTEND &amp; MOBILE</text>
-      <line x1="73" y1="39" x2="455" y2="39" stroke="#3B2355" />
-      <g font-size="18">
-        <rect x="73" y="58" width="130" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-        <rect x="213" y="58" width="126" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-        <rect x="349" y="58" width="160" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-        <rect x="73" y="106" width="156" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-        <rect x="239" y="106" width="122" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-        <rect x="73" y="154" width="144" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-        <rect x="227" y="154" width="128" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-        <text x="85" y="82">React.js</text>
-        <text x="225" y="82">Next.js</text>
-        <text x="361" y="82">React Native</text>
-        <text x="85" y="130">Tailwind CSS</text>
-        <text x="251" y="130">Shadcn UI</text>
-        <text x="85" y="178">Redux Toolkit</text>
-        <text x="239" y="178">Framer Motion</text>
+      <g class="badge" transform="translate(166, 52)">
+        <rect width="94" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <rect x="8" y="5" width="16" height="16" rx="2" fill="#3178C6" />
+        <text x="16" y="17" text-anchor="middle" class="sans" font-size="9" font-weight="900" fill="#FFF">TS</text>
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">TypeScript</text>
       </g>
-    </g>
-
-    <g transform="translate(74 929)">
-      <path d="M22 0l26 15v30l-26 15-26-15V15z" stroke="#22C55E" stroke-width="2.2" fill="none" />
-      <text x="73" y="24" font-size="22" font-weight="800" fill="url(#green)">03. BACKEND &amp; SYSTEMS</text>
-      <line x1="73" y1="39" x2="455" y2="39" stroke="#143F2C" />
-      <g font-size="18">
-        <rect x="73" y="58" width="118" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-        <rect x="201" y="58" width="134" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-        <rect x="345" y="58" width="130" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-        <text x="85" y="82">Node.js</text>
-        <text x="213" y="82">Express.js</text>
-        <text x="357" y="82">RESTful APIs</text>
+      <g class="badge" transform="translate(266, 52)">
+        <rect width="82" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <path d="M16 6 c-3 0 -5 1 -5 3 v2 h5 v1 h-7 c-2 0 -3 2 -3 4 s1 4 3 4 h1 v-2 c0 -2 2 -3 4 -3 h5 c2 0 3 -1 3 -3 v-3 c0 -2 -2 -3 -6 -3 z" fill="#38BDF8"/>
+        <path d="M16 20 c3 0 5 -1 5 -3 v-2 h-5 v-1 h7 c2 0 3 -2 3 -4 s-1 -4 -3 -4 h-1 v2 c0 2 -2 3 -4 3 h-5 c-2 0 -3 1 -3 3 v3 c0 2 2 3 6 3 z" fill="#FACC15"/>
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Python</text>
       </g>
-    </g>
-  </g>
-
-  <g transform="translate(74 553)">
-    <path d="M18 0l22 13v26l-22 13-22-13V13z" stroke="#7C3AED" stroke-width="2.2" fill="none" />
-    <g font-family="Segoe UI, Arial, sans-serif" fill="#DCE7F2">
-      <text x="73" y="24" font-size="22" font-weight="800" fill="url(#purple)">04. DATABASE &amp; CLOUD</text>
-      <line x1="73" y1="39" x2="455" y2="39" stroke="#33204B" />
-      <g font-size="18">
-        <rect x="73" y="58" width="118" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-        <rect x="201" y="58" width="132" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-        <rect x="73" y="106" width="100" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-        <rect x="183" y="106" width="132" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-        <text x="85" y="82">MongoDB</text>
-        <text x="213" y="82">Mongoose</text>
-        <text x="85" y="130">AWS</text>
-        <text x="195" y="130">Cloudinary</text>
+      <g class="badge" transform="translate(66, 88)">
+        <rect width="78" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <rect x="8" y="5" width="16" height="16" rx="2" fill="#E44D26" />
+        <text x="16" y="17" text-anchor="middle" class="sans" font-size="9" font-weight="900" fill="#FFF">5</text>
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">HTML5</text>
       </g>
-    </g>
+      <g class="badge" transform="translate(150, 88)">
+        <rect width="76" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <rect x="8" y="5" width="16" height="16" rx="2" fill="#264DE4" />
+        <text x="16" y="17" text-anchor="middle" class="sans" font-size="9" font-weight="900" fill="#FFF">3</text>
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">CSS3</text>
+      </g>
   </g>
-
-  <g transform="translate(1000 254)">
-    <path d="M22 0l26 15v30l-26 15-26-15V15z" stroke="#F59E0B" stroke-width="2.2" fill="none" />
-    <text x="73" y="24" font-size="22" font-weight="800" fill="url(#amber)">05. TOOLS &amp; DEVOPS</text>
-    <line x1="73" y1="39" x2="455" y2="39" stroke="#4B3112" />
-    <g font-size="18">
-      <rect x="73" y="58" width="96" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <rect x="179" y="58" width="122" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <rect x="311" y="58" width="118" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <rect x="73" y="106" width="120" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <rect x="203" y="106" width="110" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <rect x="323" y="106" width="140" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <rect x="73" y="154" width="120" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <rect x="203" y="154" width="100" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <rect x="313" y="154" width="140" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <text x="85" y="82">Git</text>
-      <text x="191" y="82">GitHub</text>
-      <text x="323" y="82">Postman</text>
-      <text x="85" y="130">CI/CD</text>
-      <text x="215" y="130">Razorpay</text>
-      <text x="335" y="130">Stripe</text>
-      <text x="85" y="178">PWA</text>
-      <text x="215" y="178">VS Code</text>
-    </g>
+  <!-- Card 02: FRONTEND & MOBILE -->
+  <g transform="translate(18, 258)">
+    <rect width="365" height="152" rx="6" fill="url(#cardGrad)" stroke="#4C1D95" stroke-width="1.2" />
+    <rect x="20" y="20" width="32" height="32" rx="5" fill="#130E26" stroke="#A855F7" stroke-width="1.3" />
+    <rect x="25" y="25" width="14" height="18" rx="2" fill="none" stroke="#C084FC" stroke-width="1" />
+    <rect x="37" y="31" width="10" height="16" rx="2" fill="none" stroke="#C084FC" stroke-width="1" />
+    <text x="66" y="40" class="mono" font-size="13.5" font-weight="800" fill="#C084FC" letter-spacing="0.5">02. FRONTEND &amp; MOBILE</text>
+      <g class="badge" transform="translate(66, 54)">
+        <rect width="82" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <ellipse cx="16" cy="13" rx="7" ry="2.5" fill="none" stroke="#61DAFB" stroke-width="1" transform="rotate(30 16 13)" />
+        <ellipse cx="16" cy="13" rx="7" ry="2.5" fill="none" stroke="#61DAFB" stroke-width="1" transform="rotate(90 16 13)" />
+        <ellipse cx="16" cy="13" rx="7" ry="2.5" fill="none" stroke="#61DAFB" stroke-width="1" transform="rotate(150 16 13)" />
+        <circle cx="16" cy="13" r="1.5" fill="#61DAFB" />
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">React.js</text>
+      </g>
+      <g class="badge" transform="translate(154, 54)">
+        <rect width="78" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="16" cy="13" r="8" fill="#000" stroke="#475569" stroke-width="0.8" />
+        <text x="16" y="17" text-anchor="middle" class="sans" font-size="10" font-weight="900" fill="#FFF">N</text>
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Next.js</text>
+      </g>
+      <g class="badge" transform="translate(238, 54)">
+        <rect width="112" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <ellipse cx="16" cy="13" rx="7" ry="2.5" fill="none" stroke="#61DAFB" stroke-width="1" transform="rotate(30 16 13)" />
+        <ellipse cx="16" cy="13" rx="7" ry="2.5" fill="none" stroke="#61DAFB" stroke-width="1" transform="rotate(90 16 13)" />
+        <ellipse cx="16" cy="13" rx="7" ry="2.5" fill="none" stroke="#61DAFB" stroke-width="1" transform="rotate(150 16 13)" />
+        <circle cx="16" cy="13" r="1.5" fill="#61DAFB" />
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">React Native</text>
+      </g>
+      <g class="badge" transform="translate(66, 86)">
+        <rect width="106" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <path d="M10 13 Q13 9 16 12 T22 11 Q19 15 16 14 T10 13 Z" fill="#38BDF8" />
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Tailwind CSS</text>
+      </g>
+      <g class="badge" transform="translate(178, 86)">
+        <rect width="94" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <line x1="11" y1="17" x2="16" y2="9" stroke="#FFF" stroke-width="1.8" />
+        <line x1="16" y1="17" x2="21" y2="9" stroke="#FFF" stroke-width="1.8" />
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Shadcn UI</text>
+      </g>
+      <g class="badge" transform="translate(66, 118)">
+        <rect width="110" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="16" cy="13" r="6" fill="none" stroke="#764ABC" stroke-width="1.8" />
+        <circle cx="16" cy="13" r="2" fill="#764ABC" />
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Redux Toolkit</text>
+      </g>
+      <g class="badge" transform="translate(182, 118)">
+        <rect width="116" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <path d="M12 8 h8 l-4 5 h4 l-8 8 v-8 h4 z" fill="#0055FF" />
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Framer Motion</text>
+      </g>
   </g>
-
-  <g transform="translate(1000 576)">
-    <path d="M22 0l26 15v30l-26 15-26-15V15z" stroke="#22D3EE" stroke-width="2.2" fill="none" />
-    <text x="73" y="24" font-size="22" font-weight="800" fill="url(#cyan)">06. ARCHITECTURE &amp; CONCEPTS</text>
-    <line x1="73" y1="39" x2="455" y2="39" stroke="#0F3E50" />
-    <g font-size="18">
-      <rect x="73" y="58" width="150" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <rect x="233" y="58" width="138" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <rect x="381" y="58" width="104" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <rect x="73" y="106" width="84" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <rect x="167" y="106" width="116" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <rect x="293" y="106" width="84" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <rect x="73" y="154" width="86" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <rect x="169" y="154" width="90" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <rect x="269" y="154" width="94" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <text x="85" y="82">Microservices</text>
-      <text x="245" y="82">System Design</text>
-      <text x="393" y="82">REST</text>
-      <text x="85" y="130">API Design</text>
-      <text x="179" y="130">MVC</text>
-      <text x="305" y="130">Agile</text>
-      <text x="85" y="178">SDLC</text>
-      <text x="181" y="178">OOPs</text>
-      <text x="281" y="178">Patterns</text>
-    </g>
+  <!-- Card 03: BACKEND & SYSTEMS -->
+  <g transform="translate(18, 420)">
+    <rect width="365" height="126" rx="6" fill="url(#cardGrad)" stroke="#065F46" stroke-width="1.2" />
+    <polygon points="36,18 52,27 52,45 36,54 20,45 20,27" fill="#082018" stroke="#10B981" stroke-width="1.3" />
+    <rect x="27" y="28" width="18" height="6" rx="1" fill="none" stroke="#10B981" stroke-width="1" />
+    <rect x="27" y="38" width="18" height="6" rx="1" fill="none" stroke="#10B981" stroke-width="1" />
+    <text x="66" y="38" class="mono" font-size="13.5" font-weight="800" fill="#10B981" letter-spacing="0.5">03. BACKEND &amp; SYSTEMS</text>
+      <g class="badge" transform="translate(66, 52)">
+        <rect width="82" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <polygon points="16,7 22,10 22,17 16,20 10,17 10,10" fill="#68A063" />
+        <text x="16" y="16.5" text-anchor="middle" class="sans" font-size="8" font-weight="900" fill="#FFF">N</text>
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Node.js</text>
+      </g>
+      <g class="badge" transform="translate(154, 52)">
+        <rect width="92" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <text x="16" y="17" text-anchor="middle" class="mono" font-size="9" font-weight="900" fill="#CBD5E1">ex</text>
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Express.js</text>
+      </g>
+      <g class="badge" transform="translate(252, 52)">
+        <rect width="100" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <text x="16" y="17" text-anchor="middle" class="mono" font-size="9" font-weight="900" fill="#22D3EE">{}</text>
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">RESTful APIs</text>
+      </g>
+      <g class="badge" transform="translate(66, 86)">
+        <rect width="64" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="16" cy="13" r="6" fill="#D63AFF" opacity="0.3"/>
+        <path d="M16 8 L17.5 11.5 L21 13 L17.5 14.5 L16 18 L14.5 14.5 L11 13 L14.5 11.5 Z" fill="#D63AFF"/>
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">JWT</text>
+      </g>
+      <g class="badge" transform="translate(136, 86)">
+        <rect width="74" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <path d="M16 7 L22 10 V15 Q16 20 16 20 Q10 15 10 10 Z" fill="#10B981" />
+        <path d="M13 13 L15 15 L19 11" fill="none" stroke="#FFF" stroke-width="1.2" />
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">RBAC</text>
+      </g>
+      <g class="badge" transform="translate(216, 86)">
+        <rect width="112" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="16" cy="13" r="6" fill="#8B5CF6" opacity="0.2"/>
+        <path d="M16 7 Q16 13 22 13 Q16 13 16 19 Q16 13 10 13 Q16 13 16 7 Z" fill="#A78BFA" />
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">AI Integration</text>
+      </g>
   </g>
-
-  <g transform="translate(1000 808)">
-    <path d="M22 0l26 15v30l-26 15-26-15V15z" stroke="#8B5CF6" stroke-width="2.2" fill="none" />
-    <text x="73" y="24" font-size="22" font-weight="800" fill="url(#purple)">07. CORE COMPUTER SCIENCE</text>
-    <line x1="73" y1="39" x2="455" y2="39" stroke="#33204B" />
-    <g font-size="18">
-      <rect x="73" y="58" width="90" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <rect x="173" y="58" width="92" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <rect x="275" y="58" width="86" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <rect x="73" y="106" width="84" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <rect x="167" y="106" width="92" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <rect x="269" y="106" width="80" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <text x="93" y="82">DSA</text>
-      <text x="193" y="82">DBMS</text>
-      <text x="295" y="82">OS</text>
-      <text x="93" y="130">CN</text>
-      <text x="185" y="130">OOPs</text>
-      <text x="287" y="130">SQL</text>
-    </g>
+  <!-- Card 04: DATABASE & CLOUD -->
+  <g transform="translate(18, 556)">
+    <rect width="365" height="126" rx="6" fill="url(#cardGrad)" stroke="#0369A1" stroke-width="1.2" />
+    <polygon points="36,18 52,27 52,45 36,54 20,45 20,27" fill="#081C2E" stroke="#0284C7" stroke-width="1.3" />
+    <path d="M28 38 a4 4 0 0 1 4 -4 a5 5 0 0 1 7 1 a4 4 0 0 1 3 3 z" fill="none" stroke="#00F0FF" stroke-width="1.2" />
+    <text x="66" y="38" class="mono" font-size="13.5" font-weight="800" fill="#38BDF8" letter-spacing="0.5">04. DATABASE &amp; CLOUD</text>
+      <g class="badge" transform="translate(66, 52)">
+        <rect width="94" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <path d="M16 7 C12 12 12 16 16 19 C20 16 20 12 16 7 Z" fill="#13AA52" />
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">MongoDB</text>
+      </g>
+      <g class="badge" transform="translate(166, 52)">
+        <rect width="96" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <rect x="10" y="8" width="12" height="10" rx="2" fill="#880000" />
+        <text x="16" y="16" text-anchor="middle" class="sans" font-size="8" font-weight="900" fill="#FFF">M</text>
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Mongoose</text>
+      </g>
+      <g class="badge" transform="translate(66, 86)">
+        <rect width="74" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <text x="16" y="15" text-anchor="middle" class="sans" font-size="7" font-weight="900" fill="#FF9900">AWS</text>
+        <path d="M11 17 Q16 19 21 17" fill="none" stroke="#FF9900" stroke-width="1" />
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">AWS</text>
+      </g>
+      <g class="badge" transform="translate(146, 86)">
+        <rect width="96" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <path d="M12 15 a3 3 0 0 1 3 -4 a4 4 0 0 1 5 1 a3 3 0 0 1 2 3 z" fill="#3448C5" />
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Cloudinary</text>
+      </g>
   </g>
-
-  <g transform="translate(1000 972)">
-    <path d="M22 0l26 15v30l-26 15-26-15V15z" stroke="#EC4899" stroke-width="2.2" fill="none" />
-    <text x="73" y="24" font-size="22" font-weight="800" fill="url(#pink)">08. SPECIAL INTERESTS</text>
-    <line x1="73" y1="39" x2="455" y2="39" stroke="#4C2141" />
-    <g font-size="18">
-      <rect x="73" y="58" width="144" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <rect x="227" y="58" width="158" height="36" rx="6" stroke="#33505E" fill="#0C151D" />
-      <text x="85" y="82">UI/UX Design</text>
-      <text x="239" y="82">Problem Solving</text>
-    </g>
+  <!-- Card 05: TOOLS & DEVOPS -->
+  <g transform="translate(797, 114)">
+    <rect width="365" height="152" rx="6" fill="url(#cardGrad)" stroke="#B45309" stroke-width="1.2" />
+    <polygon points="36,18 52,27 52,45 36,54 20,45 20,27" fill="#241406" stroke="#F59E0B" stroke-width="1.3" />
+    <circle cx="36" cy="36" r="6" fill="none" stroke="#F59E0B" stroke-width="1.8" />
+    <path d="M36 26 v3 M36 43 v3 M26 36 h3 M43 36 h3" stroke="#F59E0B" stroke-width="1.8" />
+    <text x="66" y="38" class="mono" font-size="13.5" font-weight="800" fill="#F59E0B" letter-spacing="0.5">05. TOOLS &amp; DEVOPS</text>
+      <g class="badge" transform="translate(66, 54)">
+        <rect width="66" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <rect x="11" y="8" width="10" height="10" rx="2" fill="#F05032" transform="rotate(45 16 13)" />
+        <circle cx="16" cy="13" r="2" fill="#FFF" />
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Git</text>
+      </g>
+      <g class="badge" transform="translate(138, 54)">
+        <rect width="82" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="16" cy="13" r="7" fill="#24292E" stroke="#6E7681" stroke-width="0.8" />
+        <path d="M13 15 c0 -2 1.5 -3 3 -3 s3 1 3 3 z" fill="#FFF" />
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">GitHub</text>
+      </g>
+      <g class="badge" transform="translate(226, 54)">
+        <rect width="88" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="16" cy="13" r="7" fill="#FF6C37" />
+        <circle cx="16" cy="13" r="2.5" fill="#FFF" />
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Postman</text>
+      </g>
+      <g class="badge" transform="translate(66, 86)">
+        <rect width="78" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="13" cy="13" r="3.5" fill="none" stroke="#00F0FF" stroke-width="1.4" />
+        <circle cx="19" cy="13" r="3.5" fill="none" stroke="#00F0FF" stroke-width="1.4" />
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">CI/CD</text>
+      </g>
+      <g class="badge" transform="translate(150, 86)">
+        <rect width="94" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <path d="M14 7 L20 7 L17 13 L20 13 L12 19 L15 12 L13 12 Z" fill="#0C2340" stroke="#3395FF" stroke-width="0.8"/>
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Razorpay</text>
+      </g>
+      <g class="badge" transform="translate(250, 86)">
+        <rect width="78" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <rect x="10" y="8" width="12" height="10" rx="2" fill="#635BFF" />
+        <text x="16" y="16" text-anchor="middle" class="sans" font-size="8" font-weight="900" fill="#FFF">S</text>
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Stripe</text>
+      </g>
+      <g class="badge" transform="translate(66, 118)">
+        <rect width="70" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <rect x="9" y="8" width="14" height="10" rx="2" fill="#5A0FC8" />
+        <text x="16" y="15.5" text-anchor="middle" class="mono" font-size="6.5" font-weight="900" fill="#FFF">PWA</text>
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">PWA</text>
+      </g>
+      <g class="badge" transform="translate(142, 118)">
+        <rect width="92" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <path d="M19 7 L22 9 V17 L19 19 L14 15 L11 17 L9 16 V10 L11 9 L14 11 Z" fill="#007ACC" />
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">VS Code</text>
+      </g>
   </g>
-
-  <g transform="translate(584 346)">
-    <circle cx="176" cy="194" r="170" fill="none" stroke="#0F3847" stroke-width="1.2" stroke-dasharray="6 10" opacity="0.8" />
-    <circle cx="176" cy="194" r="142" fill="none" stroke="#1F4A5A" stroke-width="1.2" opacity="0.8" />
-    <circle cx="176" cy="194" r="118" fill="none" stroke="#163445" stroke-width="1.2" />
-    <circle cx="176" cy="194" r="96" fill="none" stroke="#0E2230" stroke-width="3" />
-    <circle cx="176" cy="194" r="79" fill="none" stroke="#17263A" stroke-width="2" />
-    <circle cx="176" cy="194" r="61" fill="none" stroke="#10202D" stroke-width="2" />
-    <circle cx="176" cy="194" r="46" fill="#050A12" stroke="#15384C" stroke-width="3" />
-    <circle cx="176" cy="194" r="28" fill="#050A12" stroke="#19D7F6" stroke-width="2.5" />
-    <path d="M176 106l8 13h-16z" fill="#1DDBF7" />
-    <path d="M176 282l8-13h-16z" fill="#1DDBF7" />
-    <path d="M100 194l13-8v16z" fill="#1DDBF7" />
-    <path d="M252 194l-13-8v16z" fill="#1DDBF7" />
-    <g stroke-linecap="round" fill="none">
-      <path d="M176 113a81 81 0 0 1 67 35" stroke="#22D3EE" stroke-width="7" />
-      <path d="M230 167a81 81 0 0 1 -4 67" stroke="#8B5CF6" stroke-width="7" />
-      <path d="M122 263a81 81 0 0 1 -12 -59" stroke="#22D3EE" stroke-width="7" />
-      <path d="M138 133a81 81 0 0 1 44 -20" stroke="#8B5CF6" stroke-width="7" />
-      <path d="M200 129a81 81 0 0 1 39 25" stroke="#38BDF8" stroke-width="7" />
-      <path d="M113 216a81 81 0 0 1 13 -45" stroke="#38BDF8" stroke-width="7" />
-    </g>
-    <text x="176" y="186" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="800" fill="#1DE5F9">FULL STACK</text>
-    <text x="176" y="218" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="800" fill="#1DE5F9">DEVELOPER</text>
-    <text x="176" y="254" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#7DD3FC">&lt;/&gt;</text>
-    <text x="176" y="293" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#1DE5F9">BUILD • SHIP • SCALE</text>
-    <circle cx="50" cy="132" r="6" fill="#22D3EE" />
-    <circle cx="302" cy="132" r="6" fill="#F59E0B" />
-    <circle cx="12" cy="228" r="6" fill="#A78BFA" />
-    <circle cx="347" cy="228" r="6" fill="#F472B6" />
+  <!-- Card 06: ARCHITECTURE & CONCEPTS -->
+  <g transform="translate(797, 276)">
+    <rect width="365" height="134" rx="6" fill="url(#cardGrad)" stroke="#0E4A63" stroke-width="1.2" />
+    <rect x="20" y="20" width="32" height="32" rx="5" fill="#081826" stroke="#00F0FF" stroke-width="1.3" />
+    <rect x="32" y="25" width="8" height="6" rx="1" fill="none" stroke="#00F0FF" stroke-width="1" />
+    <rect x="24" y="38" width="8" height="6" rx="1" fill="none" stroke="#00F0FF" stroke-width="1" />
+    <rect x="40" y="38" width="8" height="6" rx="1" fill="none" stroke="#00F0FF" stroke-width="1" />
+    <path d="M36 31 v4 M28 35 h16" stroke="#00F0FF" stroke-width="1" />
+    <text x="66" y="38" class="mono" font-size="13.5" font-weight="800" fill="#00F0FF" letter-spacing="0.5">06. ARCHITECTURE &amp; CONCEPTS</text>
+      <g class="badge" transform="translate(66, 52)">
+        <rect width="98" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="12" cy="13" r="2" fill="#38BDF8" />
+        <text x="16" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Microservices</text>
+      </g>
+      <g class="badge" transform="translate(170, 52)">
+        <rect width="102" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="12" cy="13" r="2" fill="#38BDF8" />
+        <text x="16" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">System Design</text>
+      </g>
+      <g class="badge" transform="translate(66, 78)">
+        <rect width="56" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="12" cy="13" r="2" fill="#38BDF8" />
+        <text x="16" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">REST</text>
+      </g>
+      <g class="badge" transform="translate(128, 78)">
+        <rect width="82" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="12" cy="13" r="2" fill="#38BDF8" />
+        <text x="16" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">API Design</text>
+      </g>
+      <g class="badge" transform="translate(216, 78)">
+        <rect width="54" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="12" cy="13" r="2" fill="#38BDF8" />
+        <text x="16" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">MVC</text>
+      </g>
+      <g class="badge" transform="translate(66, 104)">
+        <rect width="58" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="12" cy="13" r="2" fill="#38BDF8" />
+        <text x="16" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Agile</text>
+      </g>
+      <g class="badge" transform="translate(130, 104)">
+        <rect width="58" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="12" cy="13" r="2" fill="#38BDF8" />
+        <text x="16" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">SDLC</text>
+      </g>
+      <g class="badge" transform="translate(194, 104)">
+        <rect width="60" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="12" cy="13" r="2" fill="#38BDF8" />
+        <text x="16" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">OOPs</text>
+      </g>
+  </g>
+  <!-- Card 07: CORE COMPUTER SCIENCE -->
+  <g transform="translate(797, 420)">
+    <rect width="365" height="126" rx="6" fill="url(#cardGrad)" stroke="#4C1D95" stroke-width="1.2" />
+    <rect x="20" y="20" width="32" height="32" rx="5" fill="#140D26" stroke="#A855F7" stroke-width="1.3" />
+    <rect x="27" y="27" width="18" height="18" rx="2" fill="none" stroke="#A855F7" stroke-width="1.2" />
+    <rect x="31" y="31" width="10" height="10" fill="#A855F7" opacity="0.4" />
+    <text x="66" y="38" class="mono" font-size="13.5" font-weight="800" fill="#C084FC" letter-spacing="0.5">07. CORE COMPUTER SCIENCE</text>
+      <g class="badge" transform="translate(66, 52)">
+        <rect width="60" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="12" cy="13" r="2" fill="#38BDF8" />
+        <text x="16" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">DSA</text>
+      </g>
+      <g class="badge" transform="translate(132, 52)">
+        <rect width="68" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="12" cy="13" r="2" fill="#38BDF8" />
+        <text x="16" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">DBMS</text>
+      </g>
+      <g class="badge" transform="translate(206, 52)">
+        <rect width="52" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="12" cy="13" r="2" fill="#38BDF8" />
+        <text x="16" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">OS</text>
+      </g>
+      <g class="badge" transform="translate(66, 86)">
+        <rect width="52" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="12" cy="13" r="2" fill="#38BDF8" />
+        <text x="16" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">CN</text>
+      </g>
+      <g class="badge" transform="translate(124, 86)">
+        <rect width="62" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="12" cy="13" r="2" fill="#38BDF8" />
+        <text x="16" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">OOPS</text>
+      </g>
+      <g class="badge" transform="translate(192, 86)">
+        <rect width="130" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="12" cy="13" r="2" fill="#38BDF8" />
+        <text x="16" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Computer Networks</text>
+      </g>
+  </g>
+  <!-- Card 08: SPECIAL INTERESTS -->
+  <g transform="translate(797, 556)">
+    <rect width="365" height="126" rx="6" fill="url(#cardGrad)" stroke="#831843" stroke-width="1.2" />
+    <polygon points="36,18 52,27 52,45 36,54 20,45 20,27" fill="#240A18" stroke="#EC4899" stroke-width="1.3" />
+    <path d="M36 44 L30 38 A4 4 0 0 1 36 32 A4 4 0 0 1 42 38 Z" fill="none" stroke="#F472B6" stroke-width="1.3" />
+    <text x="66" y="38" class="mono" font-size="13.5" font-weight="800" fill="#F472B6" letter-spacing="0.5">08. SPECIAL INTERESTS</text>
+      <g class="badge" transform="translate(66, 52)">
+        <rect width="112" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="16" cy="13" r="6" fill="none" stroke="#EC4899" stroke-width="1.4"/>
+        <circle cx="16" cy="13" r="2" fill="#EC4899"/>
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">UI/UX Design</text>
+      </g>
+      <g class="badge" transform="translate(184, 52)">
+        <rect width="126" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <polygon points="16,7 21,11 21,17 16,19 11,17 11,11" fill="none" stroke="#EC4899" stroke-width="1.3" />
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Problem Solving</text>
+      </g>
+      <g class="badge" transform="translate(66, 86)">
+        <rect width="92" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <path d="M11 9 h10 v8 h-10 z" fill="none" stroke="#EC4899" stroke-width="1.2" />
+        <line x1="16" y1="9" x2="16" y2="17" stroke="#EC4899" stroke-width="1" />
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Learning</text>
+      </g>
+      <g class="badge" transform="translate(164, 86)">
+        <rect width="106" height="26" rx="4" fill="#0C1524" stroke="#1A2D44" stroke-width="1" />
+        <circle cx="16" cy="13" r="6" fill="none" stroke="#EC4899" stroke-width="1.3" stroke-dasharray="8 3" />
+        <text x="29" y="17" class="sans" font-size="11.5" font-weight="600" fill="#E2E8F0">Open Source</text>
+      </g>
+  </g>
+  <!-- Bottom Terminal Dispatch Footer -->
+  <g transform="translate(18, 700)">
+    <rect width="1144" height="42" rx="5" fill="#060A14" stroke="#0E2034" stroke-width="1" />
+    <rect x="12" y="10" width="30" height="22" rx="3" fill="#0A1626" stroke="#10B981" stroke-width="1" />
+    <text x="27" y="25" text-anchor="middle" class="mono" font-size="12" font-weight="900" fill="#10B981">&gt;_</text>
+    <text x="54" y="26" class="mono" font-size="12" font-weight="700" fill="#10B981">echo <tspan fill="#38BDF8">"Building scalable solutions with clean code &amp; great UX"</tspan></text>
+    <text x="1090" y="26" text-anchor="end" class="mono" font-size="11" font-weight="700" fill="#64748B">STATUS: <tspan fill="#10B981">DEPLOYED SUCCESSFULLY</tspan> &nbsp;|&nbsp; </text>
+    <text x="1108" y="27" font-size="14">🚀</text>
   </g>
 </svg>
