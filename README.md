@@ -357,8 +357,8 @@ industrial_milestone:
 
 <br/><br/>
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=meghanakotambari&show_icons=true&hide_rank=true&theme=radical&hide_border=true&bg_color=0A101F&title_color=22D3EE&icon_color=10B981&text_color=94A3B8&ring_color=A78BFA" alt="Meghana's GitHub Stats" />
-<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=meghanakotambari&layout=compact&theme=radical&hide_border=true&bg_color=0A101F&title_color=22D3EE&text_color=94A3B8" alt="Top Languages" />
+<img width="49%" src="./profile/stats.svg" alt="Meghana's GitHub Stats" />
+<img width="49%" src="./profile/top-langs.svg" alt="Top Languages" />
 
 </div>
 
