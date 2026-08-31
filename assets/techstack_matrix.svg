@@ -67,8 +67,8 @@
 
     <rect x="976" y="218" width="498" height="290" rx="10" stroke="#F59E0B" stroke-width="1.4" fill="#050A12" />
     <rect x="976" y="540" width="498" height="198" rx="10" stroke="#22D3EE" stroke-width="1.4" fill="#050A12" />
-    <rect x="976" y="772" width="498" height="198" rx="10" stroke="#8B5CF6" stroke-width="1.4" fill="#050A12" />
-    <rect x="976" y="1004" width="498" height="102" rx="10" stroke="#EC4899" stroke-width="1.4" fill="#050A12" />
+    <rect x="976" y="772" width="498" height="160" rx="10" stroke="#8B5CF6" stroke-width="1.4" fill="#050A12" />
+    <rect x="976" y="972" width="498" height="72" rx="10" stroke="#EC4899" stroke-width="1.4" fill="#050A12" />
   </g>
 
   <g font-family="Segoe UI, Arial, sans-serif" fill="#DCE7F2">
@@ -216,7 +216,7 @@
     </g>
   </g>
 
-  <g transform="translate(1000 1040)">
+  <g transform="translate(1000 972)">
     <path d="M22 0l26 15v30l-26 15-26-15V15z" stroke="#EC4899" stroke-width="2.2" fill="none" />
     <text x="73" y="24" font-size="22" font-weight="800" fill="url(#pink)">08. SPECIAL INTERESTS</text>
     <line x1="73" y1="39" x2="455" y2="39" stroke="#4C2141" />

@@ -296,10 +296,6 @@ industrial_milestone:
 
 <div align="center">
 
-<img width="100%" src="https://github-readme-streak-stats.herokuapp.com/?user=meghanakotambari&theme=radical&background=0A101F&stroke=22D3EE&ring=10B981&fire=22D3EE&currStreakLabel=10B981&sideLabels=94A3B8&dates=64748B&hide_border=true" alt="Meghana's GitHub Streak" />
-
-<br/><br/>
-
 <img width="100%" src="./profile/telemetry.svg" alt="Meghana's GitHub Telemetry" />
 
 </div>
