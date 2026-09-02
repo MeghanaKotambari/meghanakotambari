@@ -289,12 +289,18 @@ industrial_milestone:
 <br/>
 
 <!-- ================================================================= -->
-<!-- SECTION 9: GITHUB TELEMETRY & METRICS                           -->
+<!-- SECTION 9: GITHUB TELEMETRY & OBSERVABILITY METRICS               -->
 <!-- ================================================================= -->
 
-<img src="assets/headers/header_metrics.svg" alt="System Metrics // GitHub Telemetry" width="100%" />
+<img src="assets/headers/header_metrics.svg" alt="Telemetry // Observability Metrics" width="100%" />
 
 <div align="center">
+
+<a href="https://github.com/meghanakotambari">
+  <img src="https://streak-stats.demolab.com?user=meghanakotambari&theme=dark&background=080C14&border=1E293B&stroke=22D3EE&ring=22D3EE&fire=22D3EE&currStreakLabel=22D3EE&currStreakNum=FFFFFF&sideNums=FFFFFF&sideLabels=94A3B8&dates=64748B&border_radius=8" alt="Meghana Kotambari's GitHub Streak" width="100%" />
+</a>
+
+<br/><br/>
 
 <img width="100%" src="./profile/telemetry.svg" alt="Meghana's GitHub Telemetry" />
 

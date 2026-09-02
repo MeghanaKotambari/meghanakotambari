@@ -56,7 +56,7 @@ def main():
         ("SELECTED_WORK", "PRODUCTION_BUILDS", "FLAGSHIP_PROJECTS", "#38BDF8", "🚀", "assets/headers/header_projects.svg"),
         ("ACHIEVEMENTS", "HACKATHON_RECORDS", "MILESTONES", "#F59E0B", "🏆", "assets/headers/header_achievements.svg"),
         ("CREDENTIALS", "RESUME_SCANNER", "OFFICIAL_CV", "#22D3EE", "📄", "assets/headers/header_resume.svg"),
-        ("SYSTEM_METRICS", "GITHUB_TELEMETRY", "ANALYTICS_STREAM", "#10B981", "📊", "assets/headers/header_metrics.svg"),
+        ("TELEMETRY", "OBSERVABILITY_METRICS", "GITHUB_STATS", "#22D3EE", "📊", "assets/headers/header_metrics.svg"),
         ("TIMELINE", "CONTRIBUTION_STREAM", "ACTIVITY_MATRIX", "#A78BFA", "🐍", "assets/headers/header_timeline.svg"),
         ("COMM_LINK", "CONNECT", "DISPATCH_CHANNEL", "#22D3EE", "🌐", "assets/headers/header_connect.svg")
     ]
