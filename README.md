@@ -265,7 +265,7 @@ industrial_milestone:
 <table>
   <tr>
     <td width="38%" align="center" valign="middle">
-      <a href="https://drive.google.com/file/d/1gV66MqHhcaJzJRVpa-82R1VmVX_wMwPq/view?usp=drivesdk" target="_blank">
+      <a href="https://drive.google.com/file/d/1hTZGiIGw5QCwluV1LaTKNZrVojHzd11B/view?usp=drivesdk" target="_blank">
         <img src="assets/resume_qr.svg" alt="Scan to View Meghana Kotambari's Resume" width="260" />
       </a>
     </td>
