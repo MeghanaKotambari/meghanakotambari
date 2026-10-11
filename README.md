@@ -53,8 +53,6 @@ robust product-grade software from zero to scale.
 ```zsh
 $ sys.telemetry --active-context
 
-▸ ACTIVE_ROLE   : Full Stack Developer Intern @ IIIT Dharwad Research Park
-▸ CURRENT_BUILD : Sleep-pod booking system with automated payment pipelines (Razorpay) & AWS infra
 ▸ EXPERIENCE    : 4 Industrial Internships (IIIT Dharwad, Yumaris Agency, ARMB, LettrBlack)
 ▸ ACADEMICS     : B.E. Computer Science & Engineering // CGPA: 9.00 (Class of 2027)
 ▸ HACKATHONS    : Winner @ HackToFuture & CodeFiesta 5.0 | Top 10 in 800+ Teams (3x)
@@ -190,45 +188,46 @@ $ sys.telemetry --active-context
   </tr>
   <tr>
     <!-- Project 03 -->
-    <td width="50%" valign="top">
-      <h4>🍔 03 / OrderMe — Restaurant & Food Hub</h4>
-      <p>
-        <img src="https://img.shields.io/badge/Food_Ordering_Hub-0891B2?style=flat-square" alt="Hub" />
-        <img src="https://img.shields.io/badge/Stripe_Payments-635BFF?style=flat-square&logo=stripe&logoColor=white" alt="Stripe" />
-      </p>
-      <p>End-to-end food ordering and restaurant management platform with live state tracking, dynamic menu inventory, and dual Dine-in / Parcel flows.</p>
-      <ul>
-        <li>Integrated Stripe payment gateway with cryptographic webhook validation and automated transactions.</li>
-        <li>Constructed real-time operational merchant dashboards, live order tracking, and sales analytics.</li>
-      </ul>
-      <p>
-        <code>MERN Stack</code> · <code>Stripe</code> · <code>Cloudinary</code> · <code>JWT</code> · <code>REST</code>
-      </p>
-      <p>
-        <a href="https://github.com/meghanakotambari"><b>Live Platform ↗</b></a> &nbsp;|&nbsp; 
-        <a href="https://github.com/meghanakotambari"><b>Source Code ↗</b></a>
-      </p>
-    </td>
-    <!-- Project 04 -->
-    <td width="50%" valign="top">
-      <h4>🍲 04 / Ruchio — Food Discovery Mobile App</h4>
-      <p>
-        <img src="https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React Native" />
-        <img src="https://img.shields.io/badge/Mobile_Application-0891B2?style=flat-square&logo=android&logoColor=white" alt="Mobile App" />
-      </p>
-      <p>Modern cross-platform food discovery mobile application designed to help users explore culinary options through an engaging, intuitive UI.</p>
-      <ul>
-        <li>Engineered dynamic culinary exploration feeds, smart dish categorization, and personalized favorites.</li>
-        <li>Built responsive cross-platform mobile components with fluid native animations and offline caching.</li>
-      </ul>
-      <p>
-        <code>React Native</code> · <code>JavaScript</code> · <code>Redux Toolkit</code> · <code>REST APIs</code>
-      </p>
-      <p>
-        <a href="https://github.com/meghanakotambari"><b>Explore App ↗</b></a> &nbsp;|&nbsp; 
-        <a href="https://github.com/meghanakotambari"><b>Source Code ↗</b></a>
-      </p>
-    </td>
+   ```html
+<td width="50%" valign="top">
+  <h4>🛡️ 03 / ScamShield — AI-Powered Scam Detection</h4>
+  <p>
+    <img src="https://img.shields.io/badge/AI_Security-7C3AED?style=flat-square" alt="AI Security" />
+    <img src="https://img.shields.io/badge/Scam_Detection-DC2626?style=flat-square" alt="Scam Detection" />
+  </p>
+  <p>AI-powered security platform designed to identify suspicious content and potential online scams, helping users recognize digital threats and make safer decisions.</p>
+  <ul>
+    <li>Developed scam detection workflows to analyze suspicious content and highlight potential security risks.</li>
+    <li>Designed an intuitive interface to present threat analysis and improve digital safety awareness.</li>
+  </ul>
+  <p>
+    <code>MERN Stack</code> · <code>AI</code> · <code>REST APIs</code> · <code>Tailwind CSS</code>
+  </p>
+  <p>
+    <a href="https://github.com/meghanakotambari"><b>Live Platform ↗</b></a> &nbsp;|&nbsp;
+    <a href="https://github.com/meghanakotambari"><b>Source Code ↗</b></a>
+  </p>
+</td>
+<!-- Project 04 -->
+<td width="50%" valign="top">
+  <h4>🏥 04 / MedLink — Secure Healthcare &amp; EMR Platform</h4>
+  <p>
+    <img src="https://img.shields.io/badge/Digital_Healthcare-0891B2?style=flat-square" alt="Digital Healthcare" />
+    <img src="https://img.shields.io/badge/Secure_Record_Sharing-16A34A?style=flat-square" alt="Secure Record Sharing" />
+  </p>
+  <p>Cross-platform healthcare application connecting patients and doctors through digital health IDs, doctor discovery, appointment scheduling, and centralized electronic medical records.</p>
+  <ul>
+    <li>Implemented time-limited QR codes and PIN-based consent verification for secure medical record sharing.</li>
+    <li>Integrated role-based access control (RBAC) and secure RESTful APIs to protect sensitive medical information.</li>
+  </ul>
+  <p>
+    <code>React Native</code> · <code>Node.js</code> · <code>Express.js</code> · <code>PostgreSQL</code> · <code>REST APIs</code>
+  </p>
+  <p>
+    <a href="https://github.com/meghanakotambari"><b>Explore App ↗</b></a> &nbsp;|&nbsp;
+    <a href="https://github.com/meghanakotambari"><b>Source Code ↗</b></a>
+  </p>
+</td>
   </tr>
 </table>
 
@@ -273,7 +272,6 @@ industrial_milestone:
       <h4>⚡ Instant CV Access // PDF Document</h4>
       <p>Point your smartphone camera at the scanner matrix or click below to view the official verified resume on Google Drive.</p>
       <ul>
-        <li><b>Current Role:</b> Full Stack Developer Intern @ IIIT Dharwad Research Park</li>
         <li><b>Core Specialization:</b> Full-Stack Web, React Native, AI-Assisted Backends</li>
         <li><b>Education:</b> B.E. Computer Science & Engineering (CGPA: 9.00 // 2027)</li>
         <li><b>Track Record:</b> 4 Industrial Internships (IIIT Dharwad, Yumaris, ARMB, LettrBlack) · 2x Hackathon Winner</li>
