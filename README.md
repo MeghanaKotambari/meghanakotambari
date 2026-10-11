@@ -70,7 +70,7 @@ $ sys.telemetry --active-context
 <img src="assets/headers/header_experience.svg" alt="Experience // 4 Industrial Internships" width="100%" />
 
 <details open>
-<summary><b>🏢 01 / Full Stack Developer Intern — IIIT Dharwad Research Park</b> &nbsp; <code>July 2026 – Present</code></summary>
+<summary><b>🏢 01 / Full Stack Developer Intern — IIIT Dharwad Research Park</b> &nbsp; <code>July 2026 – October 2026</code></summary>
 <br/>
 
 > 📍 **Location:** Dharwad, India *(Hybrid)* &nbsp;|&nbsp; 🏷️ **Domain:** Sleep-Pod Booking Platform & Cloud Infrastructure
