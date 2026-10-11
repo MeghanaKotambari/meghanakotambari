@@ -277,7 +277,7 @@ industrial_milestone:
         <li><b>Track Record:</b> 4 Industrial Internships (IIIT Dharwad, Yumaris, ARMB, LettrBlack) · 2x Hackathon Winner</li>
       </ul>
       <br/>
-      <a href="https://drive.google.com/file/d/1gV66MqHhcaJzJRVpa-82R1VmVX_wMwPq/view?usp=drivesdk" target="_blank">
+      <a href="https://drive.google.com/file/d/1hTZGiIGw5QCwluV1LaTKNZrVojHzd11B/view?usp=drivesdk" target="_blank">
         <img src="https://img.shields.io/badge/Open_Resume_on_Google_Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white" alt="Open Resume" />
       </a>
     </td>
